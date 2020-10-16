@@ -11,4 +11,4 @@ WHERE
 	?image crm:P2_has_type <http://iiif.io/api/image> .
 	?image crm:P2_has_type ?recto .
 	?recto rdfs:label "recto" .
-}
+} LIMIT 200
