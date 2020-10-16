@@ -84,7 +84,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.smartupds.harvester.Main</mainClass>
+                            <mainClass>com.smartupds.photo.similarity.Main</mainClass>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
                         </manifest>
                         <manifestEntries>

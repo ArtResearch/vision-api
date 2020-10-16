@@ -6,6 +6,13 @@
 package com.smartupds.photo.similarity.impl;
 
 import com.smartupds.photo.similarity.common.Resources;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -37,9 +44,37 @@ public class IdGenerator {
     }
     
     public void generate() {
-        Logger.getLogger(IdGenerator.class.getName()).log(Level.INFO, "Generating Pastec IDs.");
-        Logger.getLogger(IdGenerator.class.getName()).log(Level.INFO, "Pastec IDs generated and saved in :.".concat(Resources.PASTEC_IDS));
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            Logger.getLogger(IdGenerator.class.getName()).log(Level.INFO, "Generating Pastec IDs.");
+            long imageID = 1;
+            String idsPath = Resources.PASTEC_IDS +"/pastecIDs";
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(idsPath), "UTF-8");
+            for (String image: images){
+                    String command = "curl -X PUT -d '{\"url\":\""+image+"\"}' http://localhost:4212/index/images/"+imageID;
+//                    ProcessBuilder pb = new ProcessBuilder(command);
+                    Process p = Runtime.getRuntime().exec(command);
+                    Logger.getLogger(IdGenerator.class.getName()).log(Level.INFO, "Excecuting curl command : ".concat(command));
+                    
+                    BufferedReader reader =  new BufferedReader(new InputStreamReader(p.getInputStream()));
+                    String result = "";
+                    while((result = reader.readLine())!=null){
+                        System.out.println(result);
+                        
+                    }
+                    writer.append("http://localhost:4212/index/images/"+imageID+"\n");
+                    imageID++;
+//                p.wait();
+//                p.destroy();
+
+//                break;
+            }
+            writer.close();
+            Logger.getLogger(IdGenerator.class.getName()).log(Level.INFO, "Pastec IDs generated and saved in :.".concat(idsPath));
+        } catch (IOException ex) {
+            Logger.getLogger(IdGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+
     }
     
 }

@@ -18,6 +18,8 @@ import java.io.UnsupportedEncodingException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -69,14 +71,23 @@ public class QueryHandler {
             RepositoryConnection conn = repo.getConnection();
             GraphQuery graph = conn.prepareGraphQuery(QueryLanguage.SPARQL, constructQuery);
             GraphQueryResult result = graph.evaluate();
-            graphPath = Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_graph.ttl";
+//            graphPath = Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_graph.ttl";
+            graphPath = Resources.GRAPHS +"/graph.ttl";
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(graphPath), "UTF-8");
+            OutputStreamWriter writer2 = new OutputStreamWriter(new FileOutputStream(Resources.GRAPHS +"/image_uris"), "UTF-8");
+            HashSet<String> image_uris_distinct = new HashSet<>();
             while(result.hasNext()){
                 Statement stmt = result.next();
                 writer.append("<"+stmt.getSubject().toString()+"> <"+ stmt.getPredicate()+"> <"+stmt.getObject()+">.\n");
+//                writer2.append(stmt.getObject()+"\n");
+                image_uris_distinct.add(stmt.getObject().toString().trim());
             }
             writer.close();
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "File with graph created at :".concat(graphPath));
+//            System.out.println(image_uris_distinct.size());
+            writer2.append(String.join("\n", image_uris_distinct));
+            writer2.close();
+            Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "File with image URIS created at :".concat(Resources.GRAPHS +"/image_uris"));
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Repository Shutting Down.");
             repo.shutDown();
         } catch (FileNotFoundException | UnsupportedEncodingException ex) {

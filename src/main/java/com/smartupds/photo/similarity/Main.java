@@ -58,8 +58,8 @@ public class Main {
         QueryHandler q = new QueryHandler(line.getOptionValue("q"));
         q.setRepository(line.getOptionValue("e"));
         String graphPath = q.createGraph();
-        IdGenerator ids = new IdGenerator(graphPath);
-        ids.generate();
+//        IdGenerator ids = new IdGenerator(graphPath);
+//        ids.generate();
     }
 
     private static void printOptions(){
