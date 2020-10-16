@@ -1,0 +1,125 @@
+package com.smartupds.photo.similarity.impl;
+
+
+import com.smartupds.photo.similarity.common.Resources;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author mafragias
+ */
+public class ModelGenerator {
+    
+    private String jsonfile;
+    private HashMap<BigInteger ,String> image_index = new HashMap<>();
+    private HashMap<BigInteger ,String[][]> image_maps = new HashMap<>();
+//    private HashSet<BigInteger > hash_set =  new HashSet<>();
+    public ModelGenerator(String jsonfile) {
+        this.jsonfile = jsonfile;
+    }
+
+    public void generate() {
+        try {
+            Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Model generation started.");
+            parseJSON();
+            String modelPath = Resources.MODEL + "/model.ttl";
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(modelPath), "UTF-8");
+            image_maps.forEach((index,maps) -> {
+                System.out.println("--image--");
+                try {
+                    System.out.println(image_index.get(index));
+                    String image_1 = image_index.get(index);
+                    BigInteger hash_1 = new BigInteger(DigestUtils.sha1Hex(image_1).replaceAll("[a-zA-Z]+", "").trim());
+                    for(int i=0; i<maps.length;i++){
+                        System.out.println("--map--");
+                        System.out.println(image_index.get(new BigInteger(maps[i][0])));
+                        String image_2 = image_index.get(new BigInteger(maps[i][0]));
+                        BigInteger hash_2 = new BigInteger(DigestUtils.sha1Hex(image_2).replaceAll("[a-zA-Z]+", "").trim());
+                        System.out.println(hash_1 +" - "+ hash_2);
+//                        hash_set.add(hash_1.add(hash_2));
+                        BigInteger hash = hash_1.add(hash_2);
+                        writer.append("<"+image_1+"> <"+Resources.SIM+"element> <"+Resources.SIM+hash+">.\n");
+                        writer.append("<"+image_2+"> <"+Resources.SIM+"element> <"+Resources.SIM+hash+">.\n");
+                        writer.append("<"+Resources.SIM+hash+"> a <"+Resources.SIM+"Association>.\n");
+                        writer.append("<"+Resources.SIM+hash+"> <"+Resources.SIM+"method> <"+Resources.SIM+"Pastec>.\n");
+                        writer.append("<"+Resources.SIM+"Pastec/"+hash+"> a <"+Resources.SIM+"AssociationMethod>.\n");
+                        writer.append("<"+Resources.SIM+"Pastec/"+hash+"> a <"+Resources.SIM+"Pastec>.\n");
+                        writer.append("<"+Resources.SIM+"Pastec/"+hash+"> <"+Resources.SIM+"weight> \""+maps[i][1]+"\".\n");
+                    }
+                } catch (IOException ex) {
+                    Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            });
+//            hash_set.forEach(x -> System.out.println(x));
+            Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "File with model created at :".concat(modelPath));
+            Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Model generated.");
+            writer.close();
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    private void parseJSON(){
+        try {
+            JSONParser parserJson = new JSONParser();
+            Object obj = parserJson.parse(new InputStreamReader(new FileInputStream(jsonfile), "UTF8"));
+            JSONObject jsonObject = (JSONObject) obj;
+            JSONArray companyList = (JSONArray) jsonObject.get("results");
+            Iterator<JSONObject> iterator = companyList.iterator();
+            while (iterator.hasNext()) {
+                JSONObject result = iterator.next();
+                if (result.get("image_id")!=null){
+                    BigInteger image_id = new BigInteger(result.get("image_id").toString());
+                    String image_url = result.get("image_url").toString();
+                    image_index.put(image_id, image_url);
+                    JSONObject search_results = (JSONObject)result.get("search_results");
+                    JSONArray image_ids = (JSONArray) search_results.get("image_ids");
+                    JSONArray scores = (JSONArray) search_results.get("scores");
+                    String[][] image_scores = new String[image_ids.size()][2];
+
+
+                    if (!image_ids.isEmpty()){
+                        for(int i=0;i<image_ids.size();i++){
+                            image_scores[i][0] = image_ids.get(i).toString();
+                            image_scores[i][1] = scores.get(i).toString();
+                        }
+                        System.out.println(Arrays.deepToString(image_scores));
+                        image_maps.put(image_id, image_scores);
+                    }
+                }
+            }
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException | ParseException ex) {
+            Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+}
