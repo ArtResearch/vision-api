@@ -1,0 +1,227 @@
+{
+	"results": [
+		{
+			"image_id": 1,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/406096348/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 2,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/406274334/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 3,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/19331461/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 4,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/406096384/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 5,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/406274350/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 6,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/406551267/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 7,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/19331460/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 8,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/406551332/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 9,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/406274330/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 10,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/19331465/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [
+					{
+						"height": 921,
+						"width": 649,
+						"x": 54,
+						"y": 35
+					}
+				],
+				"image_ids": [
+					3
+				],
+				"scores": [
+					160.0
+				],
+				"tags": [
+					""
+				],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 11,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/19331459/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 12,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/19331463/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [
+					{
+						"height": 871,
+						"width": 698,
+						"x": 36,
+						"y": 46
+					},
+					{
+						"height": 908,
+						"width": 699,
+						"x": 35,
+						"y": 46
+					},
+					{
+						"height": 523,
+						"width": 673,
+						"x": 51,
+						"y": 430
+					}
+				],
+				"image_ids": [
+					3,
+					10,
+					11
+				],
+				"scores": [
+					95.0,
+					85.0,
+					20.0
+				],
+				"tags": [
+					"",
+					"",
+					""
+				],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 13,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/19331466/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [
+					{
+						"height": 918,
+						"width": 609,
+						"x": 43,
+						"y": 41
+					}
+				],
+				"image_ids": [
+					12
+				],
+				"scores": [
+					18.0
+				],
+				"tags": [
+					""
+				],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 14,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/406550901/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{
+			"image_id": 15,
+			"image_url": "https://ids.lib.harvard.edu/ids/iiif/406551152/full/full/0/native.jpg",
+			"search_results": {
+				"bounding_rects": [],
+				"image_ids": [],
+				"scores": [],
+				"tags": [],
+				"type": "SEARCH_RESULTS"
+			}
+		},
+		{}
+	]
+}

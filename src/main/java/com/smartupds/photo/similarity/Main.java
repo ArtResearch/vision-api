@@ -7,6 +7,7 @@ package com.smartupds.photo.similarity;
 
 import com.smartupds.photo.similarity.common.Resources;
 import com.smartupds.photo.similarity.impl.IdGenerator;
+import com.smartupds.photo.similarity.impl.ModelGenerator;
 import com.smartupds.photo.similarity.impl.QueryHandler;
 import java.io.File;
 import java.util.logging.Level;
@@ -33,8 +34,9 @@ public class Main {
         createWorkSpace();
         createOptions();
         try {
-            String[] fake_args = {  "-q", "query",
-                                    "-e", "http://localhost:9999/blazegraph/sparql"};
+//            String[] fake_args = {  "-q", "query",
+//                                    "-e", "http://localhost:9999/blazegraph/sparql"};
+            String[] fake_args = {  "-m"};
             CommandLine line = parser.parse( options, fake_args );
             handleCommandLine(line);
         } catch( ParseException exp ) {
@@ -46,20 +48,28 @@ public class Main {
     private static void createOptions() {
         Option query = new Option("q",true,"Construct Query: -q [query]");
         query.setArgName("query");
-        query.setRequired(true);
         Option endpoint = new Option("e",true,"Endpoint: -q [endpoint]");
         endpoint.setArgName("endpoint");
-        endpoint.setRequired(true);
+        Option model = new Option("m",false,"Generate model : -model");
+        model.setArgName("model");
+        
         options.addOption(query);
         options.addOption(endpoint);
+        options.addOption(model);
     }
 
     private static void handleCommandLine(CommandLine line) {
-        QueryHandler q = new QueryHandler(line.getOptionValue("q"));
-        q.setRepository(line.getOptionValue("e"));
-        String graphPath = q.createGraph();
-//        IdGenerator ids = new IdGenerator(graphPath);
-//        ids.generate();
+        if (line.hasOption("q") && line.hasOption("e")){
+            QueryHandler q = new QueryHandler(line.getOptionValue("q"));
+            q.setRepository(line.getOptionValue("e"));
+            String graphPath = q.createGraph();
+        } else if (line.hasOption("m")){
+            ModelGenerator model = new ModelGenerator(Resources.PASTEC_IDS + "/pastecIDs.json");
+            model.generate();
+        } else {
+            printOptions();
+            throw new UnsupportedOperationException("\nWrong arguments.\n");
+        }
     }
 
     private static void printOptions(){
@@ -74,5 +84,6 @@ public class Main {
         new File(Resources.WORKSPACE).mkdir();
         new File(Resources.GRAPHS).mkdir();
         new File(Resources.PASTEC_IDS).mkdir();
+        new File(Resources.MODEL).mkdir();
     }
 }

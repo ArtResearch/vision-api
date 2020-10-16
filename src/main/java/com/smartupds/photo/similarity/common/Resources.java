@@ -10,7 +10,17 @@ package com.smartupds.photo.similarity.common;
  * @author mafragias
  */
 public class Resources {
+    
+    // Directories
     public static final String WORKSPACE = "./PhotoSimilarity-Workspace";
     public static final String GRAPHS = WORKSPACE + "/Graphs";
     public static final String PASTEC_IDS = WORKSPACE + "/Pastec-IDs";
+    public static final String MODEL = WORKSPACE + "/Model";
+    
+    // PREFIXES
+    public static final String CUSTOM = "https://pharos.artresearch.net/custom/";
+    public static final String SIM = "http://purl.org/ontology/similarity/";
+    
+    // PROPERTIES & ENTITIES
+    
 }
