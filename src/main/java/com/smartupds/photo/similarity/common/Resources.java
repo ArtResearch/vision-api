@@ -22,5 +22,10 @@ public class Resources {
     public static final String SIM = "http://purl.org/ontology/similarity/";
     
     // PROPERTIES & ENTITIES
+    public static final String ASSOCIATION = "Association";
+    public static final String ASSOCIATION_METHOD = "AssociationMethod";
+    public static final String METHOD = "method";
+    public static final String ELEMENT = "element";
+    public static final String WEIGHT = "weight";
     
 }

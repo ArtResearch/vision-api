@@ -3,10 +3,10 @@ echo
 #http://localhost:9999/blazegraph/sparql
 now=$(date +"%Y-%m-%dT%H-%M-%S")
 #Construct Query Evaluation
-java -jar target/PhotoSimilarity-0.1-assembly.jar -q $1 -e $2
+java -jar PhotoSimilarity.jar -q $1 -e $2
 
 image_ids=$(curl -X GET http://localhost:4212/index/imageIds)
-max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids $image_ids)
+max_id=$(java -jar PhotoSimilarity.jar -image_ids $image_ids)
 
 #Pastec Photo Similarity Evaluation & Indexing
 {
@@ -30,4 +30,4 @@ max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids $image_ids
 # save ids in a file
 echo -e $IDs > "./PhotoSimilarity-Workspace/Pastec-IDs/${now}_pastecIDs.ttl"
 
-java -jar target/PhotoSimilarity-0.1-assembly.jar -m "./PhotoSimilarity-Workspace/Pastec-IDs/${now}_pastecIDs.json"
+java -jar PhotoSimilarity.jar -m "./PhotoSimilarity-Workspace/Pastec-IDs/${now}_pastecIDs.json"
