@@ -6,7 +6,7 @@
 package com.smartupds.photo.similarity;
 
 import com.smartupds.photo.similarity.common.Resources;
-import com.smartupds.photo.similarity.impl.IdGenerator;
+import com.smartupds.photo.similarity.impl.IdHandler;
 import com.smartupds.photo.similarity.impl.ModelGenerator;
 import com.smartupds.photo.similarity.impl.QueryHandler;
 import java.io.File;
@@ -19,7 +19,6 @@ import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
-import org.apache.log4j.BasicConfigurator;
 
 /**
  * Photo Similarity Project
@@ -36,8 +35,9 @@ public class Main {
         try {
 //            String[] fake_args = {  "-q", "query",
 //                                    "-e", "http://localhost:9999/blazegraph/sparql"};
-            String[] fake_args = {  "-m"};
-            CommandLine line = parser.parse( options, fake_args );
+//            String[] fake_args = {  "-image_ids","{\"image_ids\":[15,14,13,12,11,10,9,8,7,6,5,4,3,2,1],\"type\":\"INDEX_IMAGE_IDS\"}"};
+//            String[] fake_args = {  "-image_ids","{\"image_ids\":[],\"type\":\"INDEX_IMAGE_IDS\"}"};
+            CommandLine line = parser.parse( options, args );
             handleCommandLine(line);
         } catch( ParseException exp ) {
             printOptions();
@@ -50,12 +50,15 @@ public class Main {
         query.setArgName("query");
         Option endpoint = new Option("e",true,"Endpoint: -q [endpoint]");
         endpoint.setArgName("endpoint");
-        Option model = new Option("m",false,"Generate model : -model");
+        Option image_ids = new Option("image_ids",true,"Image IDs: -image_ids [image_ids in json format]");
+        endpoint.setArgName("image_ids");
+        Option model = new Option("m",true,"Generate model : -model");
         model.setArgName("model");
         
         options.addOption(query);
         options.addOption(endpoint);
         options.addOption(model);
+        options.addOption(image_ids);
     }
 
     private static void handleCommandLine(CommandLine line) {
@@ -64,9 +67,13 @@ public class Main {
             q.setRepository(line.getOptionValue("e"));
             String graphPath = q.createGraph();
         } else if (line.hasOption("m")){
-            ModelGenerator model = new ModelGenerator(Resources.PASTEC_IDS + "/pastecIDs.json");
+//            ModelGenerator model = new ModelGenerator(Resources.PASTEC_IDS + "/pastecIDs.json");
+            ModelGenerator model = new ModelGenerator(line.getOptionValue("m"));
             model.generate();
-        } else {
+        } else if (line.hasOption("image_ids")){
+            IdHandler ih = new IdHandler(line.getOptionValue("image_ids"));
+            ih.handle();
+        }else {
             printOptions();
             throw new UnsupportedOperationException("\nWrong arguments.\n");
         }
