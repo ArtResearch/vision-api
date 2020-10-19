@@ -126,6 +126,6 @@ public class QueryHandler {
     
     // Setters & Getters
     public void setRepository(String endpoint) {
-        repo = new SPARQLRepository(endpoint);
+        repo = new SPARQLRepository(endpoint.trim());
     }
 }
