@@ -6,7 +6,7 @@
 package com.smartupds.photo.similarity;
 
 import com.smartupds.photo.similarity.common.Resources;
-import com.smartupds.photo.similarity.impl.IdHandler;
+import com.smartupds.photo.similarity.impl.IndexHandler;
 import com.smartupds.photo.similarity.impl.ModelGenerator;
 import com.smartupds.photo.similarity.impl.QueryHandler;
 import java.io.File;
@@ -67,11 +67,10 @@ public class Main {
             q.setRepository(line.getOptionValue("e"));
             String graphPath = q.createGraph();
         } else if (line.hasOption("m")){
-//            ModelGenerator model = new ModelGenerator(Resources.PASTEC_IDS + "/pastecIDs.json");
             ModelGenerator model = new ModelGenerator(line.getOptionValue("m"));
             model.generate();
         } else if (line.hasOption("image_ids")){
-            IdHandler ih = new IdHandler(line.getOptionValue("image_ids"));
+            IndexHandler ih = new IndexHandler(line.getOptionValue("image_ids"));
             ih.handle();
         }else {
             printOptions();

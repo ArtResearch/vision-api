@@ -22,7 +22,7 @@ max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids $image_ids
 		# Add image in Pastec
 		index=$(curl -X PUT -d '{"url":"'$line'"}' http://$host:$port/index/images/$ID)
 		# Generate ttl file
-		IDs+="<${line}> <https://pharos.artresearch.net/custom/has_index> <http://localhost:4212/index/images/${ID}>.\n"
+		IDs+="<${line}> <https://pharos.artresearch.net/custom/has_index> <http://${host}:${port}/index/images/${ID}>.\n"
 		ID=$(expr $ID + 1)
 	done < ./PhotoSimilarity-Workspace/Graphs/image_uris
 	echo -e "{}]}"
