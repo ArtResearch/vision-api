@@ -42,26 +42,28 @@ public class ModelGenerator {
     }
 
     public void generate() {
-        try {
-            Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Model generation started.");
-            parseJSON();
-            String modelPath = Resources.MODEL +"/"+LocalDateTime.now().toString().replace(":", "-")+"_model.ttl";
-            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(modelPath), "UTF-8");
+        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Model generation started.");
+        parseJSON();
+        String modelPath = Resources.MODEL +"/"+LocalDateTime.now().toString().replace(":", "-")+"_model.ttl";
+        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(modelPath), "UTF-8")) {
             image_maps.forEach((index,maps) -> {
+//                System.out.println(index);
                 try {
                     String image_1 = image_index.get(index);
                     BigInteger hash_1 = new BigInteger(DigestUtils.sha1Hex(image_1).replaceAll("[a-zA-Z]+", "").trim());
-                    for(int i=0; i<maps.length;i++){
-                        String image_2 = image_index.get(new BigInteger(maps[i][0]));
-                        BigInteger hash_2 = new BigInteger(DigestUtils.sha1Hex(image_2).replaceAll("[a-zA-Z]+", "").trim());
-                        BigInteger hash = hash_1.add(hash_2);
-                        writer.append("<"+image_1+"> <"+Resources.SIM+"element> <"+Resources.SIM+Resources.ASSOCIATION+"/"+hash+">.\n");
-                        writer.append("<"+image_2+"> <"+Resources.SIM+"element> <"+Resources.SIM+Resources.ASSOCIATION+"/"+hash+">.\n");
-                        writer.append("<"+Resources.SIM+Resources.ASSOCIATION+"/"+hash+"> a <"+Resources.SIM+Resources.ASSOCIATION+">.\n");
-                        writer.append("<"+Resources.SIM+Resources.ASSOCIATION+"/"+hash+"> <"+Resources.SIM+Resources.METHOD+"> <"+Resources.SIM+Resources.ASSOCIATION_METHOD+"/Pastec/"+hash+">.\n");
-                        writer.append("<"+Resources.SIM+Resources.ASSOCIATION_METHOD+"/Pastec/"+hash+"> a <"+Resources.SIM+Resources.ASSOCIATION_METHOD+">.\n");
-                        writer.append("<"+Resources.SIM+Resources.ASSOCIATION_METHOD+"/Pastec/"+hash+"> a <"+Resources.SIM+Resources.ASSOCIATION_METHOD+"/Pastec>.\n");
-                        writer.append("<"+Resources.SIM+Resources.ASSOCIATION_METHOD+"/Pastec/"+hash+"> <"+Resources.SIM+Resources.WEIGHT+"> \""+maps[i][1]+"\".\n");
+                    for (String[] map : maps) {
+                //                        System.out.println(maps[i][0]);
+                //                        System.out.println(maps[i][1]);
+                String image_2 = image_index.get(new BigInteger(map[0]));
+                BigInteger hash_2 = new BigInteger(DigestUtils.sha1Hex(image_2).replaceAll("[a-zA-Z]+", "").trim());
+                BigInteger hash = hash_1.add(hash_2);
+                writer.append("<"+image_1+"> <"+Resources.SIM+"element> <"+Resources.SIM+Resources.ASSOCIATION+"/"+hash+">.\n");
+                writer.append("<"+image_2+"> <"+Resources.SIM+"element> <"+Resources.SIM+Resources.ASSOCIATION+"/"+hash+">.\n");
+                writer.append("<"+Resources.SIM+Resources.ASSOCIATION+"/"+hash+"> a <"+Resources.SIM+Resources.ASSOCIATION+">.\n");
+                writer.append("<"+Resources.SIM+Resources.ASSOCIATION+"/"+hash+"> <"+Resources.SIM+Resources.METHOD+"> <"+Resources.SIM+Resources.ASSOCIATION_METHOD+"/Pastec/"+hash+">.\n");
+                writer.append("<"+Resources.SIM+Resources.ASSOCIATION_METHOD+"/Pastec/"+hash+"> a <"+Resources.SIM+Resources.ASSOCIATION_METHOD+">.\n");
+                writer.append("<"+Resources.SIM+Resources.ASSOCIATION_METHOD+"/Pastec/"+hash+"> a <"+Resources.SIM+Resources.ASSOCIATION_METHOD+"/Pastec>.\n");
+                writer.append("<"+Resources.SIM+Resources.ASSOCIATION_METHOD+"/Pastec/"+hash+"> <"+Resources.SIM+Resources.WEIGHT+"> \"" + map[1] + "\".\n");
                     }
                 } catch (IOException ex) {
                     Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
@@ -69,7 +71,6 @@ public class ModelGenerator {
             });
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "File with model created at :".concat(modelPath));
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Model generated.");
-            writer.close();
         } catch (UnsupportedEncodingException ex) {
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
