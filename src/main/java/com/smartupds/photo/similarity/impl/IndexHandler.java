@@ -10,17 +10,19 @@ import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 /**
  *
  * @author mafragias
  */
-public class IdHandler {
+public class IndexHandler {
 
     private final HashSet<BigInteger> indexes;
 
-    public IdHandler(String indexes) {
+    public IndexHandler(String indexes) {
         String[] index = indexes.substring(indexes.indexOf("[")+1,indexes.indexOf("]")).split(",");
         if (Utils.isNumeric(index[0]))
             this.indexes = Arrays.stream(index).map(i ->new BigInteger(i)).collect(Collectors.toCollection(HashSet::new));
@@ -29,10 +31,12 @@ public class IdHandler {
     }
     
     public void handle() {
+        Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Handling Pastec indexes.");
         if (this.indexes.size()>0)
           System.out.print(Collections.max(indexes));
         else
           System.out.print(0);
+        Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Current max Pastec index returned.");
     }
     
 }

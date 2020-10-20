@@ -71,7 +71,6 @@ public class QueryHandler {
             GraphQuery graph = conn.prepareGraphQuery(QueryLanguage.SPARQL, constructQuery);
             GraphQueryResult result = graph.evaluate();
             graphPath = Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_graph.ttl";
-//            graphPath = Resources.GRAPHS +"/graph.ttl";
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(graphPath), "UTF-8");
             HashSet<String> previous_ids = listImageIds();
             File file1 = new File(Resources.GRAPHS +"/image_uris");

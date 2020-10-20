@@ -33,8 +33,8 @@ $ ./run.sh query.txt http://localhost:9999/blazegraph/sparql
 
 ### Outputs
 
-* ./PhotoSimilarity-Workspace/Graphs/[timestamp]_graph.ttl : graph created with construct query.
-* ./PhotoSimilarity-Workspace/Graphs/image_uris.ttl : image uris (urls) resulted from construct query.
-* ./PhotoSimilarity-Workspace/Pastec-IDs/[timestamp]_pastecIDs.json : Pastec searcher Responses.
-* ./PhotoSimilarity-Workspace/Pastec-IDs/[timestamp]_pastecIDs.ttl : statements where the subject is the image uri the property is custom:has_index and the object is the pastec index. 
-* ./PhotoSimilarity-Workspace/Model/[timestamp]_model.ttl : resulting model for the the similarity method Pastec.
+* **./PhotoSimilarity-Workspace/Graphs/[timestamp]_graph.ttl** : graph created with construct query.
+* **./PhotoSimilarity-Workspace/Graphs/image_uris.ttl** : image uris (urls) resulted from construct query.
+* **./PhotoSimilarity-Workspace/Pastec-IDs/[timestamp]_pastecIDs.json** : Pastec searcher Responses.
+* **./PhotoSimilarity-Workspace/Pastec-IDs/[timestamp]_pastecIDs.ttl** : statements where the subject is the image uri the property is custom:has_index and the object is the pastec index. 
+* **./PhotoSimilarity-Workspace/Model/[timestamp]_model.ttl** : resulting model for the the similarity method Pastec.
