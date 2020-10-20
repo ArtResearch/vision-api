@@ -16,10 +16,10 @@ The run.sh script should be in the same folder as the PhotoSimilarity.jar.
 
 ### Script Arguments
 
-* Query [required] : a file containing the construct query, where the resulting object should be the image url.
-* Endpoint [required] : the endpoint, where you wish to harvest the data from.
-* Host [optional] : host IP address of the server that runs Pastec (default host is set as localhost).
-* Port [optional] : port that is set for Pastec (default port is set as 4212).
+* **Query [required]** : a file containing the construct query, where the resulting object should be the image url.
+* **Endpoint [required]** : the endpoint, where you wish to harvest the data from.
+* **Host [optional]** : host IP address of the server that runs Pastec (default host is set as localhost).
+* **Port [optional]** : port that is set for Pastec (default port is set as 4212).
 
 ### Bash commands
 
