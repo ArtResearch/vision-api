@@ -30,6 +30,14 @@ public class Utils {
         return filePaths;
     }
     
+    public static ArrayList<String> listJSONFilesForFolder(final File folder){
+        ArrayList<String> filePaths = new ArrayList<>();
+        for(String file: listFilesForFolder(folder)) 
+            if (file.endsWith(Resources.JSON))
+                    filePaths.add(file);
+        return filePaths;
+    }
+    
     public static boolean isNumeric(String strNum) {
         if (strNum == null) {
             return false;

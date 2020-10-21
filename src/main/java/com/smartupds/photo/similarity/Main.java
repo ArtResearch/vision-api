@@ -6,6 +6,7 @@
 package com.smartupds.photo.similarity;
 
 import com.smartupds.photo.similarity.common.Resources;
+import com.smartupds.photo.similarity.common.Utils;
 import com.smartupds.photo.similarity.impl.IndexHandler;
 import com.smartupds.photo.similarity.impl.ModelGenerator;
 import com.smartupds.photo.similarity.impl.QueryHandler;
@@ -37,6 +38,7 @@ public class Main {
 //                                    "-e", "http://localhost:9999/blazegraph/sparql"};
 //            String[] fake_args = {  "-image_ids","{\"image_ids\":[15,14,13,12,11,10,9,8,7,6,5,4,3,2,1],\"type\":\"INDEX_IMAGE_IDS\"}"};
 //            String[] fake_args = {  "-image_ids","{\"image_ids\":[],\"type\":\"INDEX_IMAGE_IDS\"}"};
+//            String[] fake_args = {  "-m","./PhotoSimilarity-Workspace/Pastec-IDs/"};
             CommandLine line = parser.parse( options, args );
             handleCommandLine(line);
         } catch( ParseException exp ) {
@@ -67,7 +69,7 @@ public class Main {
             q.setRepository(line.getOptionValue("e"));
             String graphPath = q.createGraph();
         } else if (line.hasOption("m")){
-            ModelGenerator model = new ModelGenerator(line.getOptionValue("m"));
+            ModelGenerator model = new ModelGenerator(Utils.listJSONFilesForFolder(new File(line.getOptionValue("m"))));
             model.generate();
         } else if (line.hasOption("image_ids")){
             IndexHandler ih = new IndexHandler(line.getOptionValue("image_ids"));

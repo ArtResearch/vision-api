@@ -30,4 +30,4 @@ max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids $image_ids
 # Save indexes in a file
 echo -e $IDs > "./PhotoSimilarity-Workspace/Pastec-IDs/${now}_pastecIDs.ttl"
 # Create model
-java -jar target/PhotoSimilarity-0.1-assembly.jar -m "./PhotoSimilarity-Workspace/Pastec-IDs/${now}_pastecIDs.json"
+java -jar target/PhotoSimilarity-0.1-assembly.jar -m ./PhotoSimilarity-Workspace/Pastec-IDs/

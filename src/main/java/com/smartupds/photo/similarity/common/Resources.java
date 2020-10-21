@@ -28,4 +28,7 @@ public class Resources {
     public static final String ELEMENT = "element";
     public static final String WEIGHT = "weight";
     
+    // FILE EXTENTION
+    public static final String JSON = "json";
+    
 }

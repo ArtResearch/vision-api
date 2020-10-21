@@ -11,6 +11,7 @@ import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.logging.Level;
@@ -33,12 +34,12 @@ import org.json.simple.parser.ParseException;
  */
 public class ModelGenerator {
     
-    private String jsonfile;
+    private ArrayList<String> jsonfiles;
     private HashMap<BigInteger ,String> image_index = new HashMap<>();
     private HashMap<BigInteger ,String[][]> image_maps = new HashMap<>();
 //    private HashSet<BigInteger > hash_set =  new HashSet<>();
-    public ModelGenerator(String jsonfile) {
-        this.jsonfile = jsonfile;
+    public ModelGenerator(ArrayList<String> jsonfiles) {
+        this.jsonfiles = jsonfiles;
     }
 
     public void generate() {
@@ -80,27 +81,29 @@ public class ModelGenerator {
     
     private void parseJSON(){
         try {
-            JSONParser parserJson = new JSONParser();
-            Object obj = parserJson.parse(new InputStreamReader(new FileInputStream(jsonfile), "UTF8"));
-            JSONObject jsonObject = (JSONObject) obj;
-            JSONArray companyList = (JSONArray) jsonObject.get("results");
-            Iterator<JSONObject> iterator = companyList.iterator();
-            while (iterator.hasNext()) {
-                JSONObject result = iterator.next();
-                if (result.get("image_id")!=null){
-                    BigInteger image_id = new BigInteger(result.get("image_id").toString());
-                    String image_url = result.get("image_url").toString();
-                    image_index.put(image_id, image_url);
-                    JSONObject search_results = (JSONObject)result.get("search_results");
-                    JSONArray image_ids = (JSONArray) search_results.get("image_ids");
-                    JSONArray scores = (JSONArray) search_results.get("scores");
-                    String[][] image_scores = new String[image_ids.size()][2];
-                    if (!image_ids.isEmpty()){
-                        for(int i=0;i<image_ids.size();i++){
-                            image_scores[i][0] = image_ids.get(i).toString();
-                            image_scores[i][1] = scores.get(i).toString();
+            for(String jsonfile: jsonfiles){
+                JSONParser parserJson = new JSONParser();
+                Object obj = parserJson.parse(new InputStreamReader(new FileInputStream(jsonfile), "UTF8"));
+                JSONObject jsonObject = (JSONObject) obj;
+                JSONArray companyList = (JSONArray) jsonObject.get("results");
+                Iterator<JSONObject> iterator = companyList.iterator();
+                while (iterator.hasNext()) {
+                    JSONObject result = iterator.next();
+                    if (result.get("image_id")!=null){
+                        BigInteger image_id = new BigInteger(result.get("image_id").toString());
+                        String image_url = result.get("image_url").toString();
+                        image_index.put(image_id, image_url);
+                        JSONObject search_results = (JSONObject)result.get("search_results");
+                        JSONArray image_ids = (JSONArray) search_results.get("image_ids");
+                        JSONArray scores = (JSONArray) search_results.get("scores");
+                        String[][] image_scores = new String[image_ids.size()][2];
+                        if (!image_ids.isEmpty()){
+                            for(int i=0;i<image_ids.size();i++){
+                                image_scores[i][0] = image_ids.get(i).toString();
+                                image_scores[i][1] = scores.get(i).toString();
+                            }
+                            image_maps.put(image_id, image_scores);
                         }
-                        image_maps.put(image_id, image_scores);
                     }
                 }
             }
