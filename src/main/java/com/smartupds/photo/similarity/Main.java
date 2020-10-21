@@ -34,11 +34,7 @@ public class Main {
         createWorkSpace();
         createOptions();
         try {
-//            String[] fake_args = {  "-q", "query",
-//                                    "-e", "http://localhost:9999/blazegraph/sparql"};
-//            String[] fake_args = {  "-image_ids","{\"image_ids\":[15,14,13,12,11,10,9,8,7,6,5,4,3,2,1],\"type\":\"INDEX_IMAGE_IDS\"}"};
-//            String[] fake_args = {  "-image_ids","{\"image_ids\":[],\"type\":\"INDEX_IMAGE_IDS\"}"};
-//            String[] fake_args = {  "-m","./PhotoSimilarity-Workspace/Pastec-IDs/"};
+
             CommandLine line = parser.parse( options, args );
             handleCommandLine(line);
         } catch( ParseException exp ) {
