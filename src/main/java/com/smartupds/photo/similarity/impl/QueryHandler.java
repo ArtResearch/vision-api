@@ -59,20 +59,28 @@ public class QueryHandler {
         } else {
             throw new UnsupportedOperationException("This query format is not supported.");
         }
-        Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Processing CONSTRUCT Query : \n\n".concat(constructQuery));
     }
     
+    /**
+     *
+     * @return
+     */
     public String createGraph(){
         String graphPath = "";
         try {
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Initializing Repository.");
             repo.initialize();
             RepositoryConnection conn = repo.getConnection();
+            // Filter out images with a particular method index
+            constructQuery = constructQuery.substring(0,constructQuery.lastIndexOf("}"))
+                                + "\tFILTER NOT EXISTS { ?image <https://pharos.artresearch.net/custom/"+Resources.SIMILARITY_METHOD+"/has_index> ?index}\n"
+                                + constructQuery.substring(constructQuery.lastIndexOf("}"));
+            Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Processing CONSTRUCT Query : \n\n".concat(constructQuery));
             GraphQuery graph = conn.prepareGraphQuery(QueryLanguage.SPARQL, constructQuery);
             GraphQueryResult result = graph.evaluate();
             graphPath = Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_graph.ttl";
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(graphPath), "UTF-8");
-            HashSet<String> previous_ids = listImageIds();
+//            HashSet<String> previous_ids = listImageIds();
             File file1 = new File(Resources.GRAPHS +"/image_uris");
             File file2 = new File(Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_image_uris");
             if (file1.exists()){
@@ -82,13 +90,13 @@ public class QueryHandler {
             HashSet<String> image_uris_distinct = new HashSet<>();
             while(result.hasNext()){
                 Statement stmt = result.next();
-                if (!previous_ids.contains(stmt.getObject().toString().trim())){
-                    writer.append("<"+stmt.getSubject().toString()+"> <"+ stmt.getPredicate()+"> <"+stmt.getObject()+">.\n");
-                    image_uris_distinct.add(stmt.getObject().toString().trim());
-                }
+//                if (!previous_ids.contains(stmt.getObject().toString().trim())){
+                writer.append("<"+stmt.getSubject().toString()+"> <"+ stmt.getPredicate()+"> <"+stmt.getObject()+">.\n");
+                image_uris_distinct.add(stmt.getObject().toString().trim());
+//                }
             }
             writer.close();
-            Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "File with graph created at :".concat(graphPath));
+            Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Construct query result saved at :".concat(graphPath));
             writer2.append(String.join("\n", image_uris_distinct));
             writer2.close();
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "File with image URIS created at :".concat(Resources.GRAPHS +"/image_uris"));
@@ -102,28 +110,33 @@ public class QueryHandler {
         return graphPath;
     }
     
-    private HashSet<String> listImageIds(){
-        HashSet<String> ids =  new HashSet<>();
-        Utils.listFilesForFolder(new File(Resources.GRAPHS)).forEach(file -> {
-           if (!file.endsWith(".ttl")){
-               try {
-                   BufferedReader reader = new BufferedReader( new InputStreamReader(new FileInputStream(file), "UTF8"));
-                   String row = "";
-                   while((row = reader.readLine())!=null){
-                       ids.add(row.trim());
-                   }
-                   reader.close();
-               } catch (FileNotFoundException | UnsupportedEncodingException ex) {
-                   Logger.getLogger(QueryHandler.class.getName()).log(Level.SEVERE, null, ex);
-               } catch (IOException ex) {
-                   Logger.getLogger(QueryHandler.class.getName()).log(Level.SEVERE, null, ex);
-               }
-           } 
-        });
-        return ids;
-    }
+//    private HashSet<String> listImageIds(){
+//        HashSet<String> ids =  new HashSet<>();
+//        Utils.listFilesForFolder(new File(Resources.GRAPHS)).forEach(file -> {
+//           if (!file.endsWith(".ttl")){
+//               try {
+//                   BufferedReader reader = new BufferedReader( new InputStreamReader(new FileInputStream(file), "UTF8"));
+//                   String row = "";
+//                   while((row = reader.readLine())!=null){
+//                       ids.add(row.trim());
+//                   }
+//                   reader.close();
+//               } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+//                   Logger.getLogger(QueryHandler.class.getName()).log(Level.SEVERE, null, ex);
+//               } catch (IOException ex) {
+//                   Logger.getLogger(QueryHandler.class.getName()).log(Level.SEVERE, null, ex);
+//               }
+//           } 
+//        });
+//        return ids;
+//    }
     
     // Setters & Getters
+
+    /**
+     *
+     * @param endpoint
+     */
     public void setRepository(String endpoint) {
         repo = new SPARQLRepository(endpoint.trim());
     }
