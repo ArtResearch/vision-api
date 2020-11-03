@@ -34,7 +34,12 @@ public class Main {
         createWorkSpace();
         createOptions();
         try {
-
+//            String[] fake_args = {  "-e", "http://localhost:9999/blazegraph/sparql",
+//                                    "-q", "query",
+//                                    "-m", "Pastec"};
+//            String[] fake_args = {  "-e","http://localhost:9999/blazegraph/sparql",
+//                                    "-pharosModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-02T15-39-05_pastecIDs.ttl"};
+//            String[] fake_args = {  "-image_ids","{\"image_ids\":[\"3\",\"1\",\"2\"],\"type\":\"INDEX_IMAGE_IDS\"}"};
             CommandLine line = parser.parse( options, args );
             handleCommandLine(line);
         } catch( ParseException exp ) {
@@ -46,31 +51,45 @@ public class Main {
     private static void createOptions() {
         Option query = new Option("q",true,"Construct Query: -q [query]");
         query.setArgName("query");
-        Option endpoint = new Option("e",true,"Endpoint: -q [endpoint]");
+        Option endpoint = new Option("e",true,"Endpoint: -e [endpoint]");
         endpoint.setArgName("endpoint");
+        Option method = new Option("m",true,"Method name : -m [method_name]");
+        method.setArgName("method");
         Option image_ids = new Option("image_ids",true,"Image IDs: -image_ids [image_ids in json format]");
         endpoint.setArgName("image_ids");
-        Option model = new Option("m",true,"Generate model : -model");
-        model.setArgName("model");
+        Option pharos_model = new Option("pharosModel",true,"Update Pharos model : -pharosModel [index_graph.ttl]");
+        Option vision_model = new Option("visionModel",true,"Update Vision model : -visionModel [similarity_file.json]");
         
         options.addOption(query);
         options.addOption(endpoint);
-        options.addOption(model);
+        options.addOption(method);
         options.addOption(image_ids);
+        options.addOption(pharos_model);
+        options.addOption(vision_model);
     }
 
     private static void handleCommandLine(CommandLine line) {
+        if (line.hasOption("m")){
+            Resources.setMethod(line.getOptionValue("m"));
+            Logger.getLogger(Main.class.getName()).log(Level.INFO,"Selected Method : ".concat(Resources.SIMILARITY_METHOD));
+        }
         if (line.hasOption("q") && line.hasOption("e")){
             QueryHandler q = new QueryHandler(line.getOptionValue("q"));
             q.setRepository(line.getOptionValue("e"));
-            String graphPath = q.createGraph();
-        } else if (line.hasOption("m")){
-            ModelGenerator model = new ModelGenerator(Utils.listJSONFilesForFolder(new File(line.getOptionValue("m"))));
-            model.generate();
+//            String graphPath = 
+            q.createGraph();
         } else if (line.hasOption("image_ids")){
             IndexHandler ih = new IndexHandler(line.getOptionValue("image_ids"));
             ih.handle();
-        }else {
+        } else if (line.hasOption("pharosModel") && line.hasOption("e")){
+            ModelGenerator model = new ModelGenerator(line.getOptionValue("pharosModel"));
+            model.setRepository(line.getOptionValue("e"));
+            model.updateIndexes();
+        } else if (line.hasOption("visionModel")){
+            ModelGenerator model = new ModelGenerator(Utils.listJSONFilesForFolder(new File(line.getOptionValue("visionModel"))));
+            model.setRepository(line.getOptionValue("e"));
+            model.generate();
+        } else {
             printOptions();
             throw new UnsupportedOperationException("\nWrong arguments.\n");
         }
@@ -87,7 +106,7 @@ public class Main {
         Logger.getLogger(Main.class.getName()).log(Level.INFO,"Creating PhotoSimilarity-Workspace folder.");
         new File(Resources.WORKSPACE).mkdir();
         new File(Resources.GRAPHS).mkdir();
-        new File(Resources.PASTEC_IDS).mkdir();
+        new File(Resources.IDS).mkdir();
         new File(Resources.MODEL).mkdir();
     }
 }

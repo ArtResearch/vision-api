@@ -30,6 +30,11 @@ public class Utils {
         return filePaths;
     }
     
+    /**
+     *
+     * @param folder
+     * @return
+     */
     public static ArrayList<String> listJSONFilesForFolder(final File folder){
         ArrayList<String> filePaths = new ArrayList<>();
         for(String file: listFilesForFolder(folder)) 
@@ -38,6 +43,11 @@ public class Utils {
         return filePaths;
     }
     
+    /**
+     *
+     * @param strNum
+     * @return
+     */
     public static boolean isNumeric(String strNum) {
         if (strNum == null) {
             return false;

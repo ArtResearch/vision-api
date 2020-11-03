@@ -24,19 +24,22 @@ public class IndexHandler {
 
     public IndexHandler(String indexes) {
         String[] index = indexes.substring(indexes.indexOf("[")+1,indexes.indexOf("]")).split(",");
-        if (Utils.isNumeric(index[0]))
-            this.indexes = Arrays.stream(index).map(i ->new BigInteger(i)).collect(Collectors.toCollection(HashSet::new));
-        else
+        if (Utils.isNumeric(index[0].replace("\"", ""))){
+            this.indexes = Arrays.stream(index).map(i ->new BigInteger(i.replace("\"", ""))).collect(Collectors.toCollection(HashSet::new));
+        }else
             this.indexes = new HashSet<>();
     }
     
+    /**
+     *
+     */
     public void handle() {
-        Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Handling Pastec indexes.");
+        Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Handling indexes.");
         if (this.indexes.size()>0)
           System.out.print(Collections.max(indexes));
         else
           System.out.print(0);
-        Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Current max Pastec index returned.");
+        Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Current max index returned.");
     }
     
 }
