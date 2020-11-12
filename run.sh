@@ -44,7 +44,7 @@ now=$(date +"%Y-%m-%dT%H-%M-%S")
 # Construct query evaluation
 java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -e $endpoint -m $method
 # Request existing indexes
-image_ids=$(curl -X GET http://$host:$port/index/imageIds)
+image_ids=$(curl -X GET $host:$port/index/imageIds)
 max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids $image_ids)
 
 IDs+="<https://pharos.artresearch.net/resource/custom/visual_similarity> {\n"
@@ -54,12 +54,12 @@ IDs+="<https://pharos.artresearch.net/resource/custom/visual_similarity> {\n"
 	echo -e "{\"results\" : ["
 	while read line || [ -n "$line" ]; do
 		# Search through the images in pastec with the image url
-		search=$(curl -X POST -d '{"url":"'$line'"}' http://$host:$port/index/searcher)
+		search=$(curl -X POST -d '{"url":"'$line'"}' $host:$port/index/searcher)
 		echo -e "{\"image_id\": ${ID},\n\"image_url\": \"${line}\",\n\"search_results\": ${search} },"
 		# Add image in Pastec
-		index=$(curl -X POST -d '{"url":"'$line'"}' http://$host:$port/index/images/$ID)
+		index=$(curl -X POST -d '{"url":"'$line'"}' $host:$port/index/images/$ID)
 		# Generate ttl file
-		IDs+="\t<${line}> <https://pharos.artresearch.net/custom/${method}/has_index> <http://${host}:${port}/index/images/${ID}>.\n"
+		IDs+="\t<${line}> <https://pharos.artresearch.net/custom/${method}/has_index> <${host}:${port}/index/images/${ID}>.\n"
 		ID=$(expr $ID + 1)
 	done < ./PhotoSimilarity-Workspace/Graphs/image_uris
 	echo -e "{}]}"
@@ -70,4 +70,4 @@ echo -e $IDs > "./PhotoSimilarity-Workspace/IDs/${now}_pastecIDs.ttl"
 # Update Pharos
 java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharosModel "./PhotoSimilarity-Workspace/IDs/${now}_pastecIDs.ttl"
 # Create model and update Vision
-java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $vision_endpoint -visionModel ./PhotoSimilarity-Workspace/IDs/
+java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -e $vision_endpoint -visionModel "./PhotoSimilarity-Workspace/IDs/${now}_pastecIDs.json"

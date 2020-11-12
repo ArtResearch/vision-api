@@ -2,7 +2,7 @@
 #
 # Examlple of using options in scripts
 #
-
+. ./config.conf
 if [ $# -eq 0 ]
 then
         echo -e "Missing options!\n"

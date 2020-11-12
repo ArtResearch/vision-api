@@ -37,8 +37,10 @@ public class Main {
 //            String[] fake_args = {  "-e", "http://localhost:9999/blazegraph/sparql",
 //                                    "-q", "query",
 //                                    "-m", "Pastec"};
-//            String[] fake_args = {  "-e","http://localhost:9999/blazegraph/sparql",
-//                                    "-pharosModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-02T15-39-05_pastecIDs.ttl"};
+//            String[] fake_args = {  "-p","http://localhost:9999/blazegraph/sparql",
+//                                    "-e","https://vision.artresearch.net/sparql",
+//                                    "-m","Pastec",
+//                                    "-visionModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-09T14-14-46_pastecIDs.json"};
 //            String[] fake_args = {  "-image_ids","{\"image_ids\":[\"3\",\"1\",\"2\"],\"type\":\"INDEX_IMAGE_IDS\"}"};
             CommandLine line = parser.parse( options, args );
             handleCommandLine(line);
@@ -53,6 +55,8 @@ public class Main {
         query.setArgName("query");
         Option endpoint = new Option("e",true,"Endpoint: -e [endpoint]");
         endpoint.setArgName("endpoint");
+        Option pharos_endpoint = new Option("p",true,"Pharos endpoint: -e [pharos_endpoint]");
+        pharos_endpoint.setArgName("pharos_endpoint");
         Option method = new Option("m",true,"Method name : -m [method_name]");
         method.setArgName("method");
         Option image_ids = new Option("image_ids",true,"Image IDs: -image_ids [image_ids in json format]");
@@ -62,6 +66,7 @@ public class Main {
         
         options.addOption(query);
         options.addOption(endpoint);
+        options.addOption(pharos_endpoint);
         options.addOption(method);
         options.addOption(image_ids);
         options.addOption(pharos_model);
@@ -75,8 +80,7 @@ public class Main {
         }
         if (line.hasOption("q") && line.hasOption("e")){
             QueryHandler q = new QueryHandler(line.getOptionValue("q"));
-            q.setRepository(line.getOptionValue("e"));
-//            String graphPath = 
+            q.setRepository(line.getOptionValue("e")); 
             q.createGraph();
         } else if (line.hasOption("image_ids")){
             IndexHandler ih = new IndexHandler(line.getOptionValue("image_ids"));
@@ -88,6 +92,10 @@ public class Main {
         } else if (line.hasOption("visionModel")){
             ModelGenerator model = new ModelGenerator(Utils.listJSONFilesForFolder(new File(line.getOptionValue("visionModel"))));
             model.setRepository(line.getOptionValue("e"));
+            model.getIndexes(line.getOptionValue("p"));
+//            System.out.println(line.getOptionValue("visionModel"));
+//            System.out.println(line.getOptionValue("p"));
+//            System.out.println(line.getOptionValue("e"));
             model.generate();
         } else {
             printOptions();
