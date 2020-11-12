@@ -18,6 +18,10 @@ import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.eclipse.rdf4j.query.BindingSet;
+import org.eclipse.rdf4j.query.TupleQuery;
+import org.eclipse.rdf4j.query.TupleQueryResult;
 import org.eclipse.rdf4j.query.Update;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.sparql.SPARQLRepository;
@@ -58,6 +62,7 @@ public class ModelGenerator {
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Model generation started.");
         parseJSON();
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Repository.");
+        repo.setUsernameAndPassword("vision","vision");
         repo.initialize();
         String modelPath = Resources.MODEL +"/"+LocalDateTime.now().toString().replace(":", "-")+"_model.ttl";
         try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(modelPath), "UTF-8")) {
@@ -71,13 +76,21 @@ public class ModelGenerator {
                         BigInteger hash = hash_1.add(hash_2);
                         String graph = "";
                         graph = graph.concat("<"+Resources.VISION+Resources.GRAPH+"/visual_similarity/"+hash+"> {\n");
-                        graph = graph.concat("\t<"+image_1+"> <"+Resources.SIM+Resources.ELEMENT+"> <"+Resources.VISION+"/"+Resources.SIMILARITY+"/"+Resources.ASSOCIATION+"/"+hash+">.\n");
-                        graph = graph.concat("\t<"+image_2+"> <"+Resources.SIM+Resources.ELEMENT+"> <"+Resources.VISION+"/"+Resources.SIMILARITY+"/"+Resources.ASSOCIATION+"/"+hash+">.\n");
-                        graph = graph.concat("\t<"+Resources.VISION+Resources.ASSOCIATION+"/"+hash+"> a <"+Resources.SIM+Resources.ASSOCIATION+">.\n");
-                        graph = graph.concat("\t<"+Resources.VISION+Resources.ASSOCIATION+"/"+hash+"> <"+Resources.SIM+Resources.METHOD+"> <"+Resources.VISION+"/"+Resources.SIMILARITY+"/"+Resources.ASSOCIATION_METHOD+"/"+Resources.SIMILARITY_METHOD+"/"+hash+">.\n");
-                        graph = graph.concat("\t<"+Resources.VISION+"/"+Resources.SIMILARITY+"/"+Resources.ASSOCIATION_METHOD+hash+Resources.METHOD+"/"+Resources.SIMILARITY_METHOD+"/> a <"+Resources.SIM+Resources.ASSOCIATION_METHOD+">.\n");
-                        graph = graph.concat("\t<"+Resources.VISION+"/"+Resources.SIMILARITY+"/"+Resources.ASSOCIATION_METHOD+hash+Resources.METHOD+"/"+Resources.SIMILARITY_METHOD+"/> a <"+Resources.VISION+"/"+Resources.SIMILARITY+"/"+Resources.ASSOCIATION_METHOD+"/"+Resources.SIMILARITY_METHOD+">.\n");
-                        graph = graph.concat("\t<"+Resources.VISION+"/"+Resources.SIMILARITY+"/"+Resources.ASSOCIATION_METHOD+hash+Resources.METHOD+"/"+Resources.SIMILARITY_METHOD+"/> <"+Resources.SIM+Resources.WEIGHT+"> \"" + map[1] + "\".\n");
+                        // image_uri sim:element https://vision.artresearch.net/resource/similarity/association/hash
+                        graph = graph.concat("\t<"+image_1+"> <"+Resources.SIM+Resources.ELEMENT+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+">.\n");
+                        graph = graph.concat("\t<"+image_2+"> <"+Resources.SIM+Resources.ELEMENT+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+">.\n");
+                        // https://vision.artresearch.net/resource/Similarity/Association/hash a sim:Similarity
+                        graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"> a <"+Resources.SIM+StringUtils.capitalize(Resources.SIMILARITY)+">.\n");
+                        //https://vision.artresearch.net/resource/Similarity/Association/hash sim:method https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec
+                        graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"> <"+Resources.SIM+Resources.METHOD+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+">.\n");
+                        // https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec a sim:Association
+                        graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> a <"+Resources.SIM+Resources.ASSOCIATION+">.\n");
+                        // https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec sim:method https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec
+                        graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> <"+Resources.SIM+Resources.METHOD+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+Resources.ASSOCIATION_METHOD+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+">.\n");
+                        // https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec a sim:AssociationMethod
+                        graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+Resources.ASSOCIATION_METHOD+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> a <"+Resources.SIM+Resources.ASSOCIATION_METHOD+">.\n");
+                        // https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec sim:weight "90"
+                        graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> <"+Resources.SIM+Resources.WEIGHT+"> \"" + map[1] + "\".\n");
                         graph = graph.concat("}\n");
                         writer.append(graph);
                         updateModel(graph);
@@ -111,6 +124,7 @@ public class ModelGenerator {
         try {
             String updateQuery = "INSERT DATA { GRAPH ";
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Repository.");
+//            repo.setUsernameAndPassword("admin", "admin");
             repo.initialize();
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Generating update query.");
             BufferedReader reader = new BufferedReader( new InputStreamReader(new FileInputStream(filename), "UTF8"));
@@ -144,8 +158,8 @@ public class ModelGenerator {
                     JSONObject result = iterator.next();
                     if (result.get("image_id")!=null){
                         BigInteger image_id = new BigInteger(result.get("image_id").toString());
-                        String image_url = result.get("image_url").toString();
-                        image_index.put(image_id, image_url);
+//                        String image_url = result.get("image_url").toString();
+//                        image_index.put(image_id, image_url);
                         JSONObject search_results = (JSONObject)result.get("search_results");
                         JSONArray image_ids = (JSONArray) search_results.get("image_ids");
                         JSONArray scores = (JSONArray) search_results.get("scores");
@@ -166,11 +180,36 @@ public class ModelGenerator {
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public void getIndexes(String pharos_endpoint) {
+        SPARQLRepository pharos_repo = new SPARQLRepository(pharos_endpoint.trim());
+        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Pharos Repository.");
+//            repo.setUsernameAndPassword("admin", "admin");
+        pharos_repo.initialize();
+        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Retrieving "+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+" indexes.");
+        String select = "SELECT ?image ?index WHERE { ?image <https://pharos.artresearch.net/custom/"+Resources.SIMILARITY_METHOD+"/has_index> ?index}";
+        RepositoryConnection conn = pharos_repo.getConnection();
+        TupleQuery tupleQuery = conn.prepareTupleQuery(select);
+        TupleQueryResult tqr = tupleQuery.evaluate();
+        while(tqr.hasNext()){
+            BindingSet result = tqr.next();
+            String image = result.getValue("image").stringValue();
+            String index = result.getValue("index").stringValue();
+            index = index.substring(index.lastIndexOf("/")+1);
+            image_index.put(new BigInteger(index), image);
+        }
+        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Query successfully evaluated.");
+        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Pharos Repository Shutting Down.");
+        pharos_repo.shutDown();
+    }
     /**
      *
      * @param endpoint
      */
     public void setRepository(String endpoint) {
         repo = new SPARQLRepository(endpoint.trim());
-    }    
+    }
+
+
+
 }

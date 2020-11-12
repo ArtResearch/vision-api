@@ -37,9 +37,14 @@ public class Utils {
      */
     public static ArrayList<String> listJSONFilesForFolder(final File folder){
         ArrayList<String> filePaths = new ArrayList<>();
-        for(String file: listFilesForFolder(folder)) 
-            if (file.endsWith(Resources.JSON))
-                    filePaths.add(file);
+        if (folder.isDirectory()){
+            for(String file: listFilesForFolder(folder)) 
+                if (file.endsWith(Resources.JSON))
+                        filePaths.add(file);
+        } else if (folder.isFile() && folder.getAbsolutePath().endsWith(Resources.JSON))
+            filePaths.add(folder.getAbsolutePath());
+        else
+            throw new UnsupportedOperationException("\nFile Error.\n");
         return filePaths;
     }
     

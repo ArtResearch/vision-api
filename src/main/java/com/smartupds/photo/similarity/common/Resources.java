@@ -20,7 +20,7 @@ public class Resources {
     
     // PREFIXES
     public static final String PHAROS_CUSTOM = "https://pharos.artresearch.net/custom/";
-    public static final String VISION = "https://pharos.artresearch.net/resource/";
+    public static final String VISION = "https://vision.artresearch.net/resource/";
     public static final String SIM = "http://purl.org/ontology/similarity/";
     
     // PROPERTIES & ENTITIES
