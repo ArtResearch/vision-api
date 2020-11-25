@@ -61,8 +61,8 @@ public class ModelGenerator {
     public void generate() {
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Model generation started.");
         parseJSON();
-        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Repository.");
-        repo.setUsernameAndPassword("vision","vision");
+        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Vision Repository.");
+        repo.setUsernameAndPassword(Resources.VISION_USER,Resources.VISION_PASSWORD);
         repo.initialize();
         String modelPath = Resources.MODEL +"/"+LocalDateTime.now().toString().replace(":", "-")+"_model.ttl";
         try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(modelPath), "UTF-8")) {
@@ -123,8 +123,8 @@ public class ModelGenerator {
     public void updateIndexes(){
         try {
             String updateQuery = "INSERT DATA { GRAPH ";
-            Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Repository.");
-//            repo.setUsernameAndPassword("admin", "admin");
+            Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Pharos Repository.");
+            repo.setUsernameAndPassword(Resources.PHAROS_USER, Resources.PHAROS_PASSWORD);
             repo.initialize();
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Generating update query.");
             BufferedReader reader = new BufferedReader( new InputStreamReader(new FileInputStream(filename), "UTF8"));
@@ -200,7 +200,7 @@ public class ModelGenerator {
     public void getIndexes(String pharos_endpoint) {
         SPARQLRepository pharos_repo = new SPARQLRepository(pharos_endpoint.trim());
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Pharos Repository.");
-//            repo.setUsernameAndPassword("admin", "admin");
+        pharos_repo.setUsernameAndPassword(Resources.PHAROS_USER, Resources.PHAROS_PASSWORD);
         pharos_repo.initialize();
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Retrieving "+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+" indexes.");
         String select = "SELECT ?image ?index WHERE { ?image <https://pharos.artresearch.net/custom/"+Resources.SIMILARITY_METHOD+"/has_index> ?index}";
