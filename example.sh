@@ -7,7 +7,7 @@ if [ $# -eq 1 ]
 then
 	source $1
 else
-	while getopts ":q:e:m:h:p:" opt; do
+	while getopts ":q:e:m:h:p:u:w:r:s:" opt; do
 		case $opt in
 			q)
 				query="$OPTARG" >&2
@@ -23,6 +23,18 @@ else
 				;;
 			p)
 				port="$OPTARG" >&2
+				;;
+			u) 
+				pharos_user="$OPTARG" >&2
+				;;
+			w) 
+				pharos_password="$OPTARG" >&2
+				;;
+			r) 
+				vision_user="$OPTARG" >&2
+				;;
+			s) 
+				vision_password="$OPTARG" >&2
 				;;
 			\?)
 				echo "Invalid option: -$OPTARG" >&2
@@ -45,6 +57,10 @@ echo $endpoint
 echo $method
 echo $host
 echo $port
+echo $pharos_user
+echo $pharos_password
+echo $vision_user
+echo $vision_password
 
 
 # method=${method:-Pastec}

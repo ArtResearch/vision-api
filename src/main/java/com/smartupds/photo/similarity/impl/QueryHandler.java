@@ -28,7 +28,6 @@ import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.query.GraphQuery;
 import org.eclipse.rdf4j.query.GraphQueryResult;
 import org.eclipse.rdf4j.query.QueryLanguage;
-import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.sparql.SPARQLRepository;
 
@@ -39,7 +38,7 @@ import org.eclipse.rdf4j.repository.sparql.SPARQLRepository;
 public class QueryHandler {
     
     private String constructQuery = "";
-    private Repository repo;
+    private SPARQLRepository repo;
     
     public QueryHandler(String query){
         Matcher m = Pattern.compile("CONSTRUCT[\\s]*\\{[\\s?a-zA-Z_:\\.]*\\}[\\s]*WHERE[\\s]*\\{[\\s\\w?{}.:\\W]*\\}").matcher(query);
@@ -69,7 +68,8 @@ public class QueryHandler {
     public String createGraph(){
         String graphPath = "";
         try {
-            Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Initializing Repository.");
+            Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Initializing Pharos Repository.");
+            repo.setUsernameAndPassword(Resources.PHAROS_USER, Resources.PHAROS_PASSWORD);
             repo.initialize();
             RepositoryConnection conn = repo.getConnection();
             // Filter out images with a particular method index
@@ -135,7 +135,7 @@ public class QueryHandler {
     // Setters & Getters
 
     /**
-     *
+     * Setting Repository
      * @param endpoint
      */
     public void setRepository(String endpoint) {

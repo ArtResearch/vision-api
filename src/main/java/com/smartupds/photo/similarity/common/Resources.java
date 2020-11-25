@@ -14,7 +14,14 @@ public class Resources {
     public static String SIMILARITY_METHOD;
     public static final String PASTEC_METHOD = "pastec";
     public static final String MATCH_METHOD = "match";
-    // Directories
+    
+    // CONFIGURATIONS
+    public static String PHAROS_USER = "admin";
+    public static String PHAROS_PASSWORD = "admin";
+    public static String VISION_USER = "admin";
+    public static String VISION_PASSWORD = "admin";
+    
+    // DIRECTORIES
     public static final String WORKSPACE = "./PhotoSimilarity-Workspace";
     public static final String GRAPHS = WORKSPACE + "/Graphs";
     public static final String IDS = WORKSPACE + "/IDs";
@@ -41,5 +48,14 @@ public class Resources {
     public static void setMethod(String method){
         Resources.SIMILARITY_METHOD = method.trim().toLowerCase();
     }
-    
+
+    public static void setPharosUsernameAndPassword(String username, String password) {
+        Resources.PHAROS_USER = username.trim();
+        Resources.PHAROS_PASSWORD = password.trim();
+    }
+
+    public static void setVisionUsernameAndPassword(String username, String password) {
+        Resources.VISION_USER = username.trim();
+        Resources.VISION_PASSWORD = password.trim();
+    }
 }

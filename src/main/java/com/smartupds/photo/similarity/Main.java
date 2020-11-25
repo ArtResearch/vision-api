@@ -94,6 +94,16 @@ public class Main {
             Resources.setMethod(line.getOptionValue("m"));
             Logger.getLogger(Main.class.getName()).log(Level.INFO,"Selected Method : ".concat(Resources.SIMILARITY_METHOD));
         }
+        if (line.hasOption("pharos_user") && line.hasOption("pharos_password")){
+            Resources.setPharosUsernameAndPassword(line.getOptionValue("pharos_user"),line.getOptionValue("pharos_password"));
+            Logger.getLogger(Main.class.getName()).log(Level.INFO,"Setting Pharos Configuration.");
+        } else 
+            Logger.getLogger(Main.class.getName()).log(Level.INFO,"Setting Pharos Default Configurations.");
+        if (line.hasOption("vision_user") && line.hasOption("vision_password")){
+            Resources.setVisionUsernameAndPassword(line.getOptionValue("vision_user"),line.getOptionValue("vision_password"));
+            Logger.getLogger(Main.class.getName()).log(Level.INFO,"Setting Vision Configuration.");
+        } else 
+            Logger.getLogger(Main.class.getName()).log(Level.INFO,"Setting Vision Default Configurations.");
         if (line.hasOption("q") && line.hasOption("e")){
             QueryHandler q = new QueryHandler(line.getOptionValue("q"));
             q.setRepository(line.getOptionValue("e")); 
