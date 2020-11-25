@@ -1,19 +1,33 @@
-#!/usr/bin/sh
-#
-# Examlple of using options in scripts
-#
-
+#!/bin/bash
+echo
+# Script Options
 if [ $# -eq 1 ]
 then
-	source $1
+        # source ./config.sh
+		source $1
 else
-	while getopts ":q:e:m:h:p:u:w:r:s:" opt; do
+	while getopts ":q:e:m:h:p:v:" opt; do
 		case $opt in
 			q)
 				query="$OPTARG" >&2
 				;;
 			e)
 				endpoint="$OPTARG" >&2
+				;;
+			u) 
+				pharos_user="$OPTARG" >&2
+				;;
+			w) 
+				pharos_password="$OPTARG" >&2
+				;;
+			v)
+				vision_endpoint="$OPTARG" >&2
+				;;
+			r) 
+				vision_user="$OPTARG" >&2
+				;;
+			s) 
+				vision_password="$OPTARG" >&2
 				;;
 			m)
 				method="$OPTARG" >&2
@@ -23,18 +37,6 @@ else
 				;;
 			p)
 				port="$OPTARG" >&2
-				;;
-			u) 
-				pharos_user="$OPTARG" >&2
-				;;
-			w) 
-				pharos_password="$OPTARG" >&2
-				;;
-			r) 
-				vision_user="$OPTARG" >&2
-				;;
-			s) 
-				vision_password="$OPTARG" >&2
 				;;
 			\?)
 				echo "Invalid option: -$OPTARG" >&2
@@ -47,26 +49,20 @@ else
 		esac
 	done
 fi
-
-
-# host=${host:-localhost}
-# port=${port:-4212}
+# Optional arguments default configuration
 method=${method,,}
+now=$(date +"%Y-%m-%dT%H-%M-%S")
+
 echo $query
-echo $endpoint
-echo $method
-echo $host
-echo $port
-echo $pharos_user
-echo $pharos_password
-echo $vision_user
-echo $vision_password
+echo $endpoint 			# https://pharos.artresearch.net/sparql
+echo $pharos_user		# admin
+echo $pharos_password	# pharosadmin
+echo $vision_endpoint	# https://vision.artresearch.net/sparql
+echo $vision_user		# vision
+echo $vision_password	# vision
+echo $method			# Pastec
+echo $host				# http://vision.artresearch.net
+echo $port				# 4212
 
-
-# method=${method:-Pastec}
-
-# if [[ "$method" == "Pastec" ]]; then
-    # echo "is pastec."
-# elif [[ "$method" == "Match" ]]; then
-	# echo "is match"
-# fi
+# Construct query evaluation
+java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -e $endpoint -m $method -pharos_user $pharos_user -pharos_password $pharos_password

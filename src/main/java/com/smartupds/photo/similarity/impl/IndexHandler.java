@@ -45,12 +45,13 @@ public class IndexHandler {
         else if (Resources.SIMILARITY_METHOD.equals(Resources.MATCH_METHOD))
             indexes = ((JSONArray) jsonIndexes.get("result")).toString();
         
-        String[] index = indexes.substring(indexes.indexOf("[")+1,indexes.indexOf("]")).split(",");
+        String[] temp = indexes.substring(indexes.indexOf("[")+1,indexes.indexOf("]")).split(",");
         HashSet<BigInteger> indexesHashed = new HashSet<>();
-        if (Utils.isNumeric(index[0].replace("\"", ""))){
-            indexesHashed = Arrays.stream(index).map(i ->new BigInteger(i.replace("\"", ""))).collect(Collectors.toCollection(HashSet::new));
-        }else
-            indexesHashed = new HashSet<>();
+        for(String index:temp){
+            if (Utils.isNumeric(index.replace("\"", ""))){
+                indexesHashed.add(new BigInteger(index.replace("\"", "")));
+            }
+        }
         Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Handling indexes.");
         if (indexesHashed.size()>0)
             System.out.print(Collections.max(indexesHashed));

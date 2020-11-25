@@ -43,8 +43,8 @@ public class Main {
 //                                    "-visionModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-09T14-14-46_pastecIDs.json"};
 //            args = new String[]{  "-image_ids","{\"image_ids\":[\"3\",\"1\",\"2\"],\"type\":\"INDEX_IMAGE_IDS\"}",
 //                                  "-m","Pastec"};
-//            args = new String[]{    "-image_ids","{\"status\": \"ok\", \"error\": [], \"method\": \"list\", \"result\": []}",
-//                                    "-m","Match"};
+//            args = new String[]{    "-image_ids","{\"status\": \"ok\", \"error\": [], \"method\": \"list\", \"result\": [\"3\", \"1\", \"4\", \"\", \"2\"]}",
+//                                    "-m","match"};
 //            args = new String[]{    "-p","http://localhost:9999/blazegraph/sparql",
 //                                    "-e","https://vision.artresearch.net/sparql",
 //                                    "-visionModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-24T12-17-41_matchIDs.json",
