@@ -153,23 +153,39 @@ public class ModelGenerator {
                 Object obj = parserJson.parse(new InputStreamReader(new FileInputStream(jsonfile), "UTF8"));
                 JSONObject jsonObject = (JSONObject) obj;
                 JSONArray companyList = (JSONArray) jsonObject.get("results");
+                
                 Iterator<JSONObject> iterator = companyList.iterator();
                 while (iterator.hasNext()) {
                     JSONObject result = iterator.next();
                     if (result.get("image_id")!=null){
                         BigInteger image_id = new BigInteger(result.get("image_id").toString());
-//                        String image_url = result.get("image_url").toString();
-//                        image_index.put(image_id, image_url);
-                        JSONObject search_results = (JSONObject)result.get("search_results");
-                        JSONArray image_ids = (JSONArray) search_results.get("image_ids");
-                        JSONArray scores = (JSONArray) search_results.get("scores");
-                        String[][] image_scores = new String[image_ids.size()][2];
-                        if (!image_ids.isEmpty()){
-                            for(int i=0;i<image_ids.size();i++){
-                                image_scores[i][0] = image_ids.get(i).toString();
-                                image_scores[i][1] = scores.get(i).toString();
+                        if (Resources.SIMILARITY_METHOD.equals(Resources.PASTEC_METHOD)){
+                            JSONObject search_results = (JSONObject)result.get("search_results");
+                            JSONArray image_ids = (JSONArray) search_results.get("image_ids");
+                            JSONArray scores = (JSONArray) search_results.get("scores");
+                            String[][] image_scores = new String[image_ids.size()][2];
+                            if (!image_ids.isEmpty()){
+                                for(int i=0;i<image_ids.size();i++){
+                                    image_scores[i][0] = image_ids.get(i).toString();
+                                    image_scores[i][1] = scores.get(i).toString();
+                                }
+                                image_maps.put(image_id, image_scores);
                             }
-                            image_maps.put(image_id, image_scores);
+                        } else if (Resources.SIMILARITY_METHOD.equals(Resources.MATCH_METHOD)){
+                            JSONArray search_results = (JSONArray)result.get("search_results");
+                            if (!search_results.isEmpty()){
+                                JSONArray results = (JSONArray)((JSONObject)search_results.get(0)).get("result");
+                                Iterator<JSONObject> resultIterator = results.iterator();
+                                String[][] image_scores = new String[results.size()][2];
+                                int count = 0 ;
+                                while(resultIterator.hasNext()){
+                                    JSONObject scoring = resultIterator.next();
+                                    image_scores[count][0] = scoring.get("filepath").toString();
+                                    image_scores[count][1] = scoring.get("score").toString();
+                                    count++;
+                                }
+                                image_maps.put(image_id, image_scores);
+                            }
                         }
                     }
                 }

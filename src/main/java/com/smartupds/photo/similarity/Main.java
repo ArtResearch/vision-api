@@ -41,7 +41,15 @@ public class Main {
 //                                    "-e","https://vision.artresearch.net/sparql",
 //                                    "-m","Pastec",
 //                                    "-visionModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-09T14-14-46_pastecIDs.json"};
-//            String[] fake_args = {  "-image_ids","{\"image_ids\":[\"3\",\"1\",\"2\"],\"type\":\"INDEX_IMAGE_IDS\"}"};
+//            args = new String[]{  "-image_ids","{\"image_ids\":[\"3\",\"1\",\"2\"],\"type\":\"INDEX_IMAGE_IDS\"}",
+//                                  "-m","Pastec"};
+//            args = new String[]{    "-image_ids","{\"status\": \"ok\", \"error\": [], \"method\": \"list\", \"result\": []}",
+//                                    "-m","Match"};
+//            args = new String[]{    "-p","http://localhost:9999/blazegraph/sparql",
+//                                    "-e","https://vision.artresearch.net/sparql",
+//                                    "-visionModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-24T12-17-41_matchIDs.json",
+//                                    "-m","Match"};
+
             CommandLine line = parser.parse( options, args );
             handleCommandLine(line);
         } catch( ParseException exp ) {
@@ -62,7 +70,11 @@ public class Main {
         Option image_ids = new Option("image_ids",true,"Image IDs: -image_ids [image_ids in json format]");
         endpoint.setArgName("image_ids");
         Option pharos_model = new Option("pharosModel",true,"Update Pharos model : -pharosModel [index_graph.ttl]");
+        Option pharos_user = new Option("pharos_user",true,"Pharos username : -pharos_user [username]");
+        Option pharos_password = new Option("pharos_password",true,"Pharos password : -pharos_password [password]");
         Option vision_model = new Option("visionModel",true,"Update Vision model : -visionModel [similarity_file.json]");
+        Option vision_user = new Option("vision_user",true,"Vision username : -vision_user [username]");
+        Option vision_password = new Option("vision_password",true,"Vision password : -vision_password [password]");
         
         options.addOption(query);
         options.addOption(endpoint);
@@ -70,7 +82,11 @@ public class Main {
         options.addOption(method);
         options.addOption(image_ids);
         options.addOption(pharos_model);
+        options.addOption(pharos_user);
+        options.addOption(pharos_password);
         options.addOption(vision_model);
+        options.addOption(vision_user);
+        options.addOption(vision_password);
     }
 
     private static void handleCommandLine(CommandLine line) {
@@ -93,9 +109,6 @@ public class Main {
             ModelGenerator model = new ModelGenerator(Utils.listJSONFilesForFolder(new File(line.getOptionValue("visionModel"))));
             model.setRepository(line.getOptionValue("e"));
             model.getIndexes(line.getOptionValue("p"));
-//            System.out.println(line.getOptionValue("visionModel"));
-//            System.out.println(line.getOptionValue("p"));
-//            System.out.println(line.getOptionValue("e"));
             model.generate();
         } else {
             printOptions();
