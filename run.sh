@@ -52,6 +52,18 @@ fi
 # Optional arguments default configuration
 method=${method,,}
 now=$(date +"%Y-%m-%dT%H-%M-%S")
+
+# echo $query
+# echo $endpoint 			# https://pharos.artresearch.net/sparql
+# echo $pharos_user		# admin
+# echo $pharos_password	# pharosadmin
+# echo $vision_endpoint	# https://vision.artresearch.net/sparql
+# echo $vision_user		# vision
+# echo $vision_password	# vision
+# echo $method			# Pastec
+# echo $host				# http://vision.artresearch.net
+# echo $port				# 4212
+
 # Construct query evaluation
 java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -e $endpoint -m $method -pharos_user $pharos_user -pharos_password $pharos_password
 
@@ -109,7 +121,6 @@ elif [[ "$method" == "match" ]]; then
 	# Save indexes in a file
 	IDs+="}"
 fi
-
 echo -e $IDs > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
 # Update Pharos
 java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -pharosModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"

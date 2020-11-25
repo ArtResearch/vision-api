@@ -91,6 +91,7 @@ public class QueryHandler {
             HashSet<String> image_uris_distinct = new HashSet<>();
             while(result.hasNext()){
                 Statement stmt = result.next();
+//                System.out.println(stmt);
 //                if (!previous_ids.contains(stmt.getObject().toString().trim())){
                 writer.append("<"+stmt.getSubject().toString()+"> <"+ stmt.getPredicate()+"> <"+stmt.getObject()+">.\n");
                 image_uris_distinct.add(stmt.getObject().toString().trim());
