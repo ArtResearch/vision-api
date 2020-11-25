@@ -12,6 +12,8 @@ package com.smartupds.photo.similarity.common;
 public class Resources {
     // METHOD 
     public static String SIMILARITY_METHOD;
+    public static final String PASTEC_METHOD = "pastec";
+    public static final String MATCH_METHOD = "match";
     // Directories
     public static final String WORKSPACE = "./PhotoSimilarity-Workspace";
     public static final String GRAPHS = WORKSPACE + "/Graphs";

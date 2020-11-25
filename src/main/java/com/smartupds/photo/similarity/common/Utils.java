@@ -39,7 +39,7 @@ public class Utils {
         ArrayList<String> filePaths = new ArrayList<>();
         if (folder.isDirectory()){
             for(String file: listFilesForFolder(folder)) 
-                if (file.endsWith(Resources.JSON))
+                if (file.endsWith(Resources.JSON) && file.contains(Resources.SIMILARITY_METHOD))
                         filePaths.add(file);
         } else if (folder.isFile() && folder.getAbsolutePath().endsWith(Resources.JSON))
             filePaths.add(folder.getAbsolutePath());
