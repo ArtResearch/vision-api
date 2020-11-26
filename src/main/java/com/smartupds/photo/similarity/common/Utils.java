@@ -7,6 +7,8 @@ package com.smartupds.photo.similarity.common;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -63,5 +65,14 @@ public class Utils {
             return false;
         }
         return true;
+    }
+
+    public static void resizeImage(String URL) {
+        String newURL = "";
+        Matcher m = Pattern.compile("(^.*\\/)[^\\/]*(\\/[^\\/]*\\/[^\\/]*$)").matcher(URL);
+        if (m.find()){
+            newURL = m.group(1) + "!1000,1000" + m.group(2);
+        }
+        System.out.println(newURL);
     }
 }

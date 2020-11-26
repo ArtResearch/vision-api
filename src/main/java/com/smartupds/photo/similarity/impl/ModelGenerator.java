@@ -203,7 +203,7 @@ public class ModelGenerator {
         pharos_repo.setUsernameAndPassword(Resources.PHAROS_USER, Resources.PHAROS_PASSWORD);
         pharos_repo.initialize();
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Retrieving "+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+" indexes.");
-        String select = "SELECT ?image ?index WHERE { ?image <https://pharos.artresearch.net/custom/"+Resources.SIMILARITY_METHOD+"/has_index> ?index}";
+        String select = "SELECT ?image ?index WHERE { ?image <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> ?index}";
         RepositoryConnection conn = pharos_repo.getConnection();
         TupleQuery tupleQuery = conn.prepareTupleQuery(select);
         TupleQueryResult tqr = tupleQuery.evaluate();
@@ -211,7 +211,8 @@ public class ModelGenerator {
             BindingSet result = tqr.next();
             String image = result.getValue("image").stringValue();
             String index = result.getValue("index").stringValue();
-            index = index.substring(index.lastIndexOf("/")+1);
+            if (index.contains("/"))
+                index = index.substring(index.lastIndexOf("/")+1);
             image_index.put(new BigInteger(index), image);
         }
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Query successfully evaluated.");

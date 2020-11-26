@@ -49,7 +49,7 @@ public class Main {
 //                                    "-e","https://vision.artresearch.net/sparql",
 //                                    "-visionModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-24T12-17-41_matchIDs.json",
 //                                    "-m","Match"};
-
+//            args =  new String[]{   "-image_url","https://ids.lib.harvard.edu/ids/iiif/406553072/full/full/0/native.jpg"};
             CommandLine line = parser.parse( options, args );
             handleCommandLine(line);
         } catch( ParseException exp ) {
@@ -75,6 +75,7 @@ public class Main {
         Option vision_model = new Option("visionModel",true,"Update Vision model : -visionModel [similarity_file.json]");
         Option vision_user = new Option("vision_user",true,"Vision username : -vision_user [username]");
         Option vision_password = new Option("vision_password",true,"Vision password : -vision_password [password]");
+        Option image_url = new Option("image_url",true,"Resize image : -image_url [url]");
         
         options.addOption(query);
         options.addOption(endpoint);
@@ -87,6 +88,7 @@ public class Main {
         options.addOption(vision_model);
         options.addOption(vision_user);
         options.addOption(vision_password);
+        options.addOption(image_url);
     }
 
     private static void handleCommandLine(CommandLine line) {
@@ -120,6 +122,8 @@ public class Main {
             model.setRepository(line.getOptionValue("e"));
             model.getIndexes(line.getOptionValue("p"));
             model.generate();
+        } else if (line.hasOption("image_url")){
+            Utils.resizeImage(line.getOptionValue("image_url"));
         } else {
             printOptions();
             throw new UnsupportedOperationException("\nWrong arguments.\n");
