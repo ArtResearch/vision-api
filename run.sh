@@ -50,6 +50,7 @@ else
 	done
 fi
 # Optional arguments default configuration
+host=${host:-localhost}
 method=${method,,}
 now=$(date +"%Y-%m-%dT%H-%M-%S")
 
