@@ -74,19 +74,21 @@ if [[ "$method" == "pastec" ]]; then
 	image_ids=$(curl -X GET $host:$port/index/imageIds)
 	max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids $image_ids -m $method)
 
-	IDs+="<https://pharos.artresearch.net/resource/custom/visual_similarity> {\n"
+	IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
 	#Pastec Photo Similarity Evaluation & Indexing
 	{
 		ID=$(expr $max_id + 1)
 		echo -e "{\"results\" : ["
 		while read line || [ -n "$line" ]; do
+			# resize image (based on iiif model)
+			url=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_url $line)
 			# Search through the images in pastec with the image url
-			search=$(curl -X POST -d '{"url":"'$line'"}' $host:$port/index/searcher)
+			search=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/searcher)
 			echo -e "{\"image_id\": ${ID},\n\"image_url\": \"${line}\",\n\"search_results\": ${search} },"
 			# Add image in Pastec
-			index=$(curl -X POST -d '{"url":"'$line'"}' $host:$port/index/images/$ID)
+			index=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/images/$ID)
 			# Generate ttl file
-			IDs+="\t<${line}> <https://pharos.artresearch.net/custom/${method}/has_index> <${host}:${port}/index/images/${ID}>.\n"
+			IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> <${host}:${port}/index/images/${ID}>.\n"
 			ID=$(expr $ID + 1)
 		done < ./PhotoSimilarity-Workspace/Graphs/image_uris
 		echo -e "{}]}"
@@ -101,20 +103,22 @@ elif [[ "$method" == "match" ]]; then
 	image_ids=$(echo $image_ids | sed 's/ //g')
 	max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids $image_ids -m $method)
 	
-	IDs+="<https://pharos.artresearch.net/resource/custom/visual_similarity> {\n"
+	IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
 	#Match Photo Similarity Evaluation & Indexing
 	{
 		ID=$(expr $max_id + 1)
 		echo -e "{\"results\" : ["
 		while read line || [ -n "$line" ]; do
+			# resize image (based on iiif model)
+			url=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_url $line)
 			# Search through the images in match with the image url
-			search=$(curl -X POST -F url=$line $host:$port/search)
+			search=$(curl -X POST -F url=$url $host:$port/search)
 			#[SAME]
 			echo -e "{\"image_id\": ${ID},\n\"image_url\": \"${line}\",\n\"search_results\": [${search}] },"
 			# Add image in Match
-			index=$(curl -X POST -F url=$line -F filepath=$ID $host:$port/add)
+			index=$(curl -X POST -F url=$url -F filepath=$ID $host:$port/add)
 			# Generate ttl file
-			IDs+="\t<${line}> <https://pharos.artresearch.net/custom/${method}/has_index> <${host}:${port}/index/images/${ID}>.\n"
+			IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> \"${ID}\".\n"
 			ID=$(expr $ID + 1)
 		done < ./PhotoSimilarity-Workspace/Graphs/image_uris
 		echo -e "{}]}"

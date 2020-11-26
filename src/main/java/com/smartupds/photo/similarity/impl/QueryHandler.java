@@ -74,7 +74,7 @@ public class QueryHandler {
             RepositoryConnection conn = repo.getConnection();
             // Filter out images with a particular method index
             constructQuery = constructQuery.substring(0,constructQuery.lastIndexOf("}"))
-                                + "\tFILTER NOT EXISTS { ?image <https://pharos.artresearch.net/custom/"+Resources.SIMILARITY_METHOD+"/has_index> ?index}\n"
+                                + "\tFILTER NOT EXISTS { ?image <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> ?index}\n"
                                 + constructQuery.substring(constructQuery.lastIndexOf("}"));
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Processing CONSTRUCT Query : \n\n".concat(constructQuery));
             GraphQuery graph = conn.prepareGraphQuery(QueryLanguage.SPARQL, constructQuery);
