@@ -157,7 +157,7 @@ public class ModelGenerator {
                 Iterator<JSONObject> iterator = companyList.iterator();
                 while (iterator.hasNext()) {
                     JSONObject result = iterator.next();
-                    if (result.get("image_id")!=null){
+                    if (result.get("image_id")!=null && !((JSONObject)result.get("search_results")).get("type").equals("IMAGE_DOWNLOADER_HTTP_ERROR")){
                         BigInteger image_id = new BigInteger(result.get("image_id").toString());
                         if (Resources.SIMILARITY_METHOD.equals(Resources.PASTEC_METHOD)){
                             JSONObject search_results = (JSONObject)result.get("search_results");
