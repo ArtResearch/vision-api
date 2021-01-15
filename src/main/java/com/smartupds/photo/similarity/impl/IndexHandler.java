@@ -53,11 +53,14 @@ public class IndexHandler {
             }
         }
         Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Handling indexes.");
-        if (indexesHashed.size()>0)
+        if (indexesHashed.size()>0){
             System.out.print(Collections.max(indexesHashed));
-        else
+            Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Current max index returned : ".concat(""+Collections.max(indexesHashed)));
+        } else {
             System.out.print(1000000);
-        Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Current max index returned.");
+            Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Current max index returned : 1000000");
+        }
+            
     }
     
 }
