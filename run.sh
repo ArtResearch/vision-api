@@ -85,17 +85,20 @@ if [[ "$method" == "pastec" ]]; then
 			# Search through the images in pastec with the image url
 			search=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/searcher)
 			echo -e "{\"image_id\": ${ID},\n\"image_url\": \"${line}\",\n\"search_results\": ${search} },"
-			# Add image in Pastec
+			# Add image in Pastec (POST original)
 			index=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/images/$ID)
 			# Generate ttl file
-			IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> <${host}:${port}/index/images/${ID}>.\n"
+			IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> <https://vision.artresearch.net:${port}/index/images/${ID}>.\n"
+			if [[ $(expr $ID % 1000) -eq 0 ]]; then
+				write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
+			fi
 			ID=$(expr $ID + 1)
 		done < ./PhotoSimilarity-Workspace/Graphs/image_uris
 		echo -e "{}]}"
 	} > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
 	# Save indexes in a file
 	IDs+="}"
-
+	write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
 elif [[ "$method" == "match" ]]; then
 	# MATCH METHOD
 	# Request existing indexes

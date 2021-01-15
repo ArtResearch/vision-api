@@ -41,7 +41,7 @@ public class Main {
 //                                    "-e","https://vision.artresearch.net/sparql",
 //                                    "-m","Pastec",
 //                                    "-visionModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-09T14-14-46_pastecIDs.json"};
-//            args = new String[]{  "-image_ids","{\"image_ids\":[\"3\",\"1\",\"2\"],\"type\":\"INDEX_IMAGE_IDS\"}",
+//            args = new String[]{  "-image_ids","{\"image_ids\":[],\"type\":\"INDEX_IMAGE_IDS\"}",
 //                                  "-m","Pastec"};
 //            args = new String[]{    "-image_ids","{\"status\": \"ok\", \"error\": [], \"method\": \"list\", \"result\": [\"3\", \"1\", \"4\", \"\", \"2\"]}",
 //                                    "-m","match"};
@@ -50,6 +50,13 @@ public class Main {
 //                                    "-visionModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-24T12-17-41_matchIDs.json",
 //                                    "-m","Match"};
 //            args =  new String[]{   "-image_url","https://ids.lib.harvard.edu/ids/iiif/406553072/full/full/0/native.jpg"};
+//
+//            args = new String[] {   "-m","pastec",
+//                                    "-e","https://artresearch.net/sparql",
+//                                    "-pharos_user","user",
+//                                    "-pharos_password","pharosadmin",
+//                                    "-pharosModel","./PhotoSimilarity-Workspace/IDs/2021-01-14T18-15-09_pastecIDs.ttl"
+//            };
             CommandLine line = parser.parse( options, args );
             handleCommandLine(line);
         } catch( ParseException exp ) {

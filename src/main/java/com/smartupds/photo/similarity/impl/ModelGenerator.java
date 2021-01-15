@@ -17,6 +17,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.rdf4j.query.BindingSet;
@@ -68,10 +70,13 @@ public class ModelGenerator {
         try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(modelPath), "UTF-8")) {
             image_maps.forEach((index,maps) -> {
                 try {
+
                     String image_1 = image_index.get(index);
+//                    System.out.println(image_1 + index);
                     BigInteger hash_1 = new BigInteger(DigestUtils.sha1Hex(image_1).replaceAll("[a-zA-Z]+", "").trim());
                     for (String[] map : maps) {
                         String image_2 = image_index.get(new BigInteger(map[0]));
+//                        System.out.println(image_2 + " " + new BigInteger(map[0]) );
                         BigInteger hash_2 = new BigInteger(DigestUtils.sha1Hex(image_2).replaceAll("[a-zA-Z]+", "").trim());
                         BigInteger hash = hash_1.add(hash_2);
                         String graph = "";
@@ -122,21 +127,48 @@ public class ModelGenerator {
     
     public void updateIndexes(){
         try {
-            String updateQuery = "INSERT DATA { GRAPH ";
+            
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Pharos Repository.");
             repo.setUsernameAndPassword(Resources.PHAROS_USER, Resources.PHAROS_PASSWORD);
             repo.initialize();
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Generating update query.");
             BufferedReader reader = new BufferedReader( new InputStreamReader(new FileInputStream(filename), "UTF8"));
             String row;
-            while ((row = reader.readLine())!=null)
-                updateQuery += row +"\n";
-            updateQuery += "}";
+            String graph_name = "http://graph_name";
+            
+            ArrayList<String> updateQueries = new ArrayList<>();
+            
+            String tempupdateQuery = "";
+            int counter = 0;
+            boolean find = false;
+            while ((row = reader.readLine())!=null){
+                counter++;
+                if (find==true)
+                    tempupdateQuery = tempupdateQuery + row.replace("}", "") + "\n";
+                Matcher start = Pattern.compile("<([^>]*)>").matcher(row);
+                if (start.find() && find==false){
+                    graph_name = start.group(1);
+                    find = true;
+                }
+                if (counter%1000==0){
+                    updateQueries.add(tempupdateQuery);
+                    tempupdateQuery = "";
+                }
+            }
+            if (counter%1000!=0){
+                updateQueries.add(tempupdateQuery);
+                tempupdateQuery = "";
+            }
+            
             RepositoryConnection conn = repo.getConnection();
-            Update update = conn.prepareUpdate(updateQuery);
-            Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Executing update query.");
-            update.execute();
-            Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Update query successfully executed.");
+            for (String updateQuery: updateQueries){
+                String insert = "INSERT { GRAPH <" +graph_name+ "> {\n"+updateQuery + "\n}} WHERE {}";
+//                System.out.println(insert);
+                Update update = conn.prepareUpdate(insert);
+                Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Executing update query.");
+                update.execute();
+                Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Update query successfully executed.");
+            }
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Repository Shutting Down.");
             repo.shutDown();
         } catch (UnsupportedEncodingException | FileNotFoundException ex) {
@@ -155,16 +187,21 @@ public class ModelGenerator {
                 JSONArray companyList = (JSONArray) jsonObject.get("results");
                 
                 Iterator<JSONObject> iterator = companyList.iterator();
+                int counter = 0;
                 while (iterator.hasNext()) {
                     JSONObject result = iterator.next();
                     if (result.get("image_id")!=null && !((JSONObject)result.get("search_results")).get("type").equals("IMAGE_DOWNLOADER_HTTP_ERROR")){
                         BigInteger image_id = new BigInteger(result.get("image_id").toString());
+//                        // to comment the below
+//                        image_index.put(image_id, result.get("image_url").toString());
                         if (Resources.SIMILARITY_METHOD.equals(Resources.PASTEC_METHOD)){
                             JSONObject search_results = (JSONObject)result.get("search_results");
                             JSONArray image_ids = (JSONArray) search_results.get("image_ids");
                             JSONArray scores = (JSONArray) search_results.get("scores");
-                            String[][] image_scores = new String[image_ids.size()][2];
-                            if (!image_ids.isEmpty()){
+                            if (image_ids!=null && !image_ids.isEmpty()){
+//                                System.out.println(image_ids.toJSONString());
+//                                counter++;
+                                String[][] image_scores = new String[image_ids.size()][2];
                                 for(int i=0;i<image_ids.size();i++){
                                     image_scores[i][0] = image_ids.get(i).toString();
                                     image_scores[i][1] = scores.get(i).toString();
@@ -187,7 +224,12 @@ public class ModelGenerator {
                                 image_maps.put(image_id, image_scores);
                             }
                         }
-                    }
+                    } 
+//                    else {
+//                        //remove after
+//                        if (result.get("image_id")!=null && result.get("image_url")!=null)
+//                            image_index.put(new BigInteger(result.get("image_id").toString()), result.get("image_url").toString());
+//                    }
                 }
             }
         } catch (FileNotFoundException | UnsupportedEncodingException ex) {

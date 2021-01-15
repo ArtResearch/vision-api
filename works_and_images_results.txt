@@ -1,0 +1,76 @@
+
+> Images from Zeri and Itatti that have been classified as a match by Pastec are shown in the model below.
+
+> Respective artwork uris are https://artresearch.net/resource/?uri=https://pharos.artresearch.net/resource/zeri/work/17588 and https://artresearch.net/resource/?uri=https://pharos.artresearch.net/resource/itatti/work/8000848514
+
+> No match with inMatcher because different name of artist.
+
+<https://vision.artresearch.net/resource/graph/visual_similarity/61443611561160231886975586172> {
+	<https://iiif.artresearch.net/iiif/2/zeri!48000%2147761_g.jpg/full/full/0/default.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/61443611561160231886975586172>.
+	<https://ids.lib.harvard.edu/ids/iiif/44425767/full/full/0/native.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/61443611561160231886975586172>.
+	<https://vision.artresearch.net/resource/Similarity/61443611561160231886975586172> a <http://purl.org/ontology/similarity/Similarity>.
+	<https://vision.artresearch.net/resource/Similarity/61443611561160231886975586172> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/61443611561160231886975586172/Association/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/61443611561160231886975586172/Association/Pastec> a <http://purl.org/ontology/similarity/Association>.
+	<https://vision.artresearch.net/resource/Similarity/61443611561160231886975586172/Association/Pastec> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec> a <http://purl.org/ontology/similarity/AssociationMethod>.
+	<https://vision.artresearch.net/resource/Similarity/61443611561160231886975586172/Association/Pastec> <http://purl.org/ontology/similarity/weight> "31.0".
+}
+
+> Images from Zeri and Itatti (fotoindex) that have been classified as a match by Pastec are shown in the model below.
+
+> Respective artwork uris are https://artresearch.net/resource/?uri=https://pharos.artresearch.net/resource/zeri/work/1667 (Title : 	
+Gaddi Taddeo , San Francesco d'Assisi riceve le stimmate) and https://artresearch.net/resource/?uri=https://pharos.artresearch.net/resource/itatti/work/W00004214 (Title : W00004214)
+
+> Different titles -> not a match by In Matcher.
+
+
+<https://vision.artresearch.net/resource/graph/visual_similarity/45597923028425011514360212442> {
+	<https://iiif.itatti.harvard.edu/iiif/2/fotoindex!011_recto_d!011_recto_box02_d!011_recto_box02_d_00060.jpg/full/!700,700/0/default.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/45597923028425011514360212442>.
+	<https://iiif.artresearch.net/iiif/2/zeri!14400%2114382_g.jpg/full/full/0/default.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/45597923028425011514360212442>.
+	<https://vision.artresearch.net/resource/Similarity/45597923028425011514360212442> a <http://purl.org/ontology/similarity/Similarity>.
+	<https://vision.artresearch.net/resource/Similarity/45597923028425011514360212442> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/45597923028425011514360212442/Association/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/45597923028425011514360212442/Association/Pastec> a <http://purl.org/ontology/similarity/Association>.
+	<https://vision.artresearch.net/resource/Similarity/45597923028425011514360212442/Association/Pastec> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec> a <http://purl.org/ontology/similarity/AssociationMethod>.
+	<https://vision.artresearch.net/resource/Similarity/45597923028425011514360212442/Association/Pastec> <http://purl.org/ontology/similarity/weight> "48.0".
+}
+
+> Images from Zeri and Itatti that have been classified as a match by Pastec are shown in the model below.
+
+> Respective artwork uris are https://artresearch.net/resource/?uri=https://pharos.artresearch.net/resource/zeri/work/25807 (Title : Anointing of Christ's body) 
+and https://artresearch.net/resource/?uri=https://pharos.artresearch.net/resource/itatti/work/8000764573 (Title : Pesaro altarpiece: Pietà)
+
+> Not a match by InMatcher -> different title
+
+<https://vision.artresearch.net/resource/graph/visual_similarity/80646246126749804598273564> {
+	<https://ids.lib.harvard.edu/ids/iiif/420679396/full/full/0/native.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/80646246126749804598273564>.
+	<https://iiif.artresearch.net/iiif/2/zeri!63600%2163575_g.jpg/full/full/0/default.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/80646246126749804598273564>.
+	<https://vision.artresearch.net/resource/Similarity/80646246126749804598273564> a <http://purl.org/ontology/similarity/Similarity>.
+	<https://vision.artresearch.net/resource/Similarity/80646246126749804598273564> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/80646246126749804598273564/Association/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/80646246126749804598273564/Association/Pastec> a <http://purl.org/ontology/similarity/Association>.
+	<https://vision.artresearch.net/resource/Similarity/80646246126749804598273564/Association/Pastec> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec> a <http://purl.org/ontology/similarity/AssociationMethod>.
+	<https://vision.artresearch.net/resource/Similarity/80646246126749804598273564/Association/Pastec> <http://purl.org/ontology/similarity/weight> "35.0".
+}
+
+> Images from Zeri and Itatti that have been classified as a match by Pastec are shown in the model below.
+
+> Respective artwork uris are https://artresearch.net/resource/?uri=https://pharos.artresearch.net/resource/zeri/work/20116
+and https://artresearch.net/resource/?uri=https://pharos.artresearch.net/resource/itatti/work/8001517794
+
+> Matched by InMatcher : same title & artist.
+
+> Images for Zeri (https://iiif.artresearch.net/iiif/2/zeri!53200%2153138_g.jpg/full/full/0/default.jpg) and Itatti (https://ids.lib.harvard.edu/ids/iiif/420728992/full/full/0/native.jpg).
+
+<https://vision.artresearch.net/resource/graph/visual_similarity/75695783191427849989421311> {
+	<https://ids.lib.harvard.edu/ids/iiif/420728992/full/full/0/native.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/75695783191427849989421311>.
+	<https://iiif.artresearch.net/iiif/2/zeri!53200%2153138_g.jpg/full/full/0/default.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/75695783191427849989421311>.
+	<https://vision.artresearch.net/resource/Similarity/75695783191427849989421311> a <http://purl.org/ontology/similarity/Similarity>.
+	<https://vision.artresearch.net/resource/Similarity/75695783191427849989421311> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/75695783191427849989421311/Association/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/75695783191427849989421311/Association/Pastec> a <http://purl.org/ontology/similarity/Association>.
+	<https://vision.artresearch.net/resource/Similarity/75695783191427849989421311/Association/Pastec> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec> a <http://purl.org/ontology/similarity/AssociationMethod>.
+	<https://vision.artresearch.net/resource/Similarity/75695783191427849989421311/Association/Pastec> <http://purl.org/ontology/similarity/weight> "32.0".
+}
+
+
