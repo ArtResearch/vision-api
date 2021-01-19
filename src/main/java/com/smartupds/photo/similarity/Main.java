@@ -55,7 +55,8 @@ public class Main {
 //                                    "-e","https://artresearch.net/sparql",
 //                                    "-pharos_user","user",
 //                                    "-pharos_password","pharosadmin",
-//                                    "-pharosModel","./PhotoSimilarity-Workspace/IDs/2021-01-14T18-15-09_pastecIDs.ttl"
+//                                    "-json_file","./PhotoSimilarity-Workspace/IDs/2021-01-15T17-52-46_pastecIDs.json",
+//                                    "-pharosModel","./PhotoSimilarity-Workspace/IDs/2021-01-15T17-52-46_pastecIDs.ttl"
 //            };
             CommandLine line = parser.parse( options, args );
             handleCommandLine(line);
@@ -76,6 +77,7 @@ public class Main {
         method.setArgName("method");
         Option image_ids = new Option("image_ids",true,"Image IDs: -image_ids [image_ids in json format]");
         endpoint.setArgName("image_ids");
+        Option json_file = new Option("json_file",true,"Update Pharos model : -json_file [json_file.json]");
         Option pharos_model = new Option("pharosModel",true,"Update Pharos model : -pharosModel [index_graph.ttl]");
         Option pharos_user = new Option("pharos_user",true,"Pharos username : -pharos_user [username]");
         Option pharos_password = new Option("pharos_password",true,"Pharos password : -pharos_password [password]");
@@ -89,6 +91,7 @@ public class Main {
         options.addOption(pharos_endpoint);
         options.addOption(method);
         options.addOption(image_ids);
+        options.addOption(json_file);
         options.addOption(pharos_model);
         options.addOption(pharos_user);
         options.addOption(pharos_password);
@@ -122,6 +125,7 @@ public class Main {
             ih.handle();
         } else if (line.hasOption("pharosModel") && line.hasOption("e")){
             ModelGenerator model = new ModelGenerator(line.getOptionValue("pharosModel"));
+            model.generateIndexModel(line.getOptionValue("json_file"));
             model.setRepository(line.getOptionValue("e"));
             model.updateIndexes();
         } else if (line.hasOption("visionModel")){

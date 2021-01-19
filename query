@@ -2,20 +2,11 @@ PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/>
 PREFIX custom: <https://pharos.artresearch.net/custom/>
-CONSTRUCT {  ?s custom:has_image ?image }
-{
-  {
-	?s <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>.
-  } UNION 
-  {
-  	?s <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>.
-  } 
-  UNION 
-  {
-  	?s <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>.
-  }
+CONSTRUCT {  ?s custom:has_image ?image } WHERE {
+
+  ?s <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/marburg/source/Marburg>.
+
   ?s <http://www.cidoc-crm.org/cidoc-crm/P138i_is_represented_by> ?visual_item.
   ?visual_item <http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by> ?photo.
   ?photo <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of>  ?image.
-  FILTER NOT EXISTS { ?image <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index>|<https://pharos.artresearch.net/resource/vocab/vision/match/has_index> ?index }
-} LIMIT 10000
+} LIMIT 1000

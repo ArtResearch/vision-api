@@ -9,6 +9,16 @@
 	<https://vision.artresearch.net/resource/Similarity/75695783191427849989421311/Association/Pastec> <http://purl.org/ontology/similarity/weight> "32.0".
 }
 
+<https://similarity.net/custom/artwork_similarity> {
+	<https://ids.lib.harvard.edu/ids/iiif/406552408/full/full/0/native.jpg> <https://similarity.net/custom/Pastec/has_index> <https://vision.artresearch.net/index/images/1>.
+	<https://iiif.artresearch.net/iiif/2/zeri!23200%2122907_g.jpg/full/full/0/default.jpg> <https://similarity.net/custom/Pastec/has_index> <https://vision.artresearch.net/index/images/2>.
+	<https://iiif.artresearch.net/iiif/2/zeri!92400%2192204_g.jpg/full/full/0/default.jpg> <https://similarity.net/custom/Pastec/has_index> <https://vision.artresearch.net/index/images/3>.
+	<https://ids.lib.harvard.edu/ids/iiif/43446498/full/full/0/native.jpg> <https://similarity.net/custom/Pastec/has_index> <https://vision.artresearch.net/index/images/4>.
+	<https://ids.lib.harvard.edu/ids/iiif/45942680/full/full/0/native.jpg> <https://similarity.net/custom/Pastec/has_index> <https://vision.artresearch.net/index/images/5>.
+	<https://iiif.artresearch.net/iiif/2/zeri!93200%2192957_g.jpg/full/full/0/default.jpg> <https://similarity.net/custom/Pastec/has_index> <https://vision.artresearch.net/index/images/6>.
+}
+
+
 <https://vision.artresearch.net/resource/graph/visual_similarity/141413939379397839002093> {
 	<https://iiif.artresearch.net/iiif/2/zeri!65200%2165172_g.jpg/full/full/0/default.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/141413939379397839002093>.
 	<https://ids.lib.harvard.edu/ids/iiif/45840553/full/full/0/native.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/141413939379397839002093>.

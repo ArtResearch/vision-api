@@ -72,9 +72,10 @@ if [[ "$method" == "pastec" ]]; then
 	# PASTEC METHOD
 	# Request existing indexes
 	image_ids=$(curl -X GET $host:$port/index/imageIds)
-	max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids $image_ids -m $method)
+	echo -e $image_ids > "./PhotoSimilarity-Workspace/image_ids.json"
+	max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSimilarity-Workspace/image_ids.json -m $method)
 
-	IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
+	#IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
 	#Pastec Photo Similarity Evaluation & Indexing
 	{
 		ID=$(expr $max_id + 1)
@@ -88,7 +89,7 @@ if [[ "$method" == "pastec" ]]; then
 			# Add image in Pastec (POST original)
 			index=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/images/$ID)
 			# Generate ttl file
-			IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> <https://vision.artresearch.net:${port}/index/images/${ID}>.\n"
+			#IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> <https://vision.artresearch.net:${port}/index/images/${ID}>.\n"
 			if [[ $(expr $ID % 1000) -eq 0 ]]; then
 				write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
 			fi
@@ -97,7 +98,7 @@ if [[ "$method" == "pastec" ]]; then
 		echo -e "{}]}"
 	} > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
 	# Save indexes in a file
-	IDs+="}"
+	# IDs+="}"
 	write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
 elif [[ "$method" == "match" ]]; then
 	# MATCH METHOD
@@ -129,8 +130,8 @@ elif [[ "$method" == "match" ]]; then
 	# Save indexes in a file
 	IDs+="}"
 fi
-echo -e $IDs > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
+# echo -e $IDs > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
 # Update Pharos
-java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -pharosModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
+java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
 # Create model and update Vision
 java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -visionModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
