@@ -8,7 +8,7 @@ node_modules/
 dist/
 deliverables/
 PhotoSimilarity-Workspace/
-
+nohup.out
 # Compiled Java class files
 *.class
 
