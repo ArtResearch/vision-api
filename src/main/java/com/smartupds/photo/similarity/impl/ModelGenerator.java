@@ -49,7 +49,7 @@ public class ModelGenerator {
     
     private String filename;
     private SPARQLRepository repo;
-    
+
     public ModelGenerator(ArrayList<String> jsonfiles) {
         this.jsonfiles = jsonfiles;
     }
@@ -267,6 +267,36 @@ public class ModelGenerator {
      */
     public void setRepository(String endpoint) {
         repo = new SPARQLRepository(endpoint.trim());
+    }
+
+    public void generateIndexModel(String jsonfile) {
+        try {
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(this.filename), "UTF-8");
+            JSONParser parserJson = new JSONParser();
+            Object obj = parserJson.parse(new InputStreamReader(new FileInputStream(jsonfile), "UTF8"));
+            JSONObject jsonObject = (JSONObject) obj;
+            JSONArray results = (JSONArray) jsonObject.get("results");
+            Iterator<JSONObject> iterator = results.iterator();
+            
+            writer.append("<https://pharos.artresearch.net/resource/graph/visual_similarity/"+Resources.SIMILARITY_METHOD+"> {\n");
+            while(iterator.hasNext()){
+                JSONObject result = iterator.next();
+                if (result.get("image_id")!=null){
+                    String image_id = result.get("image_id").toString();
+                    String image_url = result.get("image_url").toString();
+                    if (Resources.SIMILARITY_METHOD.equals(Resources.PASTEC_METHOD))
+                        writer.append("\t<"+image_url+"> <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> <https://vision.artresearch.net:4212/index/images/"+image_id+">.\n");
+                    else 
+                        writer.append("\t<"+image_url+"> <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> \""+image_id+"\".\n");
+                }
+            }
+            writer.append("}\n");
+            writer.close();
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException | ParseException ex) {
+            Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 
