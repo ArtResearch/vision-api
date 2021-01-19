@@ -7,6 +7,11 @@ package com.smartupds.photo.similarity.impl;
 
 import com.smartupds.photo.similarity.common.Resources;
 import com.smartupds.photo.similarity.common.Utils;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
@@ -29,8 +34,10 @@ public class IndexHandler {
     public IndexHandler(String indexes) {
         try {
             JSONParser parser = new JSONParser();
-            jsonIndexes = (JSONObject) parser.parse(indexes);
-        } catch (ParseException ex) {
+            jsonIndexes = (JSONObject) parser.parse(new InputStreamReader(new FileInputStream(indexes), "UTF8"));
+        } catch (ParseException | FileNotFoundException | UnsupportedEncodingException ex) {
+            Logger.getLogger(IndexHandler.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
             Logger.getLogger(IndexHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

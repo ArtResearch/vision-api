@@ -68,11 +68,15 @@ public class Utils {
     }
 
     public static void resizeImage(String URL) {
-        String newURL = "";
-        Matcher m = Pattern.compile("(^.*\\/)[^\\/]*(\\/[^\\/]*\\/[^\\/]*$)").matcher(URL);
-        if (m.find()){
-            newURL = m.group(1) + "!1000,1000" + m.group(2);
+        if (URL.contains("iif")){
+            String newURL = "";
+            Matcher m = Pattern.compile("(^.*\\/)[^\\/]*(\\/[^\\/]*\\/[^\\/]*$)").matcher(URL);
+            if (m.find()){
+                newURL = m.group(1) + "!1000,1000" + m.group(2);
+            }
+            System.out.println(newURL);
+        } else {
+            System.out.println(URL);
         }
-        System.out.println(newURL);
     }
 }
