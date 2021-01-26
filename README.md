@@ -1,14 +1,14 @@
 # Photo Similarity API #
 
-The objective of this project was to create a Java API that processes image uls and sends them through Pastec/Match to be indexed and analysed that results in pairs of similar images.
+a Java API that writes a construct query to a ResearchSpace instance and fetches the URLs of images, and saves them to a file. It then adds each image to the index of a computer vision API for processing. Once images are indexed it retrieves visually similar images and inserts the similarity data into the ResearchSpace graph database. All of the data models are extensible and can be customized. The ResearchSpace instance then provides a user interface for browsing these results.
 
 ## Pastec/Match
 
-Make sure Pastec/Match is running on a server.
+This is currenly implemented with the Pasted and Match API's, you can set the endpoint in the config file. Other API's can be easily added in the future.
 
 ## Run script
 
-The script runs the Java API created, that processes the construct query and generates the model.
+The Run.sh script runs the Java API, processes the construct query according to the model.
 
 ### Script Requirements
 
