@@ -9,6 +9,11 @@ dist/
 deliverables/
 PhotoSimilarity-Workspace/
 nohup.out
+<<<<<<< HEAD
+=======
+configMatch.sh
+configPastec.sh
+>>>>>>> 930f331e0324085a7cdd19add594a70a90657571
 # Compiled Java class files
 *.class
 
