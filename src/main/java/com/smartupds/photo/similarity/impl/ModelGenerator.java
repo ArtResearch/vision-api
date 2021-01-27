@@ -43,6 +43,7 @@ import org.json.simple.parser.ParseException;
  * @author mafragias
  */
 public class ModelGenerator {
+    
     private ArrayList<String> jsonfiles;
     private HashMap<BigInteger ,String> image_index = new HashMap<>();
     private HashMap<BigInteger ,String[][]> image_maps = new HashMap<>();
@@ -58,7 +59,7 @@ public class ModelGenerator {
     }
     
     /**
-     *
+     * Generates the similarity model.
      */
     public void generate() {
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Model generation started.");
@@ -115,6 +116,10 @@ public class ModelGenerator {
         }
     }
     
+    /**
+     * Pushes the similarity model graph to the repository.
+     * @param graph
+     */
     public void updateModel(String graph){
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Adding graph to the model.");
         String graph_query = "INSERT DATA { GRAPH " +graph+"}";
@@ -125,9 +130,11 @@ public class ModelGenerator {
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Graph insert successfully executed.");
     }
     
+    /**
+     * Updates the repository with new indexes.
+     */
     public void updateIndexes(){
         try {
-            
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Pharos Repository.");
             repo.setUsernameAndPassword(Resources.PHAROS_USER, Resources.PHAROS_PASSWORD);
             repo.initialize();
@@ -192,8 +199,6 @@ public class ModelGenerator {
                     JSONObject result = iterator.next();
                     if (result.get("image_id")!=null && !((JSONObject)result.get("search_results")).get("type").equals("IMAGE_DOWNLOADER_HTTP_ERROR")){
                         BigInteger image_id = new BigInteger(result.get("image_id").toString());
-//                        // to comment the below
-//                        image_index.put(image_id, result.get("image_url").toString());
                         if (Resources.SIMILARITY_METHOD.equals(Resources.PASTEC_METHOD)){
                             JSONObject search_results = (JSONObject)result.get("search_results");
                             JSONArray image_ids = (JSONArray) search_results.get("image_ids");
@@ -224,12 +229,7 @@ public class ModelGenerator {
                                 image_maps.put(image_id, image_scores);
                             }
                         }
-                    } 
-//                    else {
-//                        //remove after
-//                        if (result.get("image_id")!=null && result.get("image_url")!=null)
-//                            image_index.put(new BigInteger(result.get("image_id").toString()), result.get("image_url").toString());
-//                    }
+                    }
                 }
             }
         } catch (FileNotFoundException | UnsupportedEncodingException ex) {
@@ -239,6 +239,10 @@ public class ModelGenerator {
         }
     }
     
+    /**
+     * Retrieves indexes from a specified repository.
+     * @param pharos_endpoint
+     */
     public void getIndexes(String pharos_endpoint) {
         SPARQLRepository pharos_repo = new SPARQLRepository(pharos_endpoint.trim());
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Pharos Repository.");
@@ -261,14 +265,11 @@ public class ModelGenerator {
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Pharos Repository Shutting Down.");
         pharos_repo.shutDown();
     }
-    /**
-     *
-     * @param endpoint
-     */
-    public void setRepository(String endpoint) {
-        repo = new SPARQLRepository(endpoint.trim());
-    }
 
+    /**
+     * Generates the model of indexes to be added to the repository.
+     * @param jsonfile
+     */
     public void generateIndexModel(String jsonfile) {
         try {
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(this.filename), "UTF-8");
@@ -298,7 +299,10 @@ public class ModelGenerator {
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-
+    
+    // Setter
+    public void setRepository(String endpoint) {
+        repo = new SPARQLRepository(endpoint.trim());
+    }
 
 }
