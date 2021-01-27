@@ -60,6 +60,6 @@ echo $pharos_user
 echo $pharos_password
 
 # Update Pharos
-# java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/2021-01-19T10-18-26_pastecIDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/2021-01-19T10-18-26_pastecIDs.ttl"
+java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/2021-01-20T12-46-55_pastecIDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/2021-01-20T12-46-55_pastecIDs.ttl"
 # Create model and update Vision
-java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -visionModel "./PhotoSimilarity-Workspace/IDs/2021-01-19T10-18-26_pastecIDs.json"
+java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -visionModel "./PhotoSimilarity-Workspace/IDs/2021-01-20T12-46-55_pastecIDs.json"

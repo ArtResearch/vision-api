@@ -25,12 +25,14 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 /**
- *
+ * The purpose of this class is to give an output with the max index from a JSON
+ * format response.
  * @author mafragias
  */
 public class IndexHandler {
     
     private JSONObject jsonIndexes = new JSONObject();
+    
     public IndexHandler(String indexes) {
         try {
             JSONParser parser = new JSONParser();
@@ -43,7 +45,7 @@ public class IndexHandler {
     }
     
     /**
-     *
+     * Handles the indexes according to the specified method's JSON responses.
      */
     public void handle() {
         String indexes = "";
@@ -67,7 +69,5 @@ public class IndexHandler {
             System.out.print(1000000);
             Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Current max index returned : 1000000");
         }
-            
     }
-    
 }
