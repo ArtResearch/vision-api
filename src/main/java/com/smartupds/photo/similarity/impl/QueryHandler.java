@@ -32,7 +32,7 @@ import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.sparql.SPARQLRepository;
 
 /**
- *
+ * To process queries in order to retrieve a list of images.
  * @author mafragias
  */
 public class QueryHandler {
@@ -62,7 +62,7 @@ public class QueryHandler {
     }
     
     /**
-     *
+     * Processes the construct query and returns the path the graph is saved to.
      * @return
      */
     public String createGraph(){
@@ -81,7 +81,6 @@ public class QueryHandler {
             GraphQueryResult result = graph.evaluate();
             graphPath = Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_graph.ttl";
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(graphPath), "UTF-8");
-//            HashSet<String> previous_ids = listImageIds();
             File file1 = new File(Resources.GRAPHS +"/image_uris");
             File file2 = new File(Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_image_uris");
             if (file1.exists()){
@@ -91,11 +90,8 @@ public class QueryHandler {
             HashSet<String> image_uris_distinct = new HashSet<>();
             while(result.hasNext()){
                 Statement stmt = result.next();
-//                System.out.println(stmt);
-//                if (!previous_ids.contains(stmt.getObject().toString().trim())){
                 writer.append("<"+stmt.getSubject().toString()+"> <"+ stmt.getPredicate()+"> <"+stmt.getObject()+">.\n");
                 image_uris_distinct.add(stmt.getObject().toString().trim());
-//                }
             }
             writer.close();
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Construct query result saved at :".concat(graphPath));
@@ -112,29 +108,7 @@ public class QueryHandler {
         return graphPath;
     }
     
-//    private HashSet<String> listImageIds(){
-//        HashSet<String> ids =  new HashSet<>();
-//        Utils.listFilesForFolder(new File(Resources.GRAPHS)).forEach(file -> {
-//           if (!file.endsWith(".ttl")){
-//               try {
-//                   BufferedReader reader = new BufferedReader( new InputStreamReader(new FileInputStream(file), "UTF8"));
-//                   String row = "";
-//                   while((row = reader.readLine())!=null){
-//                       ids.add(row.trim());
-//                   }
-//                   reader.close();
-//               } catch (FileNotFoundException | UnsupportedEncodingException ex) {
-//                   Logger.getLogger(QueryHandler.class.getName()).log(Level.SEVERE, null, ex);
-//               } catch (IOException ex) {
-//                   Logger.getLogger(QueryHandler.class.getName()).log(Level.SEVERE, null, ex);
-//               }
-//           } 
-//        });
-//        return ids;
-//    }
-    
     // Setters & Getters
-
     /**
      * Setting Repository
      * @param endpoint
