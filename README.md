@@ -36,7 +36,7 @@ $ ./run.sh [config]
 ```
 Example :
 ```bash
-$ ./run.sh ./config.sh
+$ ./run.sh config.conf
 ```
 
 ### Outputs
@@ -46,3 +46,4 @@ $ ./run.sh ./config.sh
 * **./PhotoSimilarity-Workspace/IDs/[timestamp]_[method]IDs.json** : method's searcher Responses.
 * **./PhotoSimilarity-Workspace/IDs/[timestamp]_[method]IDs.ttl** : statements where the subject is the image uri the property is custom:has_index and the object is the method's index. 
 * **./PhotoSimilarity-Workspace/Model/[timestamp]_model.ttl** : resulting model for the the similarity method.
+* **./PhotoSimilarity-Workspace/Logs/[timestamp]_[method]_error.json** : contains logs of images that reported an error.

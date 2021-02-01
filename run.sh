@@ -1,8 +1,13 @@
 #!/bin/bash
 echo
+
+# setting the authentication variables
+source authentication.env
+
 # Script Options
 if [ $# -eq 1 ]
 then
+		# setting up configuration variables
         # source ./config.sh
 		source $1
 else
@@ -66,71 +71,79 @@ now=$(date +"%Y-%m-%dT%H-%M-%S")
 # echo $port				# 4212
 
 # Construct query evaluation
-java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -e $endpoint -m $method -pharos_user $pharos_user -pharos_password $pharos_password
+java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password
 
-if [[ "$method" == "pastec" ]]; then
-	# PASTEC METHOD
-	# Request existing indexes
-	image_ids=$(curl -X GET $host:$port/index/imageIds)
-	echo -e $image_ids > "./PhotoSimilarity-Workspace/image_ids.json"
-	max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSimilarity-Workspace/image_ids.json -m $method)
 
-	#IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
-	#Pastec Photo Similarity Evaluation & Indexing
-	{
-		ID=$(expr $max_id + 1)
-		echo -e "{\"results\" : ["
-		while read line || [ -n "$line" ]; do
-			# resize image (based on iiif model)
-			url=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_url $line)
-			# Search through the images in pastec with the image url
-			search=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/searcher)
-			echo -e "{\"image_id\": ${ID},\n\"image_url\": \"${line}\",\n\"search_results\": ${search} },"
-			# Add image in Pastec (POST original)
-			index=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/images/$ID)
-			# Generate ttl file
-			#IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> <https://vision.artresearch.net:${port}/index/images/${ID}>.\n"
-			if [[ $(expr $ID % 1000) -eq 0 ]]; then
-				write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
-			fi
-			ID=$(expr $ID + 1)
-		done < ./PhotoSimilarity-Workspace/Graphs/image_uris
-		echo -e "{}]}"
-	} > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
-	# Save indexes in a file
-	# IDs+="}"
-	write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
-elif [[ "$method" == "match" ]]; then
-	# MATCH METHOD
-	# Request existing indexes
-	image_ids=$(curl -X GET $host:$port/list)
-	image_ids=$(echo $image_ids | sed 's/ //g')
-	max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids $image_ids -m $method)
-	
-	IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
-	#Match Photo Similarity Evaluation & Indexing
-	{
-		ID=$(expr $max_id + 1)
-		echo -e "{\"results\" : ["
-		while read line || [ -n "$line" ]; do
-			# resize image (based on iiif model)
-			url=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_url $line)
-			# Search through the images in match with the image url
-			search=$(curl -X POST -F url=$url $host:$port/search)
-			#[SAME]
-			echo -e "{\"image_id\": ${ID},\n\"image_url\": \"${line}\",\n\"search_results\": [${search}] },"
-			# Add image in Match
-			index=$(curl -X POST -F url=$url -F filepath=$ID $host:$port/add)
-			# Generate ttl file
-			IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> \"${ID}\".\n"
-			ID=$(expr $ID + 1)
-		done < ./PhotoSimilarity-Workspace/Graphs/image_uris
-		echo -e "{}]}"
-	} > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
-	# Save indexes in a file
-	IDs+="}"
-fi
-# echo -e $IDs > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
+# PASTEC METHOD
+method=pastec
+port=4212
+# Request existing indexes
+image_ids=$(curl -X GET $host:$port/index/imageIds)
+echo -e $image_ids > "./PhotoSimilarity-Workspace/${method}_ids.json"
+max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSimilarity-Workspace/${method}_ids.json -m $method)
+
+#IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
+#Pastec Photo Similarity Evaluation & Indexing
+{
+	ID=$(expr $max_id + 1)
+	echo -e "{\"results\" : ["
+	while read line || [ -n "$line" ]; do
+		# resize image (based on iiif model)
+		url=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_url $line)
+		# Search through the images in pastec with the image url
+		search=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/searcher)
+		echo -e "{\"image_id\": ${ID},\n\"image_url\": \"${line}\",\n\"search_results\": ${search} },"
+		# Add image in Pastec (POST original)
+		index=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/images/$ID)
+		# Generate ttl file
+		#IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> <https://vision.artresearch.net:${port}/index/images/${ID}>.\n"
+		if [[ $(expr $ID % 1000) -eq 0 ]]; then
+			write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
+		fi
+		ID=$(expr $ID + 1)
+	done < ./PhotoSimilarity-Workspace/Graphs/image_uris
+	echo -e "{}]}"
+} > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
+# Save indexes in a file
+# IDs+="}"
+write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
+
+# Update Pharos
+java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
+# Create model and update Vision
+java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -visionModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -log "./PhotoSimilarity-Workspace/Logs/${now}_${method}_error.log"
+
+# MATCH METHOD
+method=match
+port=8888
+# Request existing indexes
+image_ids=$(curl -X GET $host:$port/list)
+image_ids=$(echo $image_ids | sed 's/ //g')
+echo -e $image_ids > "./PhotoSimilarity-Workspace/${method}_ids.json"
+max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids "./PhotoSimilarity-Workspace/${method}_ids.json" -m $method)
+
+IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
+#Match Photo Similarity Evaluation & Indexing
+{
+	ID=$(expr $max_id + 1)
+	echo -e "{\"results\" : ["
+	while read line || [ -n "$line" ]; do
+		# resize image (based on iiif model)
+		url=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_url $line)
+		# Search through the images in match with the image url
+		search=$(curl -X POST -F url=$url $host:$port/search)
+		#[SAME]
+		echo -e "{\"image_id\": ${ID},\n\"image_url\": \"${line}\",\n\"search_results\": [${search}] },"
+		# Add image in Match
+		index=$(curl -X POST -F url=$url -F filepath=$ID $host:$port/add)
+		# Generate ttl file
+		IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> \"${ID}\".\n"
+		ID=$(expr $ID + 1)
+	done < ./PhotoSimilarity-Workspace/Graphs/image_uris
+	echo -e "{}]}"
+} > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
+# Save indexes in a file
+IDs+="}"
 # Update Pharos
 java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
 # Create model and update Vision

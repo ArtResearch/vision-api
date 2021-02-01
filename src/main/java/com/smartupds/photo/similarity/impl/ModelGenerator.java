@@ -197,9 +197,9 @@ public class ModelGenerator {
                 int counter = 0;
                 while (iterator.hasNext()) {
                     JSONObject result = iterator.next();
-                    if (result.get("image_id")!=null && !((JSONObject)result.get("search_results")).get("type").equals("IMAGE_DOWNLOADER_HTTP_ERROR")){
+                    if (result.get("image_id")!=null ){
                         BigInteger image_id = new BigInteger(result.get("image_id").toString());
-                        if (Resources.SIMILARITY_METHOD.equals(Resources.PASTEC_METHOD)){
+                        if (Resources.SIMILARITY_METHOD.equals(Resources.PASTEC_METHOD) && !((JSONObject)result.get("search_results")).get("type").equals("IMAGE_DOWNLOADER_HTTP_ERROR")){
                             JSONObject search_results = (JSONObject)result.get("search_results");
                             JSONArray image_ids = (JSONArray) search_results.get("image_ids");
                             JSONArray scores = (JSONArray) search_results.get("scores");
@@ -259,6 +259,7 @@ public class ModelGenerator {
             String index = result.getValue("index").stringValue();
             if (index.contains("/"))
                 index = index.substring(index.lastIndexOf("/")+1);
+//            System.out.println(new BigInteger(index) +"\t"+image);
             image_index.put(new BigInteger(index), image);
         }
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Query successfully evaluated.");
