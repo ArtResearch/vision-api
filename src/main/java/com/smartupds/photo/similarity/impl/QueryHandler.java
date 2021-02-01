@@ -23,7 +23,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.apache.commons.lang3.StringUtils;
 import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.query.GraphQuery;
 import org.eclipse.rdf4j.query.GraphQueryResult;
@@ -74,7 +73,8 @@ public class QueryHandler {
             RepositoryConnection conn = repo.getConnection();
             // Filter out images with a particular method index
             constructQuery = constructQuery.substring(0,constructQuery.lastIndexOf("}"))
-                                + "\tFILTER NOT EXISTS { ?image <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> ?index}\n"
+                                + "\tFILTER NOT EXISTS { ?image <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.MATCH_METHOD+"/has_index>|"
+                    + "<https://pharos.artresearch.net/resource/vocab/vision/"+Resources.PASTEC_METHOD+"/has_index> ?index}\n"
                                 + constructQuery.substring(constructQuery.lastIndexOf("}"));
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Processing CONSTRUCT Query : \n\n".concat(constructQuery));
             GraphQuery graph = conn.prepareGraphQuery(QueryLanguage.SPARQL, constructQuery);

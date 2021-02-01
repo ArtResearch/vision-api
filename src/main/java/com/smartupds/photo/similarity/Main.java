@@ -34,45 +34,7 @@ public class Main {
 //        BasicConfigurator.configure();
         createWorkSpace();
         createOptions();
-        try {
-//            String[] fake_args = {  "-e", "http://localhost:9999/blazegraph/sparql",
-//                                    "-q", "query",
-//                                    "-m", "Pastec"};
-//            String[] fake_args = {  "-p","http://localhost:9999/blazegraph/sparql",
-//                                    "-e","https://vision.artresearch.net/sparql",
-//                                    "-m","Pastec",
-//                                    "-visionModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-09T14-14-46_pastecIDs.json"};
-//            args = new String[]{  "-image_ids","{\"image_ids\":[],\"type\":\"INDEX_IMAGE_IDS\"}",
-//                                  "-m","Pastec"};
-//            args = new String[]{    "-image_ids","{\"status\": \"ok\", \"error\": [], \"method\": \"list\", \"result\": [\"3\", \"1\", \"4\", \"\", \"2\"]}",
-//                                    "-m","match"};
-//            args = new String[]{    "-p","http://localhost:9999/blazegraph/sparql",
-//                                    "-e","https://vision.artresearch.net/sparql",
-//                                    "-visionModel","C:\\Users\\mafragias\\Documents\\WORKSPACE\\NetBeansProjects\\PhotoSimilarity\\PhotoSimilarity-Workspace\\IDs\\2020-11-24T12-17-41_matchIDs.json",
-//                                    "-m","Match"};
-//            args =  new String[]{   "-image_url","https://ids.lib.harvard.edu/ids/iiif/406553072/full/full/0/native.jpg"};
-//
-//            args = new String[] {   "-m","pastec",
-//                                    "-e","https://artresearch.net/sparql",
-//                                    "-pharos_user","user",
-//                                    "-pharos_password","pharosadmin",
-//                                    "-json_file","./PhotoSimilarity-Workspace/IDs/2021-01-15T17-52-46_pastecIDs.json",
-//                                    "-pharosModel","./PhotoSimilarity-Workspace/IDs/2021-01-15T17-52-46_pastecIDs.ttl"
-//            };
-            //error log.
-            args = new String[] {   "-m","pastec",
-                                    "-e","https://artresearch.net/sparql",
-                                    "-pharos_user","admin",
-                                    "-pharos_password","pharosadmin",
-                                    "vision_endpoint","https://vision.artresearch.net/sparql",
-                                    "vision_user","vision",
-                                    "vision_password","vision",
-                                    "-visionModel","./PhotoSimilarity-Workspace/IDs/2021-01-21T10-03-31_pastecIDs.json",
-                                    "-log","./PhotoSimilarity-Workspace/Logs/"
-            };
-
-
-            
+        try {            
             CommandLine line = parser.parse( options, args );
             handleCommandLine(line);
         } catch( ParseException exp ) {
@@ -135,7 +97,7 @@ public class Main {
             Logger.getLogger(Main.class.getName()).log(Level.INFO,"Setting Vision Default Configurations.");
         if (line.hasOption("q") && line.hasOption("e")){
             QueryHandler q = new QueryHandler(line.getOptionValue("q"));
-            q.setRepository(line.getOptionValue("e")); 
+            q.setRepository(line.getOptionValue("e"));
             q.createGraph();
         } else if (line.hasOption("image_ids")){
             IndexHandler ih = new IndexHandler(line.getOptionValue("image_ids"));
@@ -146,7 +108,7 @@ public class Main {
             model.setRepository(line.getOptionValue("e"));
             model.updateIndexes();
         } else if (line.hasOption("visionModel")){
-            ModelGenerator model = new ModelGenerator(Utils.listJSONFilesForFolder(new File(line.getOptionValue("visionModel")).getParentFile()));
+            ModelGenerator model = new ModelGenerator(Utils.listJSONFilesForFolder(new File(line.getOptionValue("visionModel"))));
             model.setRepository(line.getOptionValue("e"));
             model.getIndexes(line.getOptionValue("p"));
             model.generate();
