@@ -9,11 +9,11 @@ dist/
 deliverables/
 PhotoSimilarity-Workspace/
 nohup.out
-configMatch.sh
-configPastec.sh
 ignore/
-configPastecLocal.sh
+configPastecLocal.env
 partialRun.sh
+authentication.env
+run_separete.sh
 
 # Compiled Java class files
 *.class
