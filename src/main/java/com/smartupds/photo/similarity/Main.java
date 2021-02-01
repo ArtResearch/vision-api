@@ -7,6 +7,7 @@ package com.smartupds.photo.similarity;
 
 import com.smartupds.photo.similarity.common.Resources;
 import com.smartupds.photo.similarity.common.Utils;
+import com.smartupds.photo.similarity.impl.ImageLogger;
 import com.smartupds.photo.similarity.impl.IndexHandler;
 import com.smartupds.photo.similarity.impl.ModelGenerator;
 import com.smartupds.photo.similarity.impl.QueryHandler;
@@ -58,6 +59,20 @@ public class Main {
 //                                    "-json_file","./PhotoSimilarity-Workspace/IDs/2021-01-15T17-52-46_pastecIDs.json",
 //                                    "-pharosModel","./PhotoSimilarity-Workspace/IDs/2021-01-15T17-52-46_pastecIDs.ttl"
 //            };
+            //error log.
+            args = new String[] {   "-m","pastec",
+                                    "-e","https://artresearch.net/sparql",
+                                    "-pharos_user","admin",
+                                    "-pharos_password","pharosadmin",
+                                    "vision_endpoint","https://vision.artresearch.net/sparql",
+                                    "vision_user","vision",
+                                    "vision_password","vision",
+                                    "-visionModel","./PhotoSimilarity-Workspace/IDs/2021-01-21T10-03-31_pastecIDs.json",
+                                    "-log","./PhotoSimilarity-Workspace/Logs/"
+            };
+
+
+            
             CommandLine line = parser.parse( options, args );
             handleCommandLine(line);
         } catch( ParseException exp ) {
@@ -82,6 +97,7 @@ public class Main {
         Option pharos_user = new Option("pharos_user",true,"Pharos username : -pharos_user [username]");
         Option pharos_password = new Option("pharos_password",true,"Pharos password : -pharos_password [password]");
         Option vision_model = new Option("visionModel",true,"Update Vision model : -visionModel [similarity_file.json]");
+        Option vision_log = new Option("log",true,"Generate log file : -log [error.log]");
         Option vision_user = new Option("vision_user",true,"Vision username : -vision_user [username]");
         Option vision_password = new Option("vision_password",true,"Vision password : -vision_password [password]");
         Option image_url = new Option("image_url",true,"Resize image : -image_url [url]");
@@ -96,6 +112,7 @@ public class Main {
         options.addOption(pharos_user);
         options.addOption(pharos_password);
         options.addOption(vision_model);
+        options.addOption(vision_log);
         options.addOption(vision_user);
         options.addOption(vision_password);
         options.addOption(image_url);
@@ -129,10 +146,15 @@ public class Main {
             model.setRepository(line.getOptionValue("e"));
             model.updateIndexes();
         } else if (line.hasOption("visionModel")){
-            ModelGenerator model = new ModelGenerator(Utils.listJSONFilesForFolder(new File(line.getOptionValue("visionModel"))));
+            ModelGenerator model = new ModelGenerator(Utils.listJSONFilesForFolder(new File(line.getOptionValue("visionModel")).getParentFile()));
             model.setRepository(line.getOptionValue("e"));
             model.getIndexes(line.getOptionValue("p"));
             model.generate();
+            // Generate error log.
+            if (line.hasOption("log")){
+                ImageLogger log = new ImageLogger(line.getOptionValue("visionModel"),line.getOptionValue("log"));
+                log.generate();
+            }
         } else if (line.hasOption("image_url")){
             Utils.resizeImage(line.getOptionValue("image_url"));
         } else {
@@ -154,5 +176,6 @@ public class Main {
         new File(Resources.GRAPHS).mkdir();
         new File(Resources.IDS).mkdir();
         new File(Resources.MODEL).mkdir();
+        new File(Resources.LOGS).mkdir();
     }
 }
