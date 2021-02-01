@@ -26,6 +26,7 @@ public class Resources {
     public static final String GRAPHS = WORKSPACE + "/Graphs";
     public static final String IDS = WORKSPACE + "/IDs";
     public static final String MODEL = WORKSPACE + "/Model";
+    public static final String LOGS = WORKSPACE + "/Logs";
     
     // PREFIXES
     public static final String PHAROS_CUSTOM = "https://pharos.artresearch.net/custom/";
