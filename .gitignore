@@ -12,7 +12,6 @@ nohup.out
 ignore/
 configPastecLocal.env
 partialRun.sh
-authentication.env
 run_separete.sh
 
 # Compiled Java class files
