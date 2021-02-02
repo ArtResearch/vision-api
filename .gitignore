@@ -13,6 +13,7 @@ ignore/
 configPastecLocal.env
 partialRun.sh
 run_separete.sh
+authentication.env
 
 # Compiled Java class files
 *.class
