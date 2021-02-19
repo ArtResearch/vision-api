@@ -1,0 +1,7 @@
+{"results" : [
+{"image_id": 1000006,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!134400%21134002_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[{"height":723,"width":486,"x":78,"y":209}],"image_ids":[1000001],"scores":[1003.0],"tags":[""],"type":"SEARCH_RESULTS"} },
+{"image_id": 1000007,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!134000%21133985_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[{"height":267,"width":924,"x":32,"y":288}],"image_ids":[1000002],"scores":[931.0],"tags":[""],"type":"SEARCH_RESULTS"} },

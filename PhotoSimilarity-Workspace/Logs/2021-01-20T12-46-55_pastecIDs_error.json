@@ -1,0 +1,1645 @@
+{
+  "errors": [
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!16400%2116342_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040552
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122400%21122144_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040553
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!143600%21143528_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040554
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126400%21126377_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040555
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122400%21122358_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040556
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!127600%21127542_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040557
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128000%21127955_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040558
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123600%21123523_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040559
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122800%21122471_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040560
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124400%21124047_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040561
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!144000%21143679_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040562
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126400%21126130_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040563
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122400%21122111_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040564
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129600%21129478_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040565
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!143200%21143001_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040566
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!127600%21127447_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040567
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!110400%21110389_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040568
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!106000%21105995_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040569
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!14800%2114471_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040570
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125600%21125212_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040571
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!132000%21131939_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040572
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123200%21122884_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040573
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!108800%21108683_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040574
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129600%21129231_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040575
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128400%21128066_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040576
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!111200%21111050_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040577
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122800%21122700_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040578
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!16400%2116375_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040579
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125600%21125554_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040580
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!16800%2116593_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040581
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129600%21129573_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040582
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122400%21122016_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040583
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!144000%21143908_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040584
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122800%21122605_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040585
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126800%21126624_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040586
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125600%21125459_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040587
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124000%21123946_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040588
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125200%21125050_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040589
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!18800%2118672_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040590
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126400%21126035_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040591
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126800%21126490_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040592
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125200%21124872_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040593
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129200%21128891_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040594
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!144000%21143774_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040595
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124400%21124389_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040596
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!108400%21108156_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040597
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128800%21128431_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040598
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127095_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040599
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124400%21124170_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040600
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123600%21123528_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040601
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128800%21128569_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040602
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!144000%21143609_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040603
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!18000%2117977_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040604
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122800%21122633_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040605
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122000%21121886_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040606
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!144000%21143660_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040607
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128000%21127684_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040608
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!108400%21108360_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040609
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128800%21128418_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040610
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125200%21125065_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040611
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!25200%2124982_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040612
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122400%21122087_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040613
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124000%21123727_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040614
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122400%21122291_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040615
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126800%21126401_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040616
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!143200%21143071_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040617
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!132400%21132296_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040618
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123600%21123566_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040619
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128800%21128622_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040620
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!107600%21107248_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040621
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!108000%21107804_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040622
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129600%21129530_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040623
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!143600%21143589_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040624
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126000%21125986_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040625
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!144000%21143813_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040626
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125600%21125407_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040627
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124800%21124469_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040628
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!111600%21111340_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040629
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124000%21123765_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040630
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126400%21126391_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040631
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21126904_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040632
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126000%21125606_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040633
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129200%21129165_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040634
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!130400%21130037_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040635
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!18800%2118720_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040636
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123200%21122832_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040637
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124800%21124522_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040638
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!107600%21107261_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040639
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128000%21127827_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040640
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!17600%2117313_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040641
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126400%21126011_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040642
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!144000%21143788_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040643
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123200%21122819_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040644
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!18400%2118079_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040645
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!130400%21130218_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040646
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!110400%21110356_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040647
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124800%21124673_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040648
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!108000%21107774_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040649
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125200%21124902_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040650
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129600%21129354_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040651
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126800%21126733_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040652
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126400%21126363_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040653
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123200%21122804_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040654
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124800%21124497_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040655
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!108400%21108337_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040656
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!130000%21129963_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040657
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!144000%21143637_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040658
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128400%21128270_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040659
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125600%21125226_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040660
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124400%21124313_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040661
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!132400%21132301_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040662
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122400%21122268_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040663
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125600%21125430_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040664
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128000%21127656_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040665
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123200%21123176_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040666
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!130000%21129935_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040667
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!144000%21143632_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040668
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125600%21125254_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040669
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126000%21125810_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040670
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!109600%21109278_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040671
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124400%21124351_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040672
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!18800%2118526_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040673
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128800%21128597_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040674
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126400%21126187_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040675
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!130400%21130241_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040676
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123600%21123405_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040677
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123200%21123020_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040678
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128400%21128209_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040679
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!108000%21107832_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040680
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126000%21125601_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040681
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124000%21123793_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040682
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123200%21123158_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040683
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!16400%2116251_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040684
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124800%21124540_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040685
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122400%21122263_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040686
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125600%21125435_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040687
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!109600%21109273_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040688
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!106800%21106486_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040689
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124800%21124527_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040690
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123200%21123171_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040691
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122800%21122457_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040692
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123200%21122860_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040693
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!144000%21143783_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040694
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128400%21128199_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040695
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!125200%21125188_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040696
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126000%21125634_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040697
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124000%21123898_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040698
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122800%21122424_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040699
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126800%21126610_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040700
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129200%21128949_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040701
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21126899_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040702
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128800%21128446_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040703
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126400%21126182_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040704
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!108400%21108332_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040705
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!111200%21111113_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040706
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129600%21129392_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040707
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!108800%21108669_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040708
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124800%21124645_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040709
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123600%21123347_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040710
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126400%21126368_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040711
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!124400%21124293_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040712
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!144000%21143665_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040713
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128000%21127689_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040714
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!108000%21107779_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040715
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127067_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040716
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128800%21128564_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040717
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122800%21122452_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040718
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!18800%2118735_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040719
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!111200%21110991_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040720
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127090_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040721
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126400%21126396_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040722
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277364_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040723
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!123200%21123025_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040724
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126000%21125958_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040725
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129200%21129137_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040726
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129200%21128982_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040727
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!18800%2118496_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040728
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!126800%21126705_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040729
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!129200%21129150_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040730
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!122800%21122439_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040731
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!128400%21128204_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040732
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277392_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040742
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277379_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040750
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277397_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040786
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277422_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040848
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277398_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1041243
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!268800%21268530_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1041328
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277418_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1041461
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277421_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1041471
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277373_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1041599
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277417_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1041867
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277374_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1042017
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277389_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1042075
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277387_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1042116
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277388_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1042484
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277423_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1042628
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277411_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1042979
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277391_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1043153
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!268800%21268531_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1043254
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277399_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1043265
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277378_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1043704
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277413_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1043907
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277425_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1044102
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277393_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1044103
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!278000%21277861_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1044124
+    },
+    {}
+  ]
+}

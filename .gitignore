@@ -7,12 +7,13 @@
 node_modules/
 dist/
 deliverables/
-PhotoSimilarity-Workspace/
+# PhotoSimilarity-Workspace/
 nohup.out
 ignore/
 configPastecLocal.env
 partialRun.sh
 run_separete.sh
+auth.env
 
 # Compiled Java class files
 *.class

@@ -1,0 +1,61 @@
+{
+  "errors": [
+    {
+      "image_url": "https://imagesdigitalcollections.frick.org/media/filename/W3309_POST.tif",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1039702
+    },
+    {
+      "image_url": "https://imagesdigitalcollections.frick.org/media/filename/3107100097237_001.tif",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1039712
+    },
+    {
+      "image_url": "https://imagesdigitalcollections.frick.org/media/filename/3107100097306_002.tif",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1039742
+    },
+    {
+      "image_url": "https://imagesdigitalcollections.frick.org/media/filename/3107100096022_001.tif",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1039778
+    },
+    {
+      "image_url": "https://imagesdigitalcollections.frick.org/media/filename/3107100095868_001.tif",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1039887
+    },
+    {
+      "image_url": "https://imagesdigitalcollections.frick.org/media/filename/3107100096255_003.tif",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1039972
+    },
+    {
+      "image_url": "https://imagesdigitalcollections.frick.org/media/filename/FPA003919.tif",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1039973
+    },
+    {}
+  ]
+}
