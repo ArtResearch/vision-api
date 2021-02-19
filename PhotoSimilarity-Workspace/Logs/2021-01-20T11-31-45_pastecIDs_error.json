@@ -1,0 +1,29 @@
+{
+  "errors": [
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277403_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040520
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277408_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040638
+    },
+    {
+      "image_url": "https://iiif.artresearch.net/iiif/2/zeri!277600%21277383_g.jpg/full/full/0/default.jpg",
+      "search_results": {
+        "image_downloader_http_response_code": 403,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1040725
+    },
+    {}
+  ]
+}

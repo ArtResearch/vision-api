@@ -1,0 +1,7 @@
+<https://pharos.artresearch.net/resource/graph/visual_similarity/pastec> {
+	<https://iiif.artresearch.net/iiif/2/zeri!129200%21128993_g.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1000006>.
+	<https://iiif.artresearch.net/iiif/2/zeri!129200%21128994_g.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1000007>.
+	<https://iiif.artresearch.net/iiif/2/zeri!128400%21128106_g.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1000008>.
+	<https://iiif.artresearch.net/iiif/2/zeri!129200%21129035_g.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1000009>.
+	<https://iiif.artresearch.net/iiif/2/zeri!127200%21127025_g.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1000010>.
+}

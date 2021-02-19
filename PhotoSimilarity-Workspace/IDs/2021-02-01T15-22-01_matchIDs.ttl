@@ -1,0 +1,7 @@
+<https://pharos.artresearch.net/resource/graph/visual_similarity/match> {
+	<https://iiif.artresearch.net/iiif/2/zeri!134400%21134002_g.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/match/has_index> "1000033".
+	<https://iiif.artresearch.net/iiif/2/zeri!134000%21133985_g.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/match/has_index> "1000034".
+	<https://iiif.artresearch.net/iiif/2/zeri!134000%21133978_g.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/match/has_index> "1000035".
+	<https://iiif.artresearch.net/iiif/2/zeri!134400%21134007_g.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/match/has_index> "1000036".
+	<https://iiif.artresearch.net/iiif/2/zeri!134000%21133988_g.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/match/has_index> "1000037".
+}
