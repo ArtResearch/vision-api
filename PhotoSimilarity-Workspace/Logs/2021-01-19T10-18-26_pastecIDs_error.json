@@ -1,0 +1,13 @@
+{
+  "errors": [
+    {
+      "image_url": "https://imagesdigitalcollections.frick.org/media/filename/3107100095931_006.tif",
+      "search_results": {
+        "image_downloader_http_response_code": 8,
+        "type": "IMAGE_DOWNLOADER_HTTP_ERROR"
+      },
+      "image_id": 1039450
+    },
+    {}
+  ]
+}
