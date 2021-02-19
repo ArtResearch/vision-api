@@ -25,11 +25,13 @@ auth.env
 *.log
 
 # Package files
-*.jar
+# *.jar
+target/PhotoSimilarity-0.1.jar
 
 # Maven
-target/
-dist/
+target/maven-archiver/
+target/maven-status/
+dist
 
 # JetBrains IDE
 .idea/
