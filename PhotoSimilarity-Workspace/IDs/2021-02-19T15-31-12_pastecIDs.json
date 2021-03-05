@@ -1,0 +1,17 @@
+{"results" : [
+{"image_id": 1054004,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127039_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[{"height":850,"width":627,"x":45,"y":55}],"image_ids":[1043271],"scores":[47.0],"tags":[""],"type":"SEARCH_RESULTS"} },
+{"image_id": 1054005,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127041_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[],"image_ids":[],"scores":[],"tags":[],"type":"SEARCH_RESULTS"} },
+{"image_id": 1054006,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127046_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[{"height":607,"width":917,"x":49,"y":44}],"image_ids":[1043851],"scores":[63.0],"tags":[""],"type":"SEARCH_RESULTS"} },
+{"image_id": 1054007,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127040_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[{"height":529,"width":561,"x":80,"y":205}],"image_ids":[1054005],"scores":[42.0],"tags":[""],"type":"SEARCH_RESULTS"} },
+{"image_id": 1054008,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127045_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[{"height":611,"width":902,"x":47,"y":35},{"height":596,"width":730,"x":219,"y":50}],"image_ids":[1054006,1043851],"scores":[193.0,67.0],"tags":["",""],"type":"SEARCH_RESULTS"} },
+{}]}
