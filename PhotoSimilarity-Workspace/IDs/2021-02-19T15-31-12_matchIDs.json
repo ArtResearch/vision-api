@@ -1,0 +1,17 @@
+{"results" : [
+{"image_id": 1000006,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127039_g.jpg/full/full/0/default.jpg",
+"search_results": [{"status": "ok", "error": [], "method": "search", "result": []}] },
+{"image_id": 1000007,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127041_g.jpg/full/full/0/default.jpg",
+"search_results": [{"status": "ok", "error": [], "method": "search", "result": []}] },
+{"image_id": 1000008,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127046_g.jpg/full/full/0/default.jpg",
+"search_results": [{"status": "ok", "error": [], "method": "search", "result": []}] },
+{"image_id": 1000009,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127040_g.jpg/full/full/0/default.jpg",
+"search_results": [{"status": "ok", "error": [], "method": "search", "result": [{"score": 58.85978653316823, "filepath": "1000007", "metadata": null}]}] },
+{"image_id": 1000010,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127045_g.jpg/full/full/0/default.jpg",
+"search_results": [{"status": "ok", "error": [], "method": "search", "result": [{"score": 87.9383777974952, "filepath": "1000008", "metadata": null}]}] },
+{}]}

@@ -1,0 +1,17 @@
+{"results" : [
+{"image_id": 1000016,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!128400%21128097_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[],"image_ids":[],"scores":[],"tags":[],"type":"SEARCH_RESULTS"} },
+{"image_id": 1000017,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!128400%21128091_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[],"image_ids":[],"scores":[],"tags":[],"type":"SEARCH_RESULTS"} },
+{"image_id": 1000018,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127038_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[],"image_ids":[],"scores":[],"tags":[],"type":"SEARCH_RESULTS"} },
+{"image_id": 1000019,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!128400%21128092_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[],"image_ids":[],"scores":[],"tags":[],"type":"SEARCH_RESULTS"} },
+{"image_id": 1000020,
+"image_url": "https://iiif.artresearch.net/iiif/2/zeri!127200%21127037_g.jpg/full/full/0/default.jpg",
+"search_results": {"bounding_rects":[{"height":755,"width":585,"x":253,"y":126}],"image_ids":[1000018],"scores":[17.0],"tags":[""],"type":"SEARCH_RESULTS"} },
+{}]}
