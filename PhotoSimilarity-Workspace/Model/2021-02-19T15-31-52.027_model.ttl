@@ -1,0 +1,20 @@
+<https://vision.artresearch.net/resource/graph/visual_similarity/13479143842060186512241650> {
+	<https://iiif.artresearch.net/iiif/2/zeri!127200%21127045_g.jpg/full/full/0/default.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/13479143842060186512241650>.
+	<https://iiif.artresearch.net/iiif/2/zeri!127200%21127046_g.jpg/full/full/0/default.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/13479143842060186512241650>.
+	<https://vision.artresearch.net/resource/Similarity/13479143842060186512241650> a <http://purl.org/ontology/similarity/Similarity>.
+	<https://vision.artresearch.net/resource/Similarity/13479143842060186512241650> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/13479143842060186512241650/Association/Match>.
+	<https://vision.artresearch.net/resource/Similarity/13479143842060186512241650/Association/Match> a <http://purl.org/ontology/similarity/Association>.
+	<https://vision.artresearch.net/resource/Similarity/13479143842060186512241650/Association/Match> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/AssociationMethod/Match>.
+	<https://vision.artresearch.net/resource/Similarity/AssociationMethod/Match> a <http://purl.org/ontology/similarity/AssociationMethod>.
+	<https://vision.artresearch.net/resource/Similarity/13479143842060186512241650/Association/Match> <http://purl.org/ontology/similarity/weight> "87.9383777974952".
+}
+<https://vision.artresearch.net/resource/graph/visual_similarity/84798084598648494657812> {
+	<https://iiif.artresearch.net/iiif/2/zeri!127200%21127040_g.jpg/full/full/0/default.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/84798084598648494657812>.
+	<https://iiif.artresearch.net/iiif/2/zeri!127200%21127041_g.jpg/full/full/0/default.jpg> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/84798084598648494657812>.
+	<https://vision.artresearch.net/resource/Similarity/84798084598648494657812> a <http://purl.org/ontology/similarity/Similarity>.
+	<https://vision.artresearch.net/resource/Similarity/84798084598648494657812> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/84798084598648494657812/Association/Match>.
+	<https://vision.artresearch.net/resource/Similarity/84798084598648494657812/Association/Match> a <http://purl.org/ontology/similarity/Association>.
+	<https://vision.artresearch.net/resource/Similarity/84798084598648494657812/Association/Match> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/AssociationMethod/Match>.
+	<https://vision.artresearch.net/resource/Similarity/AssociationMethod/Match> a <http://purl.org/ontology/similarity/AssociationMethod>.
+	<https://vision.artresearch.net/resource/Similarity/84798084598648494657812/Association/Match> <http://purl.org/ontology/similarity/weight> "58.85978653316823".
+}
