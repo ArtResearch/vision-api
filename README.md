@@ -1,6 +1,6 @@
-# Photo Similarity API #
+# ArtVision API #
 
-The objective of this project was to create a Java API that processes image uls and sends them through Pastec/Match to be indexed and analysed that results in pairs of similar images.
+A Java API that processes image uls and sends them through Pastec/Match (or any other CV API) to be indexed and analysed that results in pairs of similar images.
 
 ## Pastec/Match
 
@@ -8,7 +8,7 @@ Make sure Pastec/Match is running on a server.
 
 ## Run script
 
-The script runs the Java API created, that processes the construct query and generates the model.
+The script runs the Java API created, that processes the construct query and parses the images according to the model.
 
 ### Script Requirements
 
@@ -20,13 +20,13 @@ You can use a configuration file (ie. config.sh) to initialize the API. Below ar
 
 * **query [required]** : a file containing the construct query, where the resulting object should be the image url.
 * **endpoint [required]** : the endpoint, where you wish to harvest the data from.
-* **pharos_user [optional]** : the username for the endpoint (default:admin).
-* **pharos_password [optional]** : the password for the endpoint (default:admin).
-* **vision_endpoint [required]** : the vision endpoint, where you wish save your visual similarity model data.
-* **vision_user [optional]** : the username for the vision endpoint (default:admin).
-* **vision_password [optional]** : the password for the vision endpoint (default:admin).
+* **pharos_user [optional]** : the username for the endpoint.
+* **pharos_password [optional]** : the password for the endpoint.
+* **vision_endpoint [required]** : the vision endpoint, where you wish save your visual similarity data.
+* **vision_user [optional]** : the username for the vision endpoint.
+* **vision_password [optional]** : the password for the vision endpoint.
 * **method [required]** : method used (Pastec/Match).
-* **host [optional]** : host IP address of the server that runs Pastec/Match (default:localhost).
+* **host [optional]** : host IP address of the server that runs Pastec/Match.
 * **port [required]** : port that runs the method API.
 
 ### Bash commands

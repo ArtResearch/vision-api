@@ -1,0 +1,13 @@
+<https://pharos.artresearch.net/resource/itatti/work/8000848749> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/42661842/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000848749> <http://www.w3.org/2000/01/rdf-schema#label> "Madonna and Child with a goldfinch"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000848749> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000845657> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/42662362/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000845657> <http://www.w3.org/2000/01/rdf-schema#label> "Holy Family with the Infant St. John, St. Dominic and a female martyr saint"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000845657> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000850714> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/43462441/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000850714> <http://www.w3.org/2000/01/rdf-schema#label> "Holy Family with St. Anne"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000850714> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000850713> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/45980305/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000850713> <http://www.w3.org/2000/01/rdf-schema#label> "Venus and Adonis with three dogs and Cupid asleep under the trees"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000850713> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000850713> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/45980304/full/full/0/native.jpg>. 

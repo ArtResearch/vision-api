@@ -23,6 +23,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.query.GraphQuery;
 import org.eclipse.rdf4j.query.GraphQueryResult;
@@ -38,6 +39,8 @@ public class QueryHandler {
     
     private String constructQuery = "";
     private SPARQLRepository repo;
+    private String graphPath = "";
+    
     
     public QueryHandler(String query){
         Matcher m = Pattern.compile("CONSTRUCT[\\s]*\\{[\\s?a-zA-Z_:\\.]*\\}[\\s]*WHERE[\\s]*\\{[\\s\\w?{}.:\\W]*\\}").matcher(query);
@@ -65,7 +68,6 @@ public class QueryHandler {
      * @return
      */
     public String createGraph(){
-        String graphPath = "";
         try {
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Initializing Pharos Repository.");
             repo.setUsernameAndPassword(Resources.PHAROS_USER, Resources.PHAROS_PASSWORD);
@@ -73,14 +75,18 @@ public class QueryHandler {
             RepositoryConnection conn = repo.getConnection();
             // Filter out images with a particular method index
             constructQuery = constructQuery.substring(0,constructQuery.lastIndexOf("}"))
-                                + "\tFILTER NOT EXISTS { ?image <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.MATCH_METHOD+"/has_index>|"
-                    + "<https://pharos.artresearch.net/resource/vocab/vision/"+Resources.PASTEC_METHOD+"/has_index> ?index}\n"
+                                + "\t?image <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.MATCH_METHOD+"/has_index>|"
+                                + "<https://pharos.artresearch.net/resource/vocab/vision/"+Resources.PASTEC_METHOD+"/has_index> ?index.\n"
                                 + constructQuery.substring(constructQuery.lastIndexOf("}"));
+//            constructQuery = constructQuery.substring(0,constructQuery.lastIndexOf("}"))
+//                                + "\tFILTER NOT EXISTS { ?image <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.MATCH_METHOD+"/has_index>|"
+//                                + "<https://pharos.artresearch.net/resource/vocab/vision/"+Resources.PASTEC_METHOD+"/has_index> ?index}\n"
+//                                + constructQuery.substring(constructQuery.lastIndexOf("}"));
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Processing CONSTRUCT Query : \n\n".concat(constructQuery));
             GraphQuery graph = conn.prepareGraphQuery(QueryLanguage.SPARQL, constructQuery);
             GraphQueryResult result = graph.evaluate();
-            graphPath = Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_graph.ttl";
-            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(graphPath), "UTF-8");
+            this.graphPath = Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_graph.ttl";
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(this.graphPath), "UTF-8");
             File file1 = new File(Resources.GRAPHS +"/image_uris");
             File file2 = new File(Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_image_uris");
             if (file1.exists()){
@@ -90,22 +96,28 @@ public class QueryHandler {
             HashSet<String> image_uris_distinct = new HashSet<>();
             while(result.hasNext()){
                 Statement stmt = result.next();
-                writer.append("<"+stmt.getSubject().toString()+"> <"+ stmt.getPredicate()+"> <"+stmt.getObject()+">.\n");
-                image_uris_distinct.add(stmt.getObject().toString().trim());
+                if(stmt.getObject() instanceof IRI)
+                    writer.append("<"+stmt.getSubject()+"> <"+stmt.getPredicate()+"> <" + stmt.getObject() +">. \n");
+                else
+                    writer.append("<"+stmt.getSubject()+"> <"+stmt.getPredicate()+"> " + stmt.getObject() +". \n");
+                if(stmt.getPredicate().stringValue().equals(Resources.PHAROS_CUSTOM.concat(Resources.HAS_IMAGE)))
+                    image_uris_distinct.add(stmt.getObject().toString().trim());
             }
             writer.close();
-            Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Construct query result saved at :".concat(graphPath));
+            Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Construct query result saved at :".concat(this.graphPath));
             writer2.append(String.join("\n", image_uris_distinct));
             writer2.close();
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "File with image URIS created at :".concat(Resources.GRAPHS +"/image_uris"));
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Repository Shutting Down.");
             repo.shutDown();
+            
+            
         } catch (FileNotFoundException | UnsupportedEncodingException ex) {
             Logger.getLogger(QueryHandler.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(QueryHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return graphPath;
+        return this.graphPath;
     }
     
     // Setters & Getters
