@@ -85,6 +85,7 @@ public class Main {
             Resources.setMethod(line.getOptionValue("m"));
             Logger.getLogger(Main.class.getName()).log(Level.INFO,"Selected Method : ".concat(Resources.SIMILARITY_METHOD));
         }
+        // Configure endpoints
         if (line.hasOption("pharos_user") && line.hasOption("pharos_password")){
             Resources.setPharosUsernameAndPassword(line.getOptionValue("pharos_user"),line.getOptionValue("pharos_password"));
             Logger.getLogger(Main.class.getName()).log(Level.INFO,"Setting Pharos Configuration.");
@@ -95,10 +96,12 @@ public class Main {
             Logger.getLogger(Main.class.getName()).log(Level.INFO,"Setting Vision Configuration.");
         } else 
             Logger.getLogger(Main.class.getName()).log(Level.INFO,"Setting Vision Default Configurations.");
-        if (line.hasOption("q") && line.hasOption("e")){
+        
+        if (line.hasOption("q") && line.hasOption("p")){
             QueryHandler q = new QueryHandler(line.getOptionValue("q"));
-            q.setRepository(line.getOptionValue("e"));
-            q.createGraph();
+            q.setRepository(line.getOptionValue("p"));
+            String file = q.createGraph();
+            Utils.uploadFile(file, ""+Resources.VISION+Resources.GRAPH+"/materializations", line.getOptionValue("e"), Resources.VISION_USER, Resources.VISION_PASSWORD);
         } else if (line.hasOption("image_ids")){
             IndexHandler ih = new IndexHandler(line.getOptionValue("image_ids"));
             ih.handle();

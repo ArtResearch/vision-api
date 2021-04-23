@@ -41,6 +41,7 @@ public class Resources {
     public static final String WEIGHT = "weight";
     public static final String GRAPH = "graph";
     public static final String SIMILARITY = "similarity";
+    public static final String HAS_IMAGE = "has_image";
     
     // FILE EXTENTION
     public static final String JSON = "json";
