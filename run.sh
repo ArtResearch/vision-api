@@ -71,7 +71,7 @@ now=$(date +"%Y-%m-%dT%H-%M-%S")
 # echo $port				# 4212
 
 # Construct query evaluation
-java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password
+java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password
 
 
 # PASTEC METHOD
