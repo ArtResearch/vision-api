@@ -1,0 +1,13 @@
+<https://pharos.artresearch.net/resource/itatti/work/8000845657> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/42662362/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000845657> <http://www.w3.org/2000/01/rdf-schema#label> "Holy Family with the Infant St. John, St. Dominic and a female martyr saint"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000845657> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
+<https://pharos.artresearch.net/resource/itatti/actor/9000372410> <http://www.w3.org/2000/01/rdf-schema#label> "unknown"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8000845657> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000382370>. 
+<https://pharos.artresearch.net/resource/itatti/actor/9000382370> <http://www.w3.org/2000/01/rdf-schema#label> "Palmezzano, Marco"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001616225> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/466376440/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001616225> <http://www.w3.org/2000/01/rdf-schema#label> "Haseki Sultan Complex"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001616225> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/itatti/actor/500073936>. 
+<https://pharos.artresearch.net/resource/itatti/actor/500073936> <http://www.w3.org/2000/01/rdf-schema#label> "Sinan"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001616225> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/466375646/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001616225> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/466374972/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001616225> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/466376670/full/full/0/native.jpg>. 

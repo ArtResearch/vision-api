@@ -5,10 +5,21 @@
  */
 package com.smartupds.photo.similarity.common;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.eclipse.rdf4j.query.Update;
+import org.eclipse.rdf4j.repository.RepositoryConnection;
+import org.eclipse.rdf4j.repository.sparql.SPARQLRepository;
 
 /**
  *
@@ -78,5 +89,52 @@ public class Utils {
         } else {
             System.out.println(URL);
         }
+    }
+    
+    
+    public static void uploadFile(String file,String graph,String endpoint, String username, String password){
+        SPARQLRepository repo = new SPARQLRepository(endpoint);
+        if( username!=null && password!=null)
+            repo.setUsernameAndPassword(username, password);
+        try {
+            BufferedReader reader = new BufferedReader( new InputStreamReader(new FileInputStream(file), "UTF8"));
+            String row = "";
+            String ttl = "";
+            int rowCounter = 1;
+            while((row = reader.readLine())!=null){
+                ttl = ttl + row + "\n";
+                if(rowCounter%1000==0){
+                    materialize(repo,graph,ttl);
+                    ttl="";
+                }
+                rowCounter++;
+            }
+            if(!ttl.equals("")){
+                materialize(repo,graph,ttl);
+            }
+            reader.close();
+            
+        } catch (UnsupportedEncodingException | FileNotFoundException ex) {
+            Logger.getLogger(Utils.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Utils.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    private static void materialize(SPARQLRepository repo, String graph,String ttl){
+        Logger.getLogger(Utils.class.getName()).log(Level.INFO,"Initializing repository");
+        repo.initialize();
+        Logger.getLogger(Utils.class.getName()).log(Level.INFO,"Getting repository connection");
+        RepositoryConnection conn = repo.getConnection();
+        String insertQ = "INSERT {"
+                    + " GRAPH <"+graph+"> {\n\t"
+                    + "     "+ttl+"}} WHERE {}";
+        Logger.getLogger(Utils.class.getName()).log(Level.INFO, "Preparing Update query:\n".concat(insertQ));
+        Update insertQuery = conn.prepareUpdate(insertQ);
+        insertQuery.execute();
+        Logger.getLogger(Utils.class.getName()).log(Level.INFO,"Successful query execution");
+        Logger.getLogger(Utils.class.getName()).log(Level.INFO,"Shutting down repository");
+        conn.close();
+        repo.shutDown();
     }
 }
