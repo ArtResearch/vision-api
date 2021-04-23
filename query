@@ -24,4 +24,4 @@ CONSTRUCT {  ?s custom:has_image ?image } WHERE {
     ?photo <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of>  ?image.
     ?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/itatti/type/SOPP167C>
   }
-} LIMIT 5
+}
