@@ -1,0 +1,31 @@
+<https://pharos.artresearch.net/resource/itatti/work/8001620636> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900738/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620636> <http://www.w3.org/2000/01/rdf-schema#label> "Palace of the Porphyrogenitus"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620636> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
+<https://pharos.artresearch.net/resource/itatti/source/ITatti> <http://www.w3.org/2000/01/rdf-schema#label> "I Tatti"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620636> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://pharos.artresearch.net/resource/itatti/source/SharedShelf> <http://www.w3.org/2000/01/rdf-schema#label> "SharedShelf"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620648> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900382/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620648> <http://www.w3.org/2000/01/rdf-schema#label> "Church of St. Anne"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620648> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620648> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620649> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900534/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620649> <http://www.w3.org/2000/01/rdf-schema#label> "The Red Tower"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620649> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620649> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620651> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900538/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620651> <http://www.w3.org/2000/01/rdf-schema#label> "Qasr Bardawil"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620651> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620651> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900542/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620651> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620652> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900370/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620652> <http://www.w3.org/2000/01/rdf-schema#label> "Barbalissos"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620652> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620652> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900378/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620652> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900374/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620652> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620653> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900554/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620653> <http://www.w3.org/2000/01/rdf-schema#label> "Caesarea Maritima"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620653> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620653> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900578/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620653> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900582/full/full/0/native.jpg>. 
+<https://pharos.artresearch.net/resource/itatti/work/8001620653> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/465900574/full/full/0/native.jpg>. 

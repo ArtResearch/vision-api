@@ -1,0 +1,70 @@
+<https://pharos.artresearch.net/resource/zeri/work/97893> <https://pharos.artresearch.net/custom/has_image> <https://iiif.artresearch.net/iiif/2/zeri!138800%21138681_g.jpg/full/full/0/default.jpg>. 
+<https://pharos.artresearch.net/resource/zeri/work/97893> <http://www.w3.org/2000/01/rdf-schema#label> "Podesti Francesco , Ritratto di Gregorio XVI sulla sedia gestatoria"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97893> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/zeri/actor/QE6MN5AI>. 
+<https://pharos.artresearch.net/resource/zeri/actor/QE6MN5AI> <http://www.w3.org/2000/01/rdf-schema#label> "Palazzo Apostolico Lateranense, Museo Storico Vaticano"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97893> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/zeri/actor/UV6CE06W>. 
+<https://pharos.artresearch.net/resource/zeri/actor/UV6CE06W> <http://www.w3.org/2000/01/rdf-schema#label> "Podesti Francesco"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97893> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>. 
+<https://pharos.artresearch.net/resource/zeri/source/Zeri> <http://www.w3.org/2000/01/rdf-schema#label> "Zeri"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97946> <https://pharos.artresearch.net/custom/has_image> <https://iiif.artresearch.net/iiif/2/zeri!138800%21138742_g.jpg/full/full/0/default.jpg>. 
+<https://pharos.artresearch.net/resource/zeri/work/97946> <http://www.w3.org/2000/01/rdf-schema#label> "Carlandi Onorato , Paesaggio con case rustiche"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97946> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/zeri/actor/1H7ZS0BX>. 
+<https://pharos.artresearch.net/resource/zeri/actor/1H7ZS0BX> <http://www.w3.org/2000/01/rdf-schema#label> "Collezione privata"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97946> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/zeri/actor/1IUSPU8D>. 
+<https://pharos.artresearch.net/resource/zeri/actor/1IUSPU8D> <http://www.w3.org/2000/01/rdf-schema#label> "Carlandi Onorato"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97946> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>. 
+<https://pharos.artresearch.net/resource/zeri/work/97918> <https://pharos.artresearch.net/custom/has_image> <https://iiif.artresearch.net/iiif/2/zeri!138800%21138708_g.jpg/full/full/0/default.jpg>. 
+<https://pharos.artresearch.net/resource/zeri/work/97918> <http://www.w3.org/2000/01/rdf-schema#label> "Gagliardi Pietro , Esaltazione della vera croce"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97918> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/zeri/actor/VF6GOMXZ>. 
+<https://pharos.artresearch.net/resource/zeri/actor/VF6GOMXZ> <http://www.w3.org/2000/01/rdf-schema#label> "Chiesa di S. Girolamo degli Illirici"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97918> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/zeri/actor/RHTXDCRX>. 
+<https://pharos.artresearch.net/resource/zeri/actor/RHTXDCRX> <http://www.w3.org/2000/01/rdf-schema#label> "Gagliardi Pietro"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97918> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>. 
+<https://pharos.artresearch.net/resource/zeri/work/7361> <https://pharos.artresearch.net/custom/has_image> <https://iiif.artresearch.net/iiif/2/zeri!23600%2123414_g.jpg/full/full/0/default.jpg>. 
+<https://pharos.artresearch.net/resource/zeri/work/7361> <http://www.w3.org/2000/01/rdf-schema#label> "Anonimo senese sec. XIV , San Giovanni Battista e san Francesco d'Assisi"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/7361> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/zeri/actor/1IB0G3HL>. 
+<https://pharos.artresearch.net/resource/zeri/actor/1IB0G3HL> <http://www.w3.org/2000/01/rdf-schema#label> "Museo e Gallerie Nazionali di Capodimonte"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/7361> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/zeri/actor/SKV3J2Y4>. 
+<https://pharos.artresearch.net/resource/zeri/actor/SKV3J2Y4> <http://www.w3.org/2000/01/rdf-schema#label> "Anonimo senese sec. XIV"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/7361> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>. 
+<https://pharos.artresearch.net/resource/zeri/work/97899> <https://pharos.artresearch.net/custom/has_image> <https://iiif.artresearch.net/iiif/2/zeri!138800%21138688_g.jpg/full/full/0/default.jpg>. 
+<https://pharos.artresearch.net/resource/zeri/work/97899> <http://www.w3.org/2000/01/rdf-schema#label> "Landesio Eugenio , Paesaggio con pastori"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97899> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/zeri/actor/S0UK0R7F>. 
+<https://pharos.artresearch.net/resource/zeri/actor/S0UK0R7F> <http://www.w3.org/2000/01/rdf-schema#label> "Museo Nacional de San Carlos"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97899> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/zeri/actor/T4SXUPHF>. 
+<https://pharos.artresearch.net/resource/zeri/actor/T4SXUPHF> <http://www.w3.org/2000/01/rdf-schema#label> "Landesio Eugenio"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97899> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>. 
+<https://pharos.artresearch.net/resource/zeri/work/97921> <https://pharos.artresearch.net/custom/has_image> <https://iiif.artresearch.net/iiif/2/zeri!138800%21138711_g.jpg/full/full/0/default.jpg>. 
+<https://pharos.artresearch.net/resource/zeri/work/97921> <http://www.w3.org/2000/01/rdf-schema#label> "Fracassini Cesare , Madonna con Bambino in trono, angeli e santi"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97921> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/zeri/actor/SOQ66T8I>. 
+<https://pharos.artresearch.net/resource/zeri/actor/SOQ66T8I> <http://www.w3.org/2000/01/rdf-schema#label> "Basilica di S. Lorenzo fuori le Mura"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97921> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/zeri/actor/VBF5LECO>. 
+<https://pharos.artresearch.net/resource/zeri/actor/VBF5LECO> <http://www.w3.org/2000/01/rdf-schema#label> "Fracassini Cesare"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97921> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>. 
+<https://pharos.artresearch.net/resource/zeri/work/97933> <https://pharos.artresearch.net/custom/has_image> <https://iiif.artresearch.net/iiif/2/zeri!138800%21138724_g.jpg/full/full/0/default.jpg>. 
+<https://pharos.artresearch.net/resource/zeri/work/97933> <http://www.w3.org/2000/01/rdf-schema#label> "Ferrari Giuseppe , Battaglia di Novara"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97933> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/zeri/actor/1H7U7OHO>. 
+<https://pharos.artresearch.net/resource/zeri/actor/1H7U7OHO> <http://www.w3.org/2000/01/rdf-schema#label> "Palazzo Carignano, Museo Nazionale del Risorgimento Italiano"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97933> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/zeri/actor/U7UKOT6U>. 
+<https://pharos.artresearch.net/resource/zeri/actor/U7UKOT6U> <http://www.w3.org/2000/01/rdf-schema#label> "Ferrari Giuseppe"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97933> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>. 
+<https://pharos.artresearch.net/resource/zeri/work/97950> <https://pharos.artresearch.net/custom/has_image> <https://iiif.artresearch.net/iiif/2/zeri!138800%21138747_g.jpg/full/full/0/default.jpg>. 
+<https://pharos.artresearch.net/resource/zeri/work/97950> <http://www.w3.org/2000/01/rdf-schema#label> "Carlandi Onorato , Veduta di Venezia"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97950> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/zeri/actor/S1B5W5G3>. 
+<https://pharos.artresearch.net/resource/zeri/actor/S1B5W5G3> <http://www.w3.org/2000/01/rdf-schema#label> "Bellesi"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97950> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/zeri/actor/1IUSPU8D>. 
+<https://pharos.artresearch.net/resource/zeri/work/97950> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>. 
+<https://pharos.artresearch.net/resource/zeri/work/97954> <https://pharos.artresearch.net/custom/has_image> <https://iiif.artresearch.net/iiif/2/zeri!138800%21138751_g.jpg/full/full/0/default.jpg>. 
+<https://pharos.artresearch.net/resource/zeri/work/97954> <http://www.w3.org/2000/01/rdf-schema#label> "Vannutelli Scipione , Autoritratto di Scipione Vannutelli"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97954> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/zeri/actor/UBLVBTQ2>. 
+<https://pharos.artresearch.net/resource/zeri/actor/UBLVBTQ2> <http://www.w3.org/2000/01/rdf-schema#label> "Palazzo degli Uffizi, Galleria degli Uffizi"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97954> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/zeri/actor/1IUPZJW8>. 
+<https://pharos.artresearch.net/resource/zeri/actor/1IUPZJW8> <http://www.w3.org/2000/01/rdf-schema#label> "Vannutelli Scipione"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97954> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>. 
+<https://pharos.artresearch.net/resource/zeri/work/97938> <https://pharos.artresearch.net/custom/has_image> <https://iiif.artresearch.net/iiif/2/zeri!138800%21138733_g.jpg/full/full/0/default.jpg>. 
+<https://pharos.artresearch.net/resource/zeri/work/97938> <http://www.w3.org/2000/01/rdf-schema#label> "Brugnoli Annibale , Bersagliere a guardia di Palazzo dei Priori a Perugia"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97938> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/zeri/actor/QDTAJQJJ>. 
+<https://pharos.artresearch.net/resource/zeri/actor/QDTAJQJJ> <http://www.w3.org/2000/01/rdf-schema#label> "Palazzo Graziani, Fondazione Cassa di Risparmio di Perugia"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97938> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/zeri/actor/TODEI8RB>. 
+<https://pharos.artresearch.net/resource/zeri/actor/TODEI8RB> <http://www.w3.org/2000/01/rdf-schema#label> "Brugnoli Annibale"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://pharos.artresearch.net/resource/zeri/work/97938> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>. 
