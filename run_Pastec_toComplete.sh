@@ -70,6 +70,8 @@ now=$(date +"%Y-%m-%dT%H-%M-%S")
 # echo $host				# http://vision.artresearch.net
 # echo $port				# 4212
 
+method=pastec
+port=4212
 
 # Update Pharos
 java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/2021-04-23T13-40-08_pastecIDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/2021-04-23T13-40-08_pastecIDs.ttl"
