@@ -129,7 +129,8 @@ public class Utils {
         String insertQ = "INSERT {"
                     + " GRAPH <"+graph+"> {\n\t"
                     + "     "+ttl+"}} WHERE {}";
-        Logger.getLogger(Utils.class.getName()).log(Level.INFO, "Preparing Update query:\n".concat(insertQ));
+//        Logger.getLogger(Utils.class.getName()).log(Level.INFO, "Preparing Update query:\n".concat(insertQ));
+        Logger.getLogger(Utils.class.getName()).log(Level.INFO, "Preparing Update query...\n");
         Update insertQuery = conn.prepareUpdate(insertQ);
         insertQuery.execute();
         Logger.getLogger(Utils.class.getName()).log(Level.INFO,"Successful query execution");
