@@ -18698,6 +18698,4 @@
 {"image_id": 1184037,
 "image_url": "https://iiif.itatti.harvard.edu/iiif/2/fotoindex!027_recto_d!027_recto_box03_d!027_recto_box03_d_00083.jpg/full/full/0/default.jpg",
 "search_results": {"bounding_rects":[{"height":919,"width":684,"x":49,"y":35}],"image_ids":[1183064],"scores":[24.0],"tags":[""],"type":"SEARCH_RESULTS"} },
-{"image_id": 1184038,
-"image_url": "https://iiif.itatti.harvard.edu/iiif/2/fotoindex!183_recto_d!183_recto_box01_d!183_recto_box01_d_00037.jpg/full/full/0/default.jpg",
-"search_results": {"bounding_rects":[],"image_ids":[],"scores":[],"tags":[],"type":"SEARCH_RESULTS"} },
+{}]}
