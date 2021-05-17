@@ -78,29 +78,31 @@ public class ModelGenerator {
                         BigInteger hash_1 = new BigInteger(DigestUtils.sha1Hex(image_1).replaceAll("[a-zA-Z]+", "").trim());
                         for (String[] map : maps) {
                             String image_2 = image_index.get(new BigInteger(map[0]));
-    //                        System.out.println(image_2 + " " + new BigInteger(map[0]) );
-                            BigInteger hash_2 = new BigInteger(DigestUtils.sha1Hex(image_2).replaceAll("[a-zA-Z]+", "").trim());
-                            BigInteger hash = hash_1.add(hash_2);
-                            String graph = "";
-                            graph = graph.concat("<"+Resources.VISION+Resources.GRAPH+"/visual_similarity/"+hash+"> {\n");
-                            // image_uri sim:element https://vision.artresearch.net/resource/similarity/association/hash
-                            graph = graph.concat("\t<"+image_1+"> <"+Resources.SIM+Resources.ELEMENT+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+">.\n");
-                            graph = graph.concat("\t<"+image_2+"> <"+Resources.SIM+Resources.ELEMENT+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+">.\n");
-                            // https://vision.artresearch.net/resource/Similarity/Association/hash a sim:Similarity
-                            graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"> a <"+Resources.SIM+StringUtils.capitalize(Resources.SIMILARITY)+">.\n");
-                            //https://vision.artresearch.net/resource/Similarity/Association/hash sim:method https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec
-                            graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"> <"+Resources.SIM+Resources.METHOD+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+">.\n");
-                            // https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec a sim:Association
-                            graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> a <"+Resources.SIM+Resources.ASSOCIATION+">.\n");
-                            // https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec sim:method https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec
-                            graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> <"+Resources.SIM+Resources.METHOD+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+Resources.ASSOCIATION_METHOD+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+">.\n");
-                            // https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec a sim:AssociationMethod
-                            graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+Resources.ASSOCIATION_METHOD+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> a <"+Resources.SIM+Resources.ASSOCIATION_METHOD+">.\n");
-                            // https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec sim:weight "90"
-                            graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> <"+Resources.SIM+Resources.WEIGHT+"> \"" + map[1] + "\".\n");
-                            graph = graph.concat("}\n");
-                            writer.append(graph);
-                            updateModel(graph);
+                            if (image_1!=null && image_2!=null){
+        //                        System.out.println(image_2 + " " + new BigInteger(map[0]) );
+                                BigInteger hash_2 = new BigInteger(DigestUtils.sha1Hex(image_2).replaceAll("[a-zA-Z]+", "").trim());
+                                BigInteger hash = hash_1.add(hash_2);
+                                String graph = "";
+                                graph = graph.concat("<"+Resources.VISION+Resources.GRAPH+"/visual_similarity/"+hash+"> {\n");
+                                // image_uri sim:element https://vision.artresearch.net/resource/similarity/association/hash
+                                graph = graph.concat("\t<"+image_1+"> <"+Resources.SIM+Resources.ELEMENT+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+">.\n");
+                                graph = graph.concat("\t<"+image_2+"> <"+Resources.SIM+Resources.ELEMENT+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+">.\n");
+                                // https://vision.artresearch.net/resource/Similarity/Association/hash a sim:Similarity
+                                graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"> a <"+Resources.SIM+StringUtils.capitalize(Resources.SIMILARITY)+">.\n");
+                                //https://vision.artresearch.net/resource/Similarity/Association/hash sim:method https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec
+                                graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"> <"+Resources.SIM+Resources.METHOD+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+">.\n");
+                                // https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec a sim:Association
+                                graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> a <"+Resources.SIM+Resources.ASSOCIATION+">.\n");
+                                // https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec sim:method https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec
+                                graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> <"+Resources.SIM+Resources.METHOD+"> <"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+Resources.ASSOCIATION_METHOD+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+">.\n");
+                                // https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec a sim:AssociationMethod
+                                graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+Resources.ASSOCIATION_METHOD+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> a <"+Resources.SIM+Resources.ASSOCIATION_METHOD+">.\n");
+                                // https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec sim:weight "90"
+                                graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> <"+Resources.SIM+Resources.WEIGHT+"> \"" + map[1] + "\".\n");
+                                graph = graph.concat("}\n");
+                                writer.append(graph);
+                                updateModel(graph);
+                            }
                         }   
                     } catch (IOException ex) {
                         Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
