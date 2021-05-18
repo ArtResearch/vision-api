@@ -1,0 +1,12 @@
+<https://pharos.artresearch.net/resource/graph/visual_similarity/pastec> {
+	<https://ids.lib.harvard.edu/ids/iiif/406551211/full/full/0/native.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1306048>.
+	<https://ids.lib.harvard.edu/ids/iiif/406621010/full/full/0/native.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1306049>.
+	<https://ids.lib.harvard.edu/ids/iiif/406553584/full/full/0/native.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1306050>.
+	<https://ids.lib.harvard.edu/ids/iiif/406555664/full/full/0/native.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1306051>.
+	<https://ids.lib.harvard.edu/ids/iiif/406553612/full/full/0/native.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1306052>.
+	<https://ids.lib.harvard.edu/ids/iiif/406553608/full/full/0/native.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1306053>.
+	<https://ids.lib.harvard.edu/ids/iiif/406553576/full/full/0/native.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1306054>.
+	<https://ids.lib.harvard.edu/ids/iiif/406553596/full/full/0/native.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1306055>.
+	<https://ids.lib.harvard.edu/ids/iiif/457648212/full/full/0/native.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1306056>.
+	<https://ids.lib.harvard.edu/ids/iiif/406551161/full/full/0/native.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1306057>.
+}
