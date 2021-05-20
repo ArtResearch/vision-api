@@ -1,0 +1,20 @@
+<https://vision.artresearch.net/resource/graph/visual_similarity/597410503727454414133087> {
+	<https://imagesdigitalcollections.frick.org/media/filename/3107100097529_003.tif> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/597410503727454414133087>.
+	<https://imagesdigitalcollections.frick.org/media/filename/3107100097529_001.tif> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/597410503727454414133087>.
+	<https://vision.artresearch.net/resource/Similarity/597410503727454414133087> a <http://purl.org/ontology/similarity/Similarity>.
+	<https://vision.artresearch.net/resource/Similarity/597410503727454414133087> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/597410503727454414133087/Association/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/597410503727454414133087/Association/Pastec> a <http://purl.org/ontology/similarity/Association>.
+	<https://vision.artresearch.net/resource/Similarity/597410503727454414133087/Association/Pastec> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec> a <http://purl.org/ontology/similarity/AssociationMethod>.
+	<https://vision.artresearch.net/resource/Similarity/597410503727454414133087/Association/Pastec> <http://purl.org/ontology/similarity/weight> "91.0".
+}
+<https://vision.artresearch.net/resource/graph/visual_similarity/588982694588892964274870> {
+	<https://imagesdigitalcollections.frick.org/media/filename/3107100097529_003.tif> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/588982694588892964274870>.
+	<https://imagesdigitalcollections.frick.org/media/filename/3107100097529_005.tif> <http://purl.org/ontology/similarity/element> <https://vision.artresearch.net/resource/Similarity/588982694588892964274870>.
+	<https://vision.artresearch.net/resource/Similarity/588982694588892964274870> a <http://purl.org/ontology/similarity/Similarity>.
+	<https://vision.artresearch.net/resource/Similarity/588982694588892964274870> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/588982694588892964274870/Association/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/588982694588892964274870/Association/Pastec> a <http://purl.org/ontology/similarity/Association>.
+	<https://vision.artresearch.net/resource/Similarity/588982694588892964274870/Association/Pastec> <http://purl.org/ontology/similarity/method> <https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec>.
+	<https://vision.artresearch.net/resource/Similarity/AssociationMethod/Pastec> a <http://purl.org/ontology/similarity/AssociationMethod>.
+	<https://vision.artresearch.net/resource/Similarity/588982694588892964274870/Association/Pastec> <http://purl.org/ontology/similarity/weight> "54.0".
+}
