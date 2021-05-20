@@ -23,7 +23,7 @@ CONSTRUCT {
   ?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/khi/type/4F6A2899-2950-328C-B172-54AD813EE993>.
   ?s rdfs:label ?label.
   OPTIONAL {
-    ?s <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> ?institution.
+    ?s <http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper> ?institution.
     ?institution rdfs:label ?institution_label.
   }
   OPTIONAL {
@@ -44,4 +44,4 @@ CONSTRUCT {
     ?production <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> $timespan .
     ?timespan <http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end> $end .
   }
-} LIMIT 100
+} LIMIT 1000
