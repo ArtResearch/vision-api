@@ -1,0 +1,12 @@
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/>
+PREFIX custom: <https://pharos.artresearch.net/custom/>
+CONSTRUCT {  
+    ?s custom:has_image ?image.
+} WHERE {
+  ?s <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/khi/source/KHI>.
+  ?s <https://pharos.artresearch.net/resource/fr/Work_depicted_by_Photo> ?photo.
+  ?photo <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of>  ?image.
+  ?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/khi/type/4F6A2899-2950-328C-B172-54AD813EE993>.
+} LIMIT 5000
