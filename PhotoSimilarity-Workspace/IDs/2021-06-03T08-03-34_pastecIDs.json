@@ -1,0 +1,17 @@
+{"results" : [
+{"image_id": 1386461,
+"image_url": "https://ids.lib.harvard.edu/ids/iiif/406553676/full/full/0/native.jpg",
+"search_results": {"bounding_rects":[{"height":906,"width":689,"x":31,"y":39}],"image_ids":[1246584],"scores":[562.0],"tags":[""],"type":"SEARCH_RESULTS"} },
+{"image_id": 1386462,
+"image_url": "https://ids.lib.harvard.edu/ids/iiif/406553740/full/full/0/native.jpg",
+"search_results": {"bounding_rects":[{"height":915,"width":609,"x":50,"y":48}],"image_ids":[1233627],"scores":[281.0],"tags":[""],"type":"SEARCH_RESULTS"} },
+{"image_id": 1386463,
+"image_url": "https://ids.lib.harvard.edu/ids/iiif/406553748/full/full/0/native.jpg",
+"search_results": {"bounding_rects":[{"height":849,"width":518,"x":120,"y":117}],"image_ids":[1218514],"scores":[687.0],"tags":[""],"type":"SEARCH_RESULTS"} },
+{"image_id": 1386464,
+"image_url": "https://ids.lib.harvard.edu/ids/iiif/406553668/full/full/0/native.jpg",
+"search_results": {"bounding_rects":[{"height":838,"width":595,"x":68,"y":46}],"image_ids":[1227019],"scores":[656.0],"tags":[""],"type":"SEARCH_RESULTS"} },
+{"image_id": 1386465,
+"image_url": "https://ids.lib.harvard.edu/ids/iiif/406553724/full/full/0/native.jpg",
+"search_results": {"bounding_rects":[{"height":705,"width":485,"x":63,"y":139},{"height":653,"width":484,"x":64,"y":140},{"height":653,"width":484,"x":64,"y":140},{"height":653,"width":443,"x":105,"y":140},{"height":654,"width":443,"x":105,"y":139},{"height":654,"width":484,"x":63,"y":139},{"height":654,"width":485,"x":63,"y":139},{"height":653,"width":484,"x":64,"y":140},{"height":704,"width":475,"x":63,"y":140}],"image_ids":[1294508,1206677,1286134,1100647,1152183,1183013,1209895,1235803,1259425],"scores":[505.0,84.0,84.0,82.0,73.0,66.0,56.0,36.0,27.0],"tags":["","","","","","","","",""],"type":"SEARCH_RESULTS"} },
+{}]}
