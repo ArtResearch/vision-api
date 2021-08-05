@@ -16,7 +16,7 @@ The run.sh script should be in the same folder as the PhotoSimilarity.jar.
 
 ### Script Configuration Variables
 
-You can use a configuration file (ie. config.sh) to initialize the API. Below are presented the configuration variables:
+You can use a configuration file (ie. config.conf) to initialize the API. Below are presented the configuration variables:
 
 * **query [required]** : a file containing the construct query, where the resulting object should be the image url.
 * **endpoint [required]** : the endpoint, where you wish to harvest the data from.
@@ -28,6 +28,8 @@ You can use a configuration file (ie. config.sh) to initialize the API. Below ar
 * **method [required]** : method used (Pastec/Match).
 * **host [optional]** : host IP address of the server that runs Pastec/Match.
 * **port [required]** : port that runs the method API.
+
+for usernames and passwords, you can use the authentication.env.template (removing the extention template)
 
 ### Bash commands
 
