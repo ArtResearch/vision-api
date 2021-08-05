@@ -16,6 +16,7 @@ run_separete.sh
 authentication.env
 configMatch.sh
 configPastec.sh
+
 # Compiled Java class files
 *.class
 
@@ -59,3 +60,4 @@ Thumbs.db
 *.mov
 *.wmv
 
+/nbproject/
