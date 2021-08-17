@@ -27,12 +27,10 @@ configPastec.sh
 *.log
 
 # Package files
-# *.jar
-target/PhotoSimilarity-0.1.jar
+*.jar
 
 # Maven
-target/maven-archiver/
-target/maven-status/
+target/
 dist
 
 # JetBrains IDE
