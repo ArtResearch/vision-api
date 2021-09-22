@@ -60,4 +60,4 @@ Thumbs.db
 *.mov
 *.wmv
 
-/nbproject/
+/nbproject/authentication.env
