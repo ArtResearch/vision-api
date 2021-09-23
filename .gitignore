@@ -61,3 +61,4 @@ Thumbs.db
 *.wmv
 
 /nbproject/authentication.env
+target/
