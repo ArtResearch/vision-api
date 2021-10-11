@@ -60,15 +60,15 @@ method=${method,,}
 now=$(date +"%Y-%m-%dT%H-%M-%S")
 
 # echo $query
-# echo $endpoint 			# https://pharos.artresearch.net/sparql
-# echo $pharos_user		# admin
-# echo $pharos_password	# pharosadmin
-# echo $vision_endpoint	# https://vision.artresearch.net/sparql
-# echo $vision_user		# vision
-# echo $vision_password	# vision
-# echo $method			# Pastec
-# echo $host				# http://vision.artresearch.net
-# echo $port				# 4212
+# echo $endpoint
+# echo $pharos_user
+# echo $pharos_password
+# echo $vision_endpoint
+# echo $vision_user		
+# echo $vision_password	
+# echo $method			
+# echo $host
+# echo $port
 
 # Construct query evaluation
 java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password
