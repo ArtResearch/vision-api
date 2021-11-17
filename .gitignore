@@ -13,7 +13,9 @@ ignore/
 configPastecLocal.env
 partialRun.sh
 run_separete.sh
-auth.env
+authentication.env
+configMatch.sh
+configPastec.sh
 
 # Compiled Java class files
 *.class
@@ -58,3 +60,5 @@ Thumbs.db
 *.mov
 *.wmv
 
+/nbproject/authentication.env
+target/
