@@ -27,10 +27,16 @@ configPastec.sh
 *.log
 
 # Package files
-*.jar
+# *.jar
+target/PhotoSimilarity-0.1.jar
 
 # Maven
+<<<<<<< HEAD
 target/
+=======
+target/maven-archiver/
+target/maven-status/
+>>>>>>> 0d2b79c3d92b5b505dd5005450c2f1cbc0657218
 dist
 
 # JetBrains IDE
@@ -58,4 +64,9 @@ Thumbs.db
 *.mov
 *.wmv
 
+<<<<<<< HEAD
 /nbproject/
+=======
+/nbproject/authentication.env
+target/
+>>>>>>> 0d2b79c3d92b5b505dd5005450c2f1cbc0657218

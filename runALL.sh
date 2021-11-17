@@ -1,27 +1,35 @@
 #/!/bin/bash
 
-echo "Run Zeri"
+#echo "Run Zeri"
 
-./run_Pastec.sh configZeriCheat.conf
+#./run_Pastec.sh configZeriCheat.conf
 
-echo "Run ITatti"
+#echo "Run ITatti"
 
-./run_Pastec.sh configItattiCheat.conf
+#./run_Pastec.sh configItattiCheat.conf
 
-echo "Run Hertziana"
+#echo "Run Hertziana"
 
-./run_Pastec.sh configHertzianaCheat.conf
+#./run_Pastec.sh configHertzianaCheat.conf
 
-echo "Run KHI"
+#echo "Run KHI"
 
-./run_Pastec.sh configKHICheat.conf
+#./run_Pastec.sh configKHICheat.conf
 
-echo "Run Marburg"
+echo "Run Marburg 1"
 
 ./run_Pastec.sh configMarburgCheat.conf
 
-echo "Run Frick"
+echo "Run Marburg 2"
 
-./run_Pastec.sh configFrickCheat.conf
+./run_Pastec.sh configMarburgCheat.conf
+
+echo "Run Marburg 3"
+
+./run_Pastec.sh configMarburgCheat.conf
+
+echo "Run Marburg 4"
+
+./run_Pastec.sh configMarburgCheat.conf
 
 echo "END"

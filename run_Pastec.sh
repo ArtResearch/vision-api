@@ -108,6 +108,8 @@ max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSim
 # IDs+="}"
 write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
 
+python3 sntxnorm.py "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
+
 # Update Pharos
 java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
 # Create model and update Vision
