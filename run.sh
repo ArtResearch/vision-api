@@ -147,8 +147,4 @@ IDs+="}"
 # Update Pharos
 java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
 # Create model and update Vision
-<<<<<<< HEAD
 java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -visionModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -log "./PhotoSimilarity-Workspace/Logs/${now}_${method}_error.log"
-=======
-java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -visionModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -log "./PhotoSimilarity-Workspace/Logs/${now}_${method}_error.log"
->>>>>>> f49f786e0a351b691cfd53579a17b5bbc53fb330
