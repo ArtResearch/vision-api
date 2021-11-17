@@ -1,22 +1,10 @@
 # ArtVision API #
 
-<<<<<<< HEAD
-A Java API that processes image uls and sends them through Pastec/Match (or any other CV API) to be indexed and analysed that results in pairs of similar images.
-
-## Pastec/Match
-
-Make sure Pastec/Match is running on a server.
-
-## Run script
-
-The script runs the Java API created, that processes the construct query and parses the images according to the model.
-=======
 A Java API that processes image URLs from the main Pharos endpoint and sends them through Pastec/Match (or any other CV API) to be indexed and analysed. The results are transformed into turtle files that are then uploaded to the ArtVision endpoint (vision.artresearch.net). These image pairs can then be reviewed by collection curators and matched up. The matching process materializes owl:sameAs relationships between artworks that result in merged records on the main Pharos platform.
 
 ## API Architecture
 
 ![fig2](https://user-images.githubusercontent.com/6654854/134366819-ad8b03cf-f1ec-4c2a-ac7f-8043e4af51ba.png)
-
 
 ## Pastec/Match
 
@@ -25,7 +13,6 @@ Make sure Pastec/Match is running on a server and this the endpoint is accessibl
 ## Run script
 
 The script runs the Java API, it processes the construct query and parses the images according to the model.
->>>>>>> 0d2b79c3d92b5b505dd5005450c2f1cbc0657218
 
 ### Script Requirements
 
@@ -33,17 +20,6 @@ The run.sh script should be in the same folder as the PhotoSimilarity.jar.
 
 ### Script Configuration Variables
 
-<<<<<<< HEAD
-You can use a configuration file (ie. config.conf) to initialize the API. Below are presented the configuration variables:
-
-* **query [required]** : a file containing the construct query, where the resulting object should be the image url.
-* **endpoint [required]** : the endpoint, where you wish to harvest the data from.
-* **pharos_user [optional]** : the username for the endpoint.
-* **pharos_password [optional]** : the password for the endpoint.
-* **vision_endpoint [required]** : the vision endpoint, where you wish save your visual similarity data.
-* **vision_user [optional]** : the username for the vision endpoint.
-* **vision_password [optional]** : the password for the vision endpoint.
-=======
 You can use a configuration file (ie. config.conf) to initialize the API. Sample configuration variables:
 
 * **query [required]** : a file containing the construct query, where the resulting object should be the image url.
@@ -53,7 +29,6 @@ You can use a configuration file (ie. config.conf) to initialize the API. Sample
 * **vision_endpoint [required]** : the ArtVision endpoint, where you wish save your visual similarity data.
 * **vision_user [optional]** : the username for the ArtVision endpoint.
 * **vision_password [optional]** : the password for the ArtVision endpoint.
->>>>>>> 0d2b79c3d92b5b505dd5005450c2f1cbc0657218
 * **method [required]** : method used (Pastec/Match).
 * **host [optional]** : host IP address of the server that runs Pastec/Match.
 * **port [required]** : port that runs the method API.

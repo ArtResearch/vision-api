@@ -7,7 +7,7 @@
 node_modules/
 dist/
 deliverables/
-# PhotoSimilarity-Workspace/
+PhotoSimilarity-Workspace/
 nohup.out
 ignore/
 configPastecLocal.env
@@ -16,7 +16,6 @@ run_separete.sh
 authentication.env
 configMatch.sh
 configPastec.sh
-nohup.outi
 
 # Compiled Java class files
 *.class
@@ -32,7 +31,6 @@ nohup.outi
 target/PhotoSimilarity-0.1.jar
 
 # Maven
-
 target/
 dist
 
@@ -62,4 +60,3 @@ Thumbs.db
 *.wmv
 
 /nbproject/
-

@@ -59,7 +59,6 @@ host=${host:-localhost}
 method=${method,,}
 now=$(date +"%Y-%m-%dT%H-%M-%S")
 
-<<<<<<< HEAD
 # echo $query
 # echo $endpoint 			# https://pharos.artresearch.net/sparql
 # echo $pharos_user		# admin
@@ -71,8 +70,6 @@ now=$(date +"%Y-%m-%dT%H-%M-%S")
 # echo $host				# http://vision.artresearch.net
 # echo $port				# 4212
 
-=======
->>>>>>> 0d2b79c3d92b5b505dd5005450c2f1cbc0657218
 # Construct query evaluation
 java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password
 
