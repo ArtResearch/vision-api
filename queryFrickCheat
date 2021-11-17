@@ -10,3 +10,4 @@ CONSTRUCT {
   ?photo <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of>  ?image.
   ?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/frick/type/4F6A2899-2950-328C-B172-54AD813EE993>.
 } LIMIT 10000
+

@@ -60,6 +60,7 @@ method=${method,,}
 now=$(date +"%Y-%m-%dT%H-%M-%S")
 
 # echo $query
+<<<<<<< HEAD
 # echo $endpoint 			# https://pharos.artresearch.net/sparql
 # echo $pharos_user		# admin
 # echo $pharos_password	# pharosadmin
@@ -69,6 +70,17 @@ now=$(date +"%Y-%m-%dT%H-%M-%S")
 # echo $method			# Pastec
 # echo $host				# http://vision.artresearch.net
 # echo $port				# 4212
+=======
+# echo $endpoint
+# echo $pharos_user
+# echo $pharos_password
+# echo $vision_endpoint
+# echo $vision_user		
+# echo $vision_password	
+# echo $method			
+# echo $host
+# echo $port
+>>>>>>> f49f786e0a351b691cfd53579a17b5bbc53fb330
 
 # Construct query evaluation
 java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password
@@ -107,6 +119,8 @@ max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSim
 # Save indexes in a file
 # IDs+="}"
 write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
+
+python3 sntxnorm.py "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
 
 # Update Pharos
 java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"

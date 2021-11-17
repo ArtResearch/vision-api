@@ -42,4 +42,8 @@ CONSTRUCT {
     ?s <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> ?influence.
     ?influence rdfs:label ?influence_label.
   }
+<<<<<<< HEAD
 } LIMIT 100
+=======
+} LIMIT 100
+>>>>>>> f49f786e0a351b691cfd53579a17b5bbc53fb330

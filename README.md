@@ -7,7 +7,6 @@ A Java API that processes image URLs from the main Pharos endpoint and sends the
 
 ![fig2](https://user-images.githubusercontent.com/6654854/134366819-ad8b03cf-f1ec-4c2a-ac7f-8043e4af51ba.png)
 
-
 ## Pastec/Match
 
 Make sure Pastec/Match is running on a server and this the endpoint is accessible from this API.

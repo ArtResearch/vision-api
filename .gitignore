@@ -7,7 +7,7 @@
 node_modules/
 dist/
 deliverables/
-# PhotoSimilarity-Workspace/
+PhotoSimilarity-Workspace/
 nohup.out
 ignore/
 configPastecLocal.env
@@ -31,8 +31,7 @@ configPastec.sh
 target/PhotoSimilarity-0.1.jar
 
 # Maven
-target/maven-archiver/
-target/maven-status/
+target/
 dist
 
 # JetBrains IDE
@@ -60,5 +59,4 @@ Thumbs.db
 *.mov
 *.wmv
 
-/nbproject/authentication.env
-target/
+/nbproject/
