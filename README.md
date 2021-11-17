@@ -1,5 +1,6 @@
 # ArtVision API #
 
+
 A Java API that processes image URLs from the main Pharos endpoint and sends them through Pastec/Match (or any other CV API) to be indexed and analysed. The results are transformed into turtle files that are then uploaded to the ArtVision endpoint (vision.artresearch.net). These image pairs can then be reviewed by collection curators and matched up. The matching process materializes owl:sameAs relationships between artworks that result in merged records on the main Pharos platform.
 
 ## API Architecture
@@ -32,6 +33,7 @@ You can use a configuration file (ie. config.conf) to initialize the API. Sample
 * **method [required]** : method used (Pastec/Match).
 * **host [optional]** : host IP address of the server that runs Pastec/Match.
 * **port [required]** : port that runs the method API.
+
 
 for usernames and passwords, you can use the authentication.env.template (removing the extention template)
 

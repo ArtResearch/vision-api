@@ -68,6 +68,7 @@ public class TestPhotoSimilarity {
             byte[] out = data.getBytes(StandardCharsets.UTF_8);
             OutputStream stream = http.getOutputStream();
             stream.write(out);
+            System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
             InputStream inputStream = http.getInputStream();
             String response = new BufferedReader( new InputStreamReader(inputStream, StandardCharsets.UTF_8))
                                 .lines()
