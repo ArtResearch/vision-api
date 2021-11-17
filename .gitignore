@@ -16,7 +16,7 @@ run_separete.sh
 authentication.env
 configMatch.sh
 configPastec.sh
-nohup.out
+nohup.outi
 
 # Compiled Java class files
 *.class

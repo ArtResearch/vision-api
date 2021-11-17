@@ -1,0 +1,11 @@
+<https://pharos.artresearch.net/resource/graph/visual_similarity/pastec> {
+	<https://iiif.artresearch.net/iiif/2/marburg!it00050f07.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1946972>.
+	<https://iiif.artresearch.net/iiif/2/marburg!fm763017.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1946973>.
+	<https://iiif.artresearch.net/iiif/2/marburg!it00039g13.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1946974>.
+	<https://iiif.artresearch.net/iiif/2/marburg!it00040a02.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1946975>.
+	<https://iiif.artresearch.net/iiif/2/marburg!it00040a07.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1946976>.
+	<https://iiif.artresearch.net/iiif/2/marburg!it00035f01.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1946977>.
+	<https://iiif.artresearch.net/iiif/2/marburg!fm1848.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1946978>.
+	<https://iiif.artresearch.net/iiif/2/marburg!it00053b05.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1946979>.
+	<https://iiif.artresearch.net/iiif/2/marburg!it00010g05.jpg/full/full/0/default.jpg> <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> <https://vision.artresearch.net:4212/index/images/1946980>.
+}
