@@ -74,7 +74,7 @@ public class QueryHandler {
             repo.initialize();
             RepositoryConnection conn = repo.getConnection();
             // Filter out images with a particular method index
-            if (!constructQuery.contains("BIND") || !constructQuery.contains("bind")){
+            if (!(constructQuery.contains("BIND") || constructQuery.contains("bind"))){
                 constructQuery = constructQuery.substring(0,constructQuery.lastIndexOf("}"))
                                     + "\tFILTER NOT EXISTS { ?image <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.MATCH_METHOD+"/has_index>|"
                                     + "<https://pharos.artresearch.net/resource/vocab/vision/"+Resources.PASTEC_METHOD+"/has_index> ?index}\n"
