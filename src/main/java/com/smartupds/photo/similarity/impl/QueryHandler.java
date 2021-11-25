@@ -85,12 +85,11 @@ public class QueryHandler {
             GraphQueryResult result = graph.evaluate();
             this.graphPath = Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_graph.ttl";
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(this.graphPath), "UTF-8");
-            File file1 = new File(Resources.GRAPHS +"/image_uris");
-            File file2 = new File(Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_image_uris");
-            if (file1.exists()){
+            File file1 = new File(Resources.GRAPHS +"/image_uris" + Resources.SIMILARITY_METHOD.trim());
+            File file2 = new File(Resources.GRAPHS +"/"+LocalDateTime.now().toString().replace(":", "-")+"_image_uris" + Resources.SIMILARITY_METHOD.trim());
+            if (file1.exists())
                 Files.copy(file1, file2);
-            }
-            OutputStreamWriter writer2 = new OutputStreamWriter(new FileOutputStream(Resources.GRAPHS +"/image_uris"), "UTF-8");
+            OutputStreamWriter writer2 = new OutputStreamWriter(new FileOutputStream(Resources.GRAPHS +"/image_uris" + Resources.SIMILARITY_METHOD.trim()), "UTF-8");
             HashSet<String> image_uris_distinct = new HashSet<>();
             while(result.hasNext()){
                 Statement stmt = result.next();
@@ -105,7 +104,7 @@ public class QueryHandler {
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Construct query result saved at :".concat(this.graphPath));
             writer2.append(String.join("\n", image_uris_distinct));
             writer2.close();
-            Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "File with image URIS created at :".concat(Resources.GRAPHS +"/image_uris"));
+            Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "File with image URIS created at :".concat(Resources.GRAPHS +"/image_uris"+Resources.SIMILARITY_METHOD.trim()));
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Repository Shutting Down.");
             repo.shutDown();
             
