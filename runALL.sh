@@ -37,3 +37,5 @@
 echo "Run Frick 1"
 
 ./run_Pastec.sh configFrickCheat.conf
+
+echo "END"

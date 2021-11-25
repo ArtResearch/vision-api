@@ -5,16 +5,18 @@ PREFIX custom: <https://pharos.artresearch.net/custom/>
 PREFIX cfc: <https://pharos.artresearch.net/resource/custom/fc/>
 CONSTRUCT {  
     ?s custom:has_image ?image.
+    ?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/frick/type/4F6A2899-2950-328C-B172-54AD813EE993>.
 } WHERE {
     ?s a cfc:work.
     ?s <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/frick/source/Frick>.
     ?s <https://pharos.artresearch.net/resource/fr/Work_depicted_by_Photo> ?photo.
     ?photo <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ?x.
-    ?x <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ?manifest.
+    ?x <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ?manifest;
+	<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/frick/type/4F6A2899-2950-328C-B172-54AD813EE993>.
     BIND(IRI(REPLACE(STR(?manifest),"iiif/info.json","full/full/0/default.jpg")) AS ?image)
     FILTER NOT EXISTS {
         BIND(IRI(REPLACE(STR(?manifest),"iiif/info.json","full/full/0/default.jpg")) AS ?image) 
         ?image <https://pharos.artresearch.net/resource/vocab/vision/match/has_index>|<https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> ?index
     }
-} LIMIT 10
+} LIMIT 5000
 
