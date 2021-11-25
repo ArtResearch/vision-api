@@ -70,11 +70,12 @@ now=$(date +"%Y-%m-%dT%H-%M-%S")
 # echo $host
 # echo $port
 
+method=match
+
 # Construct query evaluation
-java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password
+java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -m $method
 
 # MATCH METHOD
-method=match
 port=8888
 # Request existing indexes
 image_ids=$(curl -X GET $host:$port/list)

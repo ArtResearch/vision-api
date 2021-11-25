@@ -70,12 +70,12 @@ now=$(date +"%Y-%m-%dT%H-%M-%S")
 # echo $host
 # echo $port
 
+method=pastec
 # Construct query evaluation
-java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password
+java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -m $method
 
 
 # PASTEC METHOD
-method=pastec
 port=4212
 # Request existing indexes
 image_ids=$(curl -X GET $host:$port/index/imageIds)
@@ -101,7 +101,7 @@ max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSim
 			write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
 		fi
 		ID=$(expr $ID + 1)
-	done < ./PhotoSimilarity-Workspace/Graphs/image_uris
+	done < "./PhotoSimilarity-Workspace/Graphs/image_uris${method}"
 	echo -e "{}]}"
 } > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
 # Save indexes in a file
