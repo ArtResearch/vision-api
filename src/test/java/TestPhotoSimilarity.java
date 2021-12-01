@@ -30,7 +30,7 @@ import org.junit.jupiter.api.DisplayName;
  */
 public class TestPhotoSimilarity {
     
-    private static final String PASTEC_URL = "http://localhost:4212";
+    private static final String PASTEC_URL = "http://vision.artresearch.net:4212";
     
     public TestPhotoSimilarity() {
     }

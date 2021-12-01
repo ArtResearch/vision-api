@@ -78,7 +78,7 @@ java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -p $endpoint -pharos
 # MATCH METHOD
 port=8888
 # Request existing indexes
-image_ids=$(curl -X GET $host:$port/list)
+image_ids=$(curl -X GET $host:$port/count)
 image_ids=$(echo $image_ids | sed 's/ //g')
 echo -e $image_ids > "./PhotoSimilarity-Workspace/${method}_ids.json"
 max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids "./PhotoSimilarity-Workspace/${method}_ids.json" -m $method)

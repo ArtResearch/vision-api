@@ -59,10 +59,16 @@ public class IndexHandler {
                 indexesHashed.add(new BigInteger(index.replace("\"", "")));
             }
         }
+
         Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Handling indexes.");
         if (indexesHashed.size()>0){
-            System.out.print(Collections.max(indexesHashed));
-            Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Current max index returned : ".concat(""+Collections.max(indexesHashed)));
+            if (Resources.SIMILARITY_METHOD.equals(Resources.MATCH_METHOD)) {
+                System.out.print(Collections.max(indexesHashed).add(new BigInteger("1000000")));
+                Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Current max index returned : ".concat(""+Collections.max(indexesHashed).add(new BigInteger("1000000"))));
+            } else {
+                System.out.print(Collections.max(indexesHashed));
+                Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Current max index returned : ".concat(""+Collections.max(indexesHashed)));
+            }
         } else {
             System.out.print(1000000);
             Logger.getLogger(IndexHandler.class.getName()).log(Level.INFO, "Current max index returned : 1000000");
