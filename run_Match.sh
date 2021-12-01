@@ -100,7 +100,7 @@ IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}
 		# Generate ttl file
 		IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> \"${ID}\".\n"
 		ID=$(expr $ID + 1)
-	done < ./PhotoSimilarity-Workspace/Graphs/image_uris
+	done < "./PhotoSimilarity-Workspace/Graphs/image_uris${method}"
 	echo -e "{}]}"
 } > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
 # Save indexes in a file

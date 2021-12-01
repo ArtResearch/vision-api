@@ -38,4 +38,16 @@ echo "Run Frick 1"
 
 ./run_Pastec.sh configFrickCheat.conf
 
+echo "Run Frick 2"
+
+./run_Pastec.sh configFrickCheat.conf
+
+echo "Run Frick 3"
+
+./run_Pastec.sh configFrickCheat.conf
+
+echo "Run Frick 4"
+
+./run_Pastec.sh configFrickCheat.conf
+
 echo "END"
