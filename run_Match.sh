@@ -81,7 +81,7 @@ port=8888
 image_ids=$(curl -X GET $host:$port/count)
 image_ids=$(echo $image_ids | sed 's/ //g')
 echo -e $image_ids > "./PhotoSimilarity-Workspace/${method}_ids.json"
-max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids "./PhotoSimilarity-Workspace/${method}_ids.json" -m $method)
+max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids "./PhotoSimilarity-Workspace/${method}_ids.json" -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password)
 
 IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
 #Match Photo Similarity Evaluation & Indexing

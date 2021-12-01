@@ -103,7 +103,8 @@ public class Main {
             String file = q.createGraph();
             Utils.uploadFile(file, ""+Resources.VISION+Resources.GRAPH+"/materializations", line.getOptionValue("e"), Resources.VISION_USER, Resources.VISION_PASSWORD);
         } else if (line.hasOption("image_ids")){
-            IndexHandler ih = new IndexHandler(line.getOptionValue("image_ids"));
+            IndexHandler ih = new IndexHandler();
+            ih.setRepository(line.getOptionValue("e"));
             ih.handle();
         } else if (line.hasOption("pharosModel") && line.hasOption("e")){
             ModelGenerator model = new ModelGenerator(line.getOptionValue("pharosModel"));
