@@ -18,7 +18,7 @@
 
 #echo "Run Marburg 1"
 
-#./run_Pastec.sh configMarburgCheat.conf
+#i./run_Pastec.sh configMarburgCheat.conf
 
 #echo "Run Marburg 2"
 
@@ -34,8 +34,8 @@
 
 #echo "END"
 
-echo "Run FrickI Match 1"
+echo "Run Frick Match 1"
 
 ./run_Match.sh configFrickCheatMatch.conf
 
-echo "END"
+echo "END Match"
