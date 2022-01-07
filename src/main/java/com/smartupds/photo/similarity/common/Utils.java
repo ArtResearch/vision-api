@@ -79,8 +79,8 @@ public class Utils {
     }
 
     public static void resizeImage(String URL) {
-        if (URL.contains("iif")){
-            String newURL = "";
+        if (URL.contains("iif") || URL.contains("frick.org/media/dzi/")){
+            String newURL = URL;
             Matcher m = Pattern.compile("(^.*\\/)[^\\/]*(\\/[^\\/]*\\/[^\\/]*$)").matcher(URL);
             if (m.find()){
                 newURL = m.group(1) + "!1000,1000" + m.group(2);
