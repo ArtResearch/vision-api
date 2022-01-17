@@ -71,46 +71,15 @@ now=$(date +"%Y-%m-%dT%H-%M-%S")
 # echo $port
 
 method=pastec
-# Construct query evaluation
-java -jar target/PhotoSimilarity-0.1-assembly.jar -q $query -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -m $method
-
 
 # PASTEC METHOD
 port=4212
 # Request existing indexes
-image_ids=$(curl -X GET $host:$port/index/imageIds)
-echo -e $image_ids > "./PhotoSimilarity-Workspace/${method}_ids.json"
-max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSimilarity-Workspace/${method}_ids.json -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password)
 
-#IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
-#Pastec Photo Similarity Evaluation & Indexing
-{
-	ID=$(expr $max_id + 1)
-	echo -e "{\"results\" : ["
-	while read line || [ -n "$line" ]; do
-		# resize image (based on iiif model)
-		url=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_url $line)
-		# Search through the images in pastec with the image url
-		search=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/searcher)
-		echo -e "{\"image_id\": ${ID},\n\"image_url\": \"${line}\",\n\"search_results\": ${search} },"
-		# Add image in Pastec (POST original)
-		index=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/images/$ID)
-		# Generate ttl file
-		#IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> <https://vision.artresearch.net:${port}/index/images/${ID}>.\n"
-		if [[ $(expr $ID % 1000) -eq 0 ]]; then
-			write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
-		fi
-		ID=$(expr $ID + 1)
-	done < "./PhotoSimilarity-Workspace/Graphs/image_uris${method}"
-	echo -e "{}]}"
-} > "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
-# Save indexes in a file
-# IDs+="}"
-write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
 
-python3 sntxnorm.py "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
+python3 sntxnorm.py "./PhotoSimilarity-Workspace/IDs/2022-01-07T08-24-37_pastecIDs.json"
 
 # Update Pharos
-java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
+java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/2022-01-07T08-24-37_pastecIDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/2022-01-07T08-24-37_pastecIDs.ttl"
 # Create model and update Vision
-java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -visionModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -log "./PhotoSimilarity-Workspace/Logs/${now}_${method}_error.log"
+java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -visionModel "./PhotoSimilarity-Workspace/IDs/2022-01-07T08-24-37_pastecIDs.json" -log "./PhotoSimilarity-Workspace/Logs/2022-01-07T08-24-37_pastec_error.log"
