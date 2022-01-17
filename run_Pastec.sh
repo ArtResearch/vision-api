@@ -97,9 +97,9 @@ max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSim
 		index=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/images/$ID)
 		# Generate ttl file
 		#IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> <https://vision.artresearch.net:${port}/index/images/${ID}>.\n"
-		if [[ $(expr $ID % 1000) -eq 0 ]]; then
-			write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
-		fi
+		#if [[ $(expr $ID % 1000) -eq 0 ]]; then
+		#	write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
+		#fi
 		ID=$(expr $ID + 1)
 	done < "./PhotoSimilarity-Workspace/Graphs/image_uris${method}"
 	echo -e "{}]}"
