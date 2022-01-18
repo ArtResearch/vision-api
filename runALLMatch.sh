@@ -38,4 +38,8 @@ echo "Run Frick Match 1"
 
 ./run_Match.sh configFrickCheatMatch.conf
 
+echo "Run Frick Match 2"
+
+./run_Match.sh configFrickCheatMatch1000.conf
+
 echo "END Match"
