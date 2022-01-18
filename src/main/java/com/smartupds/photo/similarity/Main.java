@@ -96,7 +96,7 @@ public class Main {
             Logger.getLogger(Main.class.getName()).log(Level.INFO,"Setting Vision Configuration.");
         } else 
             Logger.getLogger(Main.class.getName()).log(Level.INFO,"Setting Vision Default Configurations.");
-        
+        // Options
         if (line.hasOption("q") && line.hasOption("p")){
             QueryHandler q = new QueryHandler(line.getOptionValue("q"));
             q.setRepository(line.getOptionValue("p"));
@@ -115,7 +115,7 @@ public class Main {
             ModelGenerator model = new ModelGenerator(Utils.listJSONFilesForFolder(new File(line.getOptionValue("visionModel"))));
             model.setRepository(line.getOptionValue("e"));
             model.getIndexes(line.getOptionValue("p"));
-            model.generate();
+            model.generate(line.getOptionValue("visionModel").replace("./PhotoSimilarity-Workspace/IDs/", "").replace("IDs.json",""));
             // Generate error log.
             if (line.hasOption("log")){
                 ImageLogger log = new ImageLogger(line.getOptionValue("visionModel"),line.getOptionValue("log"));

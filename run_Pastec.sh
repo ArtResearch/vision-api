@@ -112,5 +112,14 @@ python3 sntxnorm.py "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json"
 
 # Update Pharos
 java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.ttl"
-# Create model and update Vision
+# Create model to be uploaded to vision
 java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -visionModel "./PhotoSimilarity-Workspace/IDs/${now}_${method}IDs.json" -log "./PhotoSimilarity-Workspace/Logs/${now}_${method}_error.log"
+
+# upload models to vision
+files="./PhotoSimilarity-Workspace/Model/${now}_${method}/*"
+for i in $files
+do
+		echo "Uploading: $i"
+        curl -u $vision_user:$vision_password -X POST -H 'Content-Type:application/x-trig' --data-binary @$i 'https://vision.artresearch.net/rdf-graph-store?keepSourceGraphs=true'
+        sleep 0.1
+done

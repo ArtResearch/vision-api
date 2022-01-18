@@ -3,6 +3,7 @@ package com.smartupds.photo.similarity.impl;
 
 import com.smartupds.photo.similarity.common.Resources;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -61,20 +63,22 @@ public class ModelGenerator {
     /**
      * Generates the similarity model.
      */
-    public void generate() {
+    public void generate(String folderName) {
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Model generation started.");
         parseJSON();
-        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Vision Repository.");
-        repo.setUsernameAndPassword(Resources.VISION_USER,Resources.VISION_PASSWORD);
-        repo.initialize();
-        String modelPath = Resources.MODEL +"/"+LocalDateTime.now().toString().replace(":", "-")+"_model.ttl";
-        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(modelPath), "UTF-8")) {
+        new File(Resources.MODEL +"/"+folderName).mkdirs();
+        int count=0;
+        String modelPath = Resources.MODEL +"/"+folderName+"/"+LocalDateTime.now().toString().replace(":", "-")+"_model_part_"+count+".trig";    
+        try {
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(modelPath), "UTF-8");
             if(image_maps!=null){
-                image_maps.forEach((index,maps) -> {
+                
+                for (Map.Entry<BigInteger ,String[][]> entry : image_maps.entrySet()) {
+                    BigInteger index = entry.getKey();
+                    String[][] maps = entry.getValue();
                     try {
-
                         String image_1 = image_index.get(index);
-    //                    System.out.println(image_1 + index);
+//                        System.out.println(image_1 + index);
                         BigInteger hash_1 = new BigInteger(DigestUtils.sha1Hex(image_1).replaceAll("[a-zA-Z]+", "").trim());
                         for (String[] map : maps) {
                             String image_2 = image_index.get(new BigInteger(map[0]));
@@ -100,40 +104,31 @@ public class ModelGenerator {
                                 // https://vision.artresearch.net/resource/similarity/association/hash/Association/Pastec sim:weight "90"
                                 graph = graph.concat("\t<"+Resources.VISION+StringUtils.capitalize(Resources.SIMILARITY)+"/"+hash+"/"+Resources.ASSOCIATION+"/"+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+"> <"+Resources.SIM+Resources.WEIGHT+"> \"" + map[1] + "\".\n");
                                 graph = graph.concat("}\n");
-                                writer.append(graph);
-                                updateModel(graph);
+                                
+                                if (count%2000==0 && count!=0){
+                                    writer.close();
+                                    modelPath = Resources.MODEL +"/"+folderName+"/"+LocalDateTime.now().toString().replace(":", "-")+"_model_part_"+count+".trig";
+                                    writer = new OutputStreamWriter(new FileOutputStream(modelPath), "UTF-8");
+                                } else 
+                                    writer.append(graph);
+                                count++;
                             }
                         }   
                     } catch (IOException ex) {
                         Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                });
+                }
             }
-            Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "File with model created at :".concat(modelPath));
+            writer.close();
+            Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Model files created at :".concat(Resources.MODEL +"/"+folderName));
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Model generated.");
-            Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Repository Shutting Down.");
-            repo.shutDown();
         } catch (UnsupportedEncodingException ex) {
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(ModelGenerator.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    /**
-     * Pushes the similarity model graph to the repository.
-     * @param graph
-     */
-    public void updateModel(String graph){
-        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Adding graph to the model.");
-        String graph_query = "INSERT DATA { GRAPH " +graph+"}";
-        RepositoryConnection conn = repo.getConnection();
-        Update update = conn.prepareUpdate(graph_query);
-        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Executing graph insert query.");
-        update.execute();
-        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Graph insert successfully executed.");
-    }
-    
+
     /**
      * Updates the repository with new indexes.
      */
@@ -252,7 +247,7 @@ public class ModelGenerator {
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Initializing Pharos Repository.");
         pharos_repo.setUsernameAndPassword(Resources.PHAROS_USER, Resources.PHAROS_PASSWORD);
         pharos_repo.initialize();
-        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Retrieving "+StringUtils.capitalize(Resources.SIMILARITY_METHOD)+" indexes.");
+        Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Retrieving {0} indexes.", StringUtils.capitalize(Resources.SIMILARITY_METHOD));
         String select = "SELECT ?image ?index WHERE { ?image <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> ?index}";
         RepositoryConnection conn = pharos_repo.getConnection();
         TupleQuery tupleQuery = conn.prepareTupleQuery(select);
