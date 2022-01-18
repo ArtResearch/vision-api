@@ -38,9 +38,9 @@ echo "Run Frick 1"
 
 ./run_Pastec.sh configFrickCheat.conf
 
-#echo "Run Frick 2"
+echo "Run Frick 2"
 
-#./run_Pastec.sh configFrickCheat.conf
+./run_Pastec.sh configFrickCheat.conf
 
 #echo "Run Frick 3"
 
