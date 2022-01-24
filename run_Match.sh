@@ -115,6 +115,6 @@ files="./PhotoSimilarity-Workspace/Model/${now}_${method}/*"
 for i in $files
 do
 		echo "Uploading: $i"
-        curl -u $vision_user:$vision_password -X POST -H 'Content-Type:application/x-trig' --data-binary @$i 'https://vision.artresearch.net/rdf-graph-store?keepSourceGraphs=true'
+        curl -u $vision_user:$vision_password -X POST -H 'Content-Type:application/x-trig' --data-binary @$i ${vision_blazegraph}'?keepSourceGraphs=true'
         sleep 0.1
 done
