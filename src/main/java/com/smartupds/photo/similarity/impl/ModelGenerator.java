@@ -248,7 +248,7 @@ public class ModelGenerator {
         pharos_repo.setUsernameAndPassword(Resources.PHAROS_USER, Resources.PHAROS_PASSWORD);
         pharos_repo.initialize();
         Logger.getLogger(ModelGenerator.class.getName()).log(Level.INFO, "Retrieving {0} indexes.", StringUtils.capitalize(Resources.SIMILARITY_METHOD));
-        String select = "SELECT ?image ?index WHERE { ?image <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> ?index}";
+        String select = "SELECT ?image ?index WHERE { ?image <https://artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> ?index}";
         RepositoryConnection conn = pharos_repo.getConnection();
         TupleQuery tupleQuery = conn.prepareTupleQuery(select);
         TupleQueryResult tqr = tupleQuery.evaluate();
@@ -279,16 +279,16 @@ public class ModelGenerator {
             JSONArray results = (JSONArray) jsonObject.get("results");
             Iterator<JSONObject> iterator = results.iterator();
             
-            writer.append("<https://pharos.artresearch.net/resource/graph/visual_similarity/"+Resources.SIMILARITY_METHOD+"> {\n");
+            writer.append("<https://artresearch.net/resource/graph/visual_similarity/"+Resources.SIMILARITY_METHOD+"> {\n");
             while(iterator.hasNext()){
                 JSONObject result = iterator.next();
                 if (result.get("image_id")!=null){
                     String image_id = result.get("image_id").toString();
                     String image_url = result.get("image_url").toString();
                     if (Resources.SIMILARITY_METHOD.equals(Resources.PASTEC_METHOD))
-                        writer.append("\t<"+image_url+"> <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> <https://vision.artresearch.net:4212/index/images/"+image_id+">.\n");
+                        writer.append("\t<"+image_url+"> <https://artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> <https://vision.artresearch.net:4212/index/images/"+image_id+">.\n");
                     else 
-                        writer.append("\t<"+image_url+"> <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> \""+image_id+"\".\n");
+                        writer.append("\t<"+image_url+"> <https://artresearch.net/resource/vocab/vision/"+Resources.SIMILARITY_METHOD+"/has_index> \""+image_id+"\".\n");
                 }
             }
             writer.append("}\n");

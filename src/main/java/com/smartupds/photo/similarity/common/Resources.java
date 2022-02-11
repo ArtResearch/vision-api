@@ -29,7 +29,7 @@ public class Resources {
     public static final String LOGS = WORKSPACE + "/Logs";
     
     // PREFIXES
-    public static final String PHAROS_CUSTOM = "https://pharos.artresearch.net/custom/";
+    public static final String PHAROS_CUSTOM = "https://artresearch.net/custom/";
     public static final String VISION = "https://vision.artresearch.net/resource/";
     public static final String SIM = "http://purl.org/ontology/similarity/";
     

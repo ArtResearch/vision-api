@@ -82,7 +82,7 @@ image_ids=$(curl -X GET $host:$port/index/imageIds)
 echo -e $image_ids > "./PhotoSimilarity-Workspace/${method}_ids.json"
 max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSimilarity-Workspace/${method}_ids.json -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password)
 
-#IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
+#IDs+="<https://artresearch.net/resource/graph/visual_similarity/${method}> {\n"
 #Pastec Photo Similarity Evaluation & Indexing
 {
 	ID=$(expr $max_id + 1)
@@ -96,7 +96,7 @@ max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSim
 		# Add image in Pastec (POST original)
 		index=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/images/$ID)
 		# Generate ttl file
-		#IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> <https://vision.artresearch.net:${port}/index/images/${ID}>.\n"
+		#IDs+="\t<${line}> <https://artresearch.net/resource/vocab/vision/${method}/has_index> <https://vision.artresearch.net:${port}/index/images/${ID}>.\n"
 		#if [[ $(expr $ID % 1000) -eq 0 ]]; then
 		#	write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
 		#fi

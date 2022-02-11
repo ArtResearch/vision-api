@@ -76,8 +76,8 @@ public class QueryHandler {
             // Filter out images with a particular method index
             if (!(constructQuery.contains("BIND") || constructQuery.contains("bind"))){
                 constructQuery = constructQuery.substring(0,constructQuery.lastIndexOf("}"))
-                                    + "\tFILTER NOT EXISTS { ?image <https://pharos.artresearch.net/resource/vocab/vision/"+Resources.MATCH_METHOD+"/has_index>|"
-                                    + "<https://pharos.artresearch.net/resource/vocab/vision/"+Resources.PASTEC_METHOD+"/has_index> ?index}\n"
+                                    + "\tFILTER NOT EXISTS { ?image <https://artresearch.net/resource/vocab/vision/"+Resources.MATCH_METHOD+"/has_index>|"
+                                    + "<https://artresearch.net/resource/vocab/vision/"+Resources.PASTEC_METHOD+"/has_index> ?index}\n"
                                     + constructQuery.substring(constructQuery.lastIndexOf("}"));
             }
             Logger.getLogger(QueryHandler.class.getName()).log(Level.INFO, "Processing CONSTRUCT Query : \n\n".concat(constructQuery));

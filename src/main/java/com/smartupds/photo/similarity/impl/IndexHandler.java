@@ -72,15 +72,15 @@ public class IndexHandler {
         if(Resources.SIMILARITY_METHOD.equals(Resources.MATCH_METHOD)) {
             this.query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
             "select (MAX(xsd:integer(?in)) AS ?max) WHERE {\n" +
-            "  graph <https://pharos.artresearch.net/resource/graph/visual_similarity/match> {\n" +
-            "  	?x <https://pharos.artresearch.net/resource/vocab/vision/match/has_index> ?in.\n" +
+            "  graph <https://artresearch.net/resource/graph/visual_similarity/match> {\n" +
+            "  	?x <https://artresearch.net/resource/vocab/vision/match/has_index> ?in.\n" +
             "  }\n" +
             "}";
         } else {
             this.query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
             "select (MAX(xsd:integer(?index)) AS ?max) WHERE {\n" +
-            "  graph <https://pharos.artresearch.net/resource/graph/visual_similarity/pastec> {\n" +
-            "  	?x <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> ?in.\n" +
+            "  graph <https://artresearch.net/resource/graph/visual_similarity/pastec> {\n" +
+            "  	?x <https://artresearch.net/resource/vocab/vision/pastec/has_index> ?in.\n" +
             "  }\n" + 
             "  BIND(REPLACE(STR(?in),\"https://vision.artresearch.net:4212/index/images/\",\"\") AS ?index)\n" +
             "}";
