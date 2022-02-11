@@ -1,14 +1,14 @@
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/>
-PREFIX custom: <https://pharos.artresearch.net/custom/>
-PREFIX cfc: <https://pharos.artresearch.net/resource/custom/fc/>
+PREFIX custom: <https://artresearch.net/custom/>
+PREFIX cfc: <https://artresearch.net/resource/custom/fc/>
 CONSTRUCT {
   ?s custom:has_image ?image.
-  ?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/frick/type/4F6A2899-2950-328C-B172-54AD813EE993>.
+  ?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://artresearch.net/resource/frick/type/4F6A2899-2950-328C-B172-54AD813EE993>.
 }WHERE {
   ?s custom:has_image ?image.
-  ?s <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/frick/source/Frick>.
+  ?s <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/frick/source/Frick>.
   #BIND
-  FILTER NOT EXISTS {?image <https://pharos.artresearch.net/resource/vocab/vision/pastec/has_index> ?index.}
+  FILTER NOT EXISTS {?image <https://artresearch.net/resource/vocab/vision/pastec/has_index> ?index.}
 } limit 2500

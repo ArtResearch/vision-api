@@ -60,7 +60,7 @@ method=${method,,}
 now=$(date +"%Y-%m-%dT%H-%M-%S")
 
 # echo $query
-# echo $endpoint 			# https://pharos.artresearch.net/sparql
+# echo $endpoint 			# https://artresearch.net/sparql
 # echo $pharos_user		# admin
 # echo $pharos_password	# pharosadmin
 # echo $vision_endpoint	# https://vision.artresearch.net/sparql
@@ -82,7 +82,7 @@ image_ids=$(curl -X GET $host:$port/index/imageIds)
 echo -e $image_ids > "./PhotoSimilarity-Workspace/${method}_ids.json"
 max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSimilarity-Workspace/${method}_ids.json -m $method)
 
-#IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
+#IDs+="<https://artresearch.net/resource/graph/visual_similarity/${method}> {\n"
 #Pastec Photo Similarity Evaluation & Indexing
 {
 	ID=$(expr $max_id + 1)
@@ -96,7 +96,7 @@ max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids ./PhotoSim
 		# Add image in Pastec (POST original)
 		index=$(curl -X POST -d '{"url":"'$url'"}' $host:$port/index/images/$ID)
 		# Generate ttl file
-		#IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> <https://vision.artresearch.net:${port}/index/images/${ID}>.\n"
+		#IDs+="\t<${line}> <https://artresearch.net/resource/vocab/vision/${method}/has_index> <https://vision.artresearch.net:${port}/index/images/${ID}>.\n"
 		if [[ $(expr $ID % 1000) -eq 0 ]]; then
 			write_index=$(curl -X POST -d '{"type":"WRITE", "index_path":"/pastec/build/pastec-index/pharos.dat"}' ${host}:${port}/index/io)
 		fi
@@ -122,7 +122,7 @@ image_ids=$(echo $image_ids | sed 's/ //g')
 echo -e $image_ids > "./PhotoSimilarity-Workspace/${method}_ids.json"
 max_id=$(java -jar target/PhotoSimilarity-0.1-assembly.jar -image_ids "./PhotoSimilarity-Workspace/${method}_ids.json" -m $method)
 
-IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}> {\n"
+IDs+="<https://artresearch.net/resource/graph/visual_similarity/${method}> {\n"
 #Match Photo Similarity Evaluation & Indexing
 {
 	ID=$(expr $max_id + 1)
@@ -137,7 +137,7 @@ IDs+="<https://pharos.artresearch.net/resource/graph/visual_similarity/${method}
 		# Add image in Match
 		index=$(curl -X POST -F url=$url -F filepath=$ID $host:$port/add)
 		# Generate ttl file
-		IDs+="\t<${line}> <https://pharos.artresearch.net/resource/vocab/vision/${method}/has_index> \"${ID}\".\n"
+		IDs+="\t<${line}> <https://artresearch.net/resource/vocab/vision/${method}/has_index> \"${ID}\".\n"
 		ID=$(expr $ID + 1)
 	done < ./PhotoSimilarity-Workspace/Graphs/image_uris
 	echo -e "{}]}"
