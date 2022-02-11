@@ -1,18 +1,18 @@
-<https://pharos.artresearch.net/resource/itatti/work/8000791674> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/406554816/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791674> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Benedict Reviving a Young Monk"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791674> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000417970>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000417970> <http://www.w3.org/2000/01/rdf-schema#label> "Berenson Art Collection, I Tatti - The Harvard University Center for Italian Renaissance Studies"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791674> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
-<https://pharos.artresearch.net/resource/itatti/source/ITatti> <http://www.w3.org/2000/01/rdf-schema#label> "I Tatti"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791674> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000379036>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000379036> <http://www.w3.org/2000/01/rdf-schema#label> "Nardo di Cione"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791674> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000372829>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000372829> <http://www.w3.org/2000/01/rdf-schema#label> "Orcagna"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000417970> <http://www.w3.org/2000/01/rdf-schema#label> "Berenson Art Collection, Villa I Tatti - The Harvard University Center for Italian Renaissance Studies"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791674> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/406554836/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791676> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/406554784/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791676> <http://www.w3.org/2000/01/rdf-schema#label> "Trajan Judging his own Son (?)"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791676> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000417970>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791676> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791676> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000397350>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000397350> <http://www.w3.org/2000/01/rdf-schema#label> "Morone, Domenico"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000791674> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/406554816/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000791674> <http://www.w3.org/2000/01/rdf-schema#label> "Saint Benedict Reviving a Young Monk"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000791674> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000417970>. 
+<https://artresearch.net/resource/itatti/actor/9000417970> <http://www.w3.org/2000/01/rdf-schema#label> "Berenson Art Collection, I Tatti - The Harvard University Center for Italian Renaissance Studies"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000791674> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/ITatti>. 
+<https://artresearch.net/resource/itatti/source/ITatti> <http://www.w3.org/2000/01/rdf-schema#label> "I Tatti"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000791674> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000379036>. 
+<https://artresearch.net/resource/itatti/actor/9000379036> <http://www.w3.org/2000/01/rdf-schema#label> "Nardo di Cione"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000791674> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000372829>. 
+<https://artresearch.net/resource/itatti/actor/9000372829> <http://www.w3.org/2000/01/rdf-schema#label> "Orcagna"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/actor/9000417970> <http://www.w3.org/2000/01/rdf-schema#label> "Berenson Art Collection, Villa I Tatti - The Harvard University Center for Italian Renaissance Studies"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000791674> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/406554836/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000791676> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/406554784/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000791676> <http://www.w3.org/2000/01/rdf-schema#label> "Trajan Judging his own Son (?)"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000791676> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000417970>. 
+<https://artresearch.net/resource/itatti/work/8000791676> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/ITatti>. 
+<https://artresearch.net/resource/itatti/work/8000791676> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000397350>. 
+<https://artresearch.net/resource/itatti/actor/9000397350> <http://www.w3.org/2000/01/rdf-schema#label> "Morone, Domenico"^^<http://www.w3.org/2001/XMLSchema#string>. 

@@ -1,84 +1,84 @@
-<https://pharos.artresearch.net/resource/itatti/work/8000850826> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/44256366/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850826> <http://www.w3.org/2000/01/rdf-schema#label> "Initial I with Annunciation to Zechariah"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850826> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000372410> <http://www.w3.org/2000/01/rdf-schema#label> "unknown"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850826> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
-<https://pharos.artresearch.net/resource/itatti/source/ITatti> <http://www.w3.org/2000/01/rdf-schema#label> "I Tatti"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850826> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000410078>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000410078> <http://www.w3.org/2000/01/rdf-schema#label> "Master of the Saint George Codex"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850714> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/43462441/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850714> <http://www.w3.org/2000/01/rdf-schema#label> "Holy Family with St. Anne"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850714> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850714> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850714> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000424678>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000424678> <http://www.w3.org/2000/01/rdf-schema#label> "Catena, Vincenzo di Biagio"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043598/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <http://www.w3.org/2000/01/rdf-schema#label> "Triumph of Glory"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
-<https://pharos.artresearch.net/resource/itatti/source/SharedShelf> <http://www.w3.org/2000/01/rdf-schema#label> "SharedShelf"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000383809>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000383809> <http://www.w3.org/2000/01/rdf-schema#label> "Gaddi, Agnolo"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791738> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/406557075/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791738> <http://www.w3.org/2000/01/rdf-schema#label> "Hercules and Cacus"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791738> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000417970>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000417970> <http://www.w3.org/2000/01/rdf-schema#label> "Berenson Art Collection, I Tatti - The Harvard University Center for Italian Renaissance Studies"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791738> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000791738> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000417986>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000417986> <http://www.w3.org/2000/01/rdf-schema#label> "Zutman, Lambert"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000417970> <http://www.w3.org/2000/01/rdf-schema#label> "Berenson Art Collection, Villa I Tatti - The Harvard University Center for Italian Renaissance Studies"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043604/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850830> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/25108652/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850830> <http://www.w3.org/2000/01/rdf-schema#label> "Madonna and Child Enthroned with St. John the Baptist and St. Ambrose"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850830> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850830> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000384481>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000384481> <http://www.w3.org/2000/01/rdf-schema#label> "Jacopo da Empoli"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850830> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850830> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000374514>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000374514> <http://www.w3.org/2000/01/rdf-schema#label> "Sarto, Andrea del"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850713> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/45980305/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850713> <http://www.w3.org/2000/01/rdf-schema#label> "Venus and Adonis with three dogs and Cupid asleep under the trees"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850713> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850713> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850713> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000333364>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000333364> <http://www.w3.org/2000/01/rdf-schema#label> "Titian"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043602/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850824> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/45951608/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850824> <http://www.w3.org/2000/01/rdf-schema#label> "Eleonora de' Medici, Duchess of Mantua"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850824> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850824> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850824> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000374208>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000374208> <http://www.w3.org/2000/01/rdf-schema#label> "Tintoretto, Jacopo"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043596/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850829> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/44410456/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850829> <http://www.w3.org/2000/01/rdf-schema#label> "Female figure in landscape"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850829> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850829> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850829> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000424307>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000424307> <http://www.w3.org/2000/01/rdf-schema#label> "Girolamo del Pacchia"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043592/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850827> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24158014/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850827> <http://www.w3.org/2000/01/rdf-schema#label> "Madonna and Child Enthroned with four saints"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850827> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850827> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850827> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000340633>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000340633> <http://www.w3.org/2000/01/rdf-schema#label> "Lippi, Fra Filippo"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043610/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850818> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/45851546/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850818> <http://www.w3.org/2000/01/rdf-schema#label> "Female saint"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850818> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850818> <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000394533>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000394533> <http://www.w3.org/2000/01/rdf-schema#label> "Pietro da Rimini"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850818> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850818> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000394533>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850818> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000424226>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000424226> <http://www.w3.org/2000/01/rdf-schema#label> "Master of the S. Maria in Porto Fuori"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850820> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/45942361/full/full/0/native.jpg>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850820> <http://www.w3.org/2000/01/rdf-schema#label> "Studies of figures with boatmen"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850820> <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <https://pharos.artresearch.net/resource/itatti/actor/9000372410>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850820> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850820> <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <https://pharos.artresearch.net/resource/itatti/actor/9000336570>. 
-<https://pharos.artresearch.net/resource/itatti/actor/9000336570> <http://www.w3.org/2000/01/rdf-schema#label> "Veronese, Paolo"^^<http://www.w3.org/2001/XMLSchema#string>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850826> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>. 
-<https://pharos.artresearch.net/resource/itatti/work/8000850821> <https://pharos.artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043600/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850826> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/44256366/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850826> <http://www.w3.org/2000/01/rdf-schema#label> "Initial I with Annunciation to Zechariah"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850826> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000372410>. 
+<https://artresearch.net/resource/itatti/actor/9000372410> <http://www.w3.org/2000/01/rdf-schema#label> "unknown"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850826> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/ITatti>. 
+<https://artresearch.net/resource/itatti/source/ITatti> <http://www.w3.org/2000/01/rdf-schema#label> "I Tatti"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850826> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000410078>. 
+<https://artresearch.net/resource/itatti/actor/9000410078> <http://www.w3.org/2000/01/rdf-schema#label> "Master of the Saint George Codex"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850714> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/43462441/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850714> <http://www.w3.org/2000/01/rdf-schema#label> "Holy Family with St. Anne"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850714> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000372410>. 
+<https://artresearch.net/resource/itatti/work/8000850714> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/ITatti>. 
+<https://artresearch.net/resource/itatti/work/8000850714> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000424678>. 
+<https://artresearch.net/resource/itatti/actor/9000424678> <http://www.w3.org/2000/01/rdf-schema#label> "Catena, Vincenzo di Biagio"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043598/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <http://www.w3.org/2000/01/rdf-schema#label> "Triumph of Glory"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000372410>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://artresearch.net/resource/itatti/source/SharedShelf> <http://www.w3.org/2000/01/rdf-schema#label> "SharedShelf"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000383809>. 
+<https://artresearch.net/resource/itatti/actor/9000383809> <http://www.w3.org/2000/01/rdf-schema#label> "Gaddi, Agnolo"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000791738> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/406557075/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000791738> <http://www.w3.org/2000/01/rdf-schema#label> "Hercules and Cacus"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000791738> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000417970>. 
+<https://artresearch.net/resource/itatti/actor/9000417970> <http://www.w3.org/2000/01/rdf-schema#label> "Berenson Art Collection, I Tatti - The Harvard University Center for Italian Renaissance Studies"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000791738> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://artresearch.net/resource/itatti/work/8000791738> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000417986>. 
+<https://artresearch.net/resource/itatti/actor/9000417986> <http://www.w3.org/2000/01/rdf-schema#label> "Zutman, Lambert"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/actor/9000417970> <http://www.w3.org/2000/01/rdf-schema#label> "Berenson Art Collection, Villa I Tatti - The Harvard University Center for Italian Renaissance Studies"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043604/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/ITatti>. 
+<https://artresearch.net/resource/itatti/work/8000850830> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/25108652/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850830> <http://www.w3.org/2000/01/rdf-schema#label> "Madonna and Child Enthroned with St. John the Baptist and St. Ambrose"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850830> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000372410>. 
+<https://artresearch.net/resource/itatti/work/8000850830> <https://artresearch.net/resource/fr/Work_created_from_Artist> <https://artresearch.net/resource/itatti/actor/9000384481>. 
+<https://artresearch.net/resource/itatti/actor/9000384481> <http://www.w3.org/2000/01/rdf-schema#label> "Jacopo da Empoli"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850830> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://artresearch.net/resource/itatti/work/8000850830> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000374514>. 
+<https://artresearch.net/resource/itatti/actor/9000374514> <http://www.w3.org/2000/01/rdf-schema#label> "Sarto, Andrea del"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850713> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/45980305/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850713> <http://www.w3.org/2000/01/rdf-schema#label> "Venus and Adonis with three dogs and Cupid asleep under the trees"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850713> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000372410>. 
+<https://artresearch.net/resource/itatti/work/8000850713> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://artresearch.net/resource/itatti/work/8000850713> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000333364>. 
+<https://artresearch.net/resource/itatti/actor/9000333364> <http://www.w3.org/2000/01/rdf-schema#label> "Titian"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043602/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850824> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/45951608/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850824> <http://www.w3.org/2000/01/rdf-schema#label> "Eleonora de' Medici, Duchess of Mantua"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850824> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000372410>. 
+<https://artresearch.net/resource/itatti/work/8000850824> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://artresearch.net/resource/itatti/work/8000850824> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000374208>. 
+<https://artresearch.net/resource/itatti/actor/9000374208> <http://www.w3.org/2000/01/rdf-schema#label> "Tintoretto, Jacopo"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043596/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850829> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/44410456/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850829> <http://www.w3.org/2000/01/rdf-schema#label> "Female figure in landscape"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850829> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000372410>. 
+<https://artresearch.net/resource/itatti/work/8000850829> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/ITatti>. 
+<https://artresearch.net/resource/itatti/work/8000850829> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000424307>. 
+<https://artresearch.net/resource/itatti/actor/9000424307> <http://www.w3.org/2000/01/rdf-schema#label> "Girolamo del Pacchia"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043592/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850827> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24158014/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850827> <http://www.w3.org/2000/01/rdf-schema#label> "Madonna and Child Enthroned with four saints"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850827> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000372410>. 
+<https://artresearch.net/resource/itatti/work/8000850827> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/ITatti>. 
+<https://artresearch.net/resource/itatti/work/8000850827> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000340633>. 
+<https://artresearch.net/resource/itatti/actor/9000340633> <http://www.w3.org/2000/01/rdf-schema#label> "Lippi, Fra Filippo"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043610/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850818> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/45851546/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850818> <http://www.w3.org/2000/01/rdf-schema#label> "Female saint"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850818> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000372410>. 
+<https://artresearch.net/resource/itatti/work/8000850818> <https://artresearch.net/resource/fr/Work_created_from_Artist> <https://artresearch.net/resource/itatti/actor/9000394533>. 
+<https://artresearch.net/resource/itatti/actor/9000394533> <http://www.w3.org/2000/01/rdf-schema#label> "Pietro da Rimini"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850818> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://artresearch.net/resource/itatti/work/8000850818> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000394533>. 
+<https://artresearch.net/resource/itatti/work/8000850818> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000424226>. 
+<https://artresearch.net/resource/itatti/actor/9000424226> <http://www.w3.org/2000/01/rdf-schema#label> "Master of the S. Maria in Porto Fuori"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850820> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/45942361/full/full/0/native.jpg>. 
+<https://artresearch.net/resource/itatti/work/8000850820> <http://www.w3.org/2000/01/rdf-schema#label> "Studies of figures with boatmen"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850820> <https://artresearch.net/resource/fr/Work_kept_by_Institution> <https://artresearch.net/resource/itatti/actor/9000372410>. 
+<https://artresearch.net/resource/itatti/work/8000850820> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://artresearch.net/resource/itatti/work/8000850820> <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <https://artresearch.net/resource/itatti/actor/9000336570>. 
+<https://artresearch.net/resource/itatti/actor/9000336570> <http://www.w3.org/2000/01/rdf-schema#label> "Veronese, Paolo"^^<http://www.w3.org/2001/XMLSchema#string>. 
+<https://artresearch.net/resource/itatti/work/8000850826> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/SharedShelf>. 
+<https://artresearch.net/resource/itatti/work/8000850821> <https://artresearch.net/custom/has_image> <https://ids.lib.harvard.edu/ids/iiif/24043600/full/full/0/native.jpg>. 
