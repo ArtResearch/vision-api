@@ -34,37 +34,37 @@
 
 #echo "END"
 
-echo "Run Frick 1"
+echo "Run Marburg 1"
 
-./run_Pastec.sh configFrickCheat.conf
+./run_Pastec.sh configMarburgCheat.conf
 
-echo "Run Frick 2"
+echo "Run Marburg 2"
 
-./run_Pastec.sh configFrickCheat.conf
+./run_Pastec.sh configMarburgCheat.conf
 
-echo "Run Frick 3"
+echo "Run Marburg 3"
 
-./run_Pastec.sh configFrickCheat.conf
+./run_Pastec.sh configMarburgCheat.conf
 
-echo "Run Frick 4"
+echo "Run Marburg 4"
 
-./run_Pastec.sh configFrickCheat.conf
+./run_Pastec.sh configMarburgCheat.conf
 
-echo "Run Frick 2.1"
+echo "Run Marburg 2.1"
 
-./run_Pastec.sh configFrickCheat.conf
+./run_Pastec.sh configMarburgCheat.conf
 
-echo "Run Frick 2.2"
+echo "Run Marburg 2.2"
 
-./run_Pastec.sh configFrickCheat.conf
+./run_Pastec.sh configMarburgCheat.conf
 
-echo "Run Frick 2.3"
+echo "Run Marburg 2.3"
 
-./run_Pastec.sh configFrickCheat.conf
+./run_Pastec.sh configMarburgCheat.conf
 
-echo "Run Frick 2.4"
+echo "Run Marburg 2.4"
 
-./run_Pastec.sh configFrickCheat.conf
+./run_Pastec.sh configMarburgCheat.conf
 
 
 echo "END"
