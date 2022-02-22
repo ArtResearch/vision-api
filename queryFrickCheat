@@ -11,4 +11,4 @@ CONSTRUCT {
   ?s <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/frick/source/Frick>.
   #BIND
   FILTER NOT EXISTS {?image <https://artresearch.net/resource/vocab/vision/pastec/has_index> ?index.}
-} limit 2500
+} limit 10
