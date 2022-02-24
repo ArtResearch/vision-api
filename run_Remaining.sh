@@ -76,15 +76,15 @@ method=pastec
 # PASTEC METHOD
 port=4212
 
-python3 sntxnorm.py "./PhotoSimilarity-Workspace/IDs/2022-02-11T02-53-57_pastecIDs.json"
+python3 sntxnorm.py "./PhotoSimilarity-Workspace/IDs/2022-02-24T09-31-13_pastecIDs.json"
 
 # Update Pharos
-java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/2022-02-11T02-53-57_pastecIDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/2022-02-11T02-53-57_pastecIDs.ttl"
+java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -e $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -json_file "./PhotoSimilarity-Workspace/IDs/2022-02-24T09-31-13_pastecIDs.json" -pharosModel "./PhotoSimilarity-Workspace/IDs/2022-02-24T09-31-13_pastecIDs.ttl"
 # Create model to be uploaded to vision
-java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -visionModel "./PhotoSimilarity-Workspace/IDs/2022-02-11T02-53-57_pastecIDs.json" -log "./PhotoSimilarity-Workspace/Logs/2022-02-11T02-53-57_pastec_error.log"
+java -jar target/PhotoSimilarity-0.1-assembly.jar -m $method -p $endpoint -pharos_user $pharos_user -pharos_password $pharos_password -e $vision_endpoint -vision_user $vision_user -vision_password $vision_password -visionModel "./PhotoSimilarity-Workspace/IDs/2022-02-24T09-31-13_pastecIDs.json" -log "./PhotoSimilarity-Workspace/Logs/2022-02-24T09-31-13_pastec_error.log"
 
 # upload models to vision
-files="./PhotoSimilarity-Workspace/Model/2022-02-11T02-53-57_pastec/*"
+files="./PhotoSimilarity-Workspace/Model/2022-02-24T09-31-13_pastec/*"
 for i in $files
 do
 		echo "Uploading: $i"
