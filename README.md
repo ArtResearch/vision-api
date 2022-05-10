@@ -24,6 +24,24 @@ The run.sh script should be in the same folder as the PhotoSimilarity.jar.
 You can use a configuration file (ie. config.conf) to initialize the API. Sample configuration variables:
 
 * **query [required]** : a file containing the construct query, where the resulting object should be the image url.
+  * Example Query
+  ``` 
+  PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/>
+  PREFIX custom: <https://artresearch.net/custom/>
+  CONSTRUCT {
+      ?s custom:has_image ?image.
+  } WHERE {
+    ?s <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/marburg/source/Marburg>.
+    ?s <https://artresearch.net/resource/fr/Work_depicted_by_Photo> ?photo.
+    ?photo <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of>  ?image.
+    ?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://artresearch.net/resource/marburg/type/4F6A2899-2950-328C-B172-54AD813EE993>.
+    #BIND
+    FILTER NOT EXISTS {?image <https://artresearch.net/resource/vocab/vision/pastec/has_index> ?index.}
+  } LIMIT 2500
+```  
+The query must expose the variable ?s and ?image. In the query can also bee specified based on the provider. 
 * **endpoint [required]** : the endpoint where you wish to harvest the data from.
 * **pharos_user [optional]** : the username for the endpoint.
 * **pharos_password [optional]** : the password for the endpoint.
