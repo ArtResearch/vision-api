@@ -9,8 +9,8 @@ CONSTRUCT {
   	?s <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pmc/source/PMC>.
   	?s cfr:Work_depicted_by_Photo ?photo.
 	?photo <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of>  ?image.
-  	?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://artresearch.net/resource/pmc/type/DEDDF600-5882-37D4-B91C-7CCCD5556894> .
+  	?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://artresearch.net/resource/pmc/type/4F6A2899-2950-328C-B172-54AD813EE993> .
 #  recto
-#  <https://artresearch.net/resource/pmc/type/DEDDF600-5882-37D4-B91C-7CCCD5556894>  
+#  https://artresearch.net/resource/pmc/type/4F6A2899-2950-328C-B172-54AD813EE993 
   FILTER NOT EXISTS {?image <https://artresearch.net/resource/vocab/vision/pastec/has_index> ?index.}
 } LIMIT 2500
