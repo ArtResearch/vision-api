@@ -1,0 +1,16 @@
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/>
+PREFIX custom: <https://artresearch.net/custom/>
+PREFIX cfr: <https://artresearch.net/resource/custom/fr/>
+CONSTRUCT {
+    ?s custom:has_image ?image.
+} WHERE {
+  	?s <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pmc/source/PMC>.
+  	?s cfr:Work_depicted_by_Photo ?photo.
+	?photo <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of>  ?image.
+  	?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://artresearch.net/resource/pmc/type/DEDDF600-5882-37D4-B91C-7CCCD5556894> .
+#  recto
+#  <https://artresearch.net/resource/pmc/type/DEDDF600-5882-37D4-B91C-7CCCD5556894>  
+  FILTER NOT EXISTS {?image <https://artresearch.net/resource/vocab/vision/pastec/has_index> ?index.}
+} LIMIT 2500

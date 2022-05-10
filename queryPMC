@@ -1,0 +1,48 @@
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX crmdig: <http://www.ics.forth.gr/isl/CRMdig/>
+PREFIX custom: <https://artresearch.net/custom/>
+PREFIX cfr: <https://artresearch.net/resource/custom/fr/>
+CONSTRUCT {
+  ?s custom:has_image ?image.
+  ?s rdfs:label ?label.
+  ?s cfr:Work_kept_by_Institution ?institution.
+  ?institution rdfs:label ?institution_label.
+  ?s cfr:Work_created_from_Artist ?artist.
+  ?artist rdfs:label ?artist_label.
+  ?s <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pmc/source/PMC>.
+  <https://artresearch.net/resource/pmc/source/PMC> rdfs:label "pmc".
+  ?s cfr:Work_influenced_by_Artist ?influence.
+  ?influence rdfs:label ?influence_label.
+  ?s cfr:Work_creation_date_start ?start.
+  ?s cfr:Work_creation_date_end ?end.
+  ?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://artresearch.net/resource/pmc/type/DEDDF600-5882-37D4-B91C-7CCCD5556894>  .
+} WHERE {
+  ?s <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pmc/source/PMC>.
+  ?s cfr:Work_depicted_by_Photo ?photo.
+  ?photo <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of>  ?image.
+  ?image <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://artresearch.net/resource/pmc/type/DEDDF600-5882-37D4-B91C-7CCCD5556894>  .
+  ?s rdfs:label ?label.
+  OPTIONAL {
+    ?s <http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper> ?institution.
+    ?institution rdfs:label ?institution_label.
+  }
+  OPTIONAL {
+    ?s cfr:Work_created_from_Artist ?artist.
+    ?artist rdfs:label ?artist_label.
+  }
+  OPTIONAL {
+    ?s cfr:Work_influenced_by_Artist ?influence.
+    ?influence rdfs:label ?influence_label.
+  }
+  OPTIONAL {
+    $s <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
+    ?production <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> $timespan .
+    ?timespan <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> $start .
+  }
+  OPTIONAL {
+  	$s <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
+    ?production <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> $timespan .
+    ?timespan <http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end> $end .
+  }
+} LIMIT 2500
