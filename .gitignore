@@ -8,7 +8,7 @@ node_modules/
 dist/
 deliverables/
 PhotoSimilarity-Workspace/
-nohup.out
+*.out
 ignore/
 configPastecLocal.env
 partialRun.sh
